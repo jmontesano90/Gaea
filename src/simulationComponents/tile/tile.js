@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import './tile.css';
 
 class Tile extends Component {
   render() {
-    return <section>Hello!</section>;
+    let tileName = 'tile' + this.props.number;
+    return <section className={`${tileName} tile`}></section>;
   }
 }
 

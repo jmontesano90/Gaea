@@ -1,0 +1,23 @@
+.tile {
+  border: 1px black solid;
+  /* width: 10px;
+  height: 10px;
+  margin: 10px;
+  flex: 0 22%; */
+  width: 24%;
+  padding-bottom: 24%; /* Same as width, sets height */
+  margin-bottom: 1%; /* (100-32*3)/2 */
+  position: relative;
+}
+
+.tile1 {
+  background-color: pink;
+}
+
+.tile2 {
+  background-color: orange;
+}
+
+.tile3 {
+  background-color: blue;
+}
