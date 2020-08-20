@@ -5,7 +5,6 @@ import arrayData from '../../dummyData/arrayData';
 
 class TileHolder extends Component {
   render() {
-    console.log(arrayData.arrayData[0]);
     let tile1 = arrayData.arrayData[0].map((data, index) => (
       <Tile number={0}></Tile>
     ));
@@ -20,10 +19,6 @@ class TileHolder extends Component {
     ));
     return (
       <section className='tiles'>
-        {/* <div className='fourths'>{tile1}</div>
-        <div className='fourths'>{tile2}</div>
-        <div className='fourths'>{tile3}</div>
-        <div className='fourths'>{tile4}</div> */}
         {tile1}
         {tile2}
         {tile3}
