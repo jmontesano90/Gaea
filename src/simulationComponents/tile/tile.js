@@ -4,7 +4,13 @@ import './tile.css';
 class Tile extends Component {
   render() {
     let tileName = 'tile' + this.props.number;
-    return <section className={`${tileName} tile`}></section>;
+    let color = this.props.grid.color;
+    return (
+      <section
+        style={{ backgroundColor: `${color}` }}
+        className={`${tileName} tile`}
+      ></section>
+    );
   }
 }
 
