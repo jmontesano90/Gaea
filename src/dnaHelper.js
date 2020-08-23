@@ -61,13 +61,13 @@ const DnaHelper = {
     for (i = 0; i < dna.length; i += 2) {
       if (
         dna.charAt(i) === dna.charAt(i).toUpperCase() ||
-        dna.charAt(i) === dna.charAt(i + 1).toUpperCase()
+        dna.charAt(i + 1) === dna.charAt(i).toUpperCase()
       ) {
         DNAValues[dna.charAt(i).toUpperCase()] = this.dnaKey[
           dna.charAt(i).toUpperCase()
         ];
       } else {
-        DNAValues[dna.charAt(i).toLowerCase()] = this.dnaKey[
+        DNAValues[dna.charAt(i).toUpperCase()] = this.dnaKey[
           dna.charAt(i).toLowerCase()
         ];
       }
@@ -77,3 +77,170 @@ const DnaHelper = {
 };
 
 export default DnaHelper;
+
+// grid: [
+//   {
+//     0: {
+//       species: 2,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 1,
+//       color: 'green',
+//     },
+//     1: {
+//       species: 2,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 2,
+//       color: 'green',
+//     },
+//     2: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 3,
+//       color: 'red',
+//     },
+//     3: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 4,
+//       color: 'red',
+//     },
+//   },
+//   {
+//     0: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 5,
+//     },
+//     1: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 6,
+//       color: 'red',
+//     },
+//     2: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 7,
+//       water: true,
+//       color: 'blue',
+//     },
+//     3: {
+//       species: 3,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 8,
+//       color: 'yellow',
+//     },
+//   },
+//   {
+//     0: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 9,
+//       color: 'red',
+//     },
+//     1: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 10,
+//       color: 'red',
+//     },
+//     2: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 11,
+//     },
+//     3: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 12,
+//     },
+//   },
+//   {
+//     0: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 13,
+//       color: 'red',
+//     },
+//     1: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 14,
+//     },
+//     2: {
+//       species: 1,
+//       pGRI: 20,
+//       nGRI: 10,
+//       pBI: 200,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 15,
+//       color: 'red',
+//     },
+//     3: {
+//       species: 0,
+//       pGRI: 0,
+//       nGRI: 0,
+//       pBI: 0,
+//       fNear: true,
+//       wNear: false,
+//       tileNumber: 16,
+//     },
+//   },
+// ],

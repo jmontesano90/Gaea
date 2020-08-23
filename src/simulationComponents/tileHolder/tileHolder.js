@@ -7,8 +7,8 @@ import GridContext from '../../GridContext';
 class TileHolder extends Component {
   static contextType = GridContext;
   render() {
-    console.log(this.context.grid[0]);
-    console.log(arrayData.arrayData[0]);
+    //console.log(this.context.grid[0]);
+    //console.log(arrayData.arrayData[0]);
     let tile1 = arrayData.arrayData[0].map((data, index) => (
       <Tile number={0} grid={this.context.grid[0][index]} key={index}></Tile>
     ));

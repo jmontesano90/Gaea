@@ -9,6 +9,7 @@ class App extends Component {
   //pGRI: Positive growth rate influence on plants of the same species in adjacent grids
   //nGRI: Negative growth rate influence on plants of different species in adjacent grids
   //pBI: Positive breeding influence on plants of the same species in this grid
+  //GRiTotal: Total of all influence from adjacent grids for growth
   //fNear: Friendly species in adjacent grid
   //wNear: water tile in adjacent grid
   //plants:  Points to the index in plant state showing which plants are in this grid
@@ -16,44 +17,44 @@ class App extends Component {
     grid: [
       {
         0: {
-          species: 2,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 1,
-          color: 'green',
         },
         1: {
-          species: 2,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 2,
-          color: 'green',
         },
         2: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 3,
-          color: 'red',
         },
         3: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 4,
-          color: 'red',
         },
       },
       {
@@ -62,69 +63,70 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 5,
         },
         1: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 6,
-          color: 'red',
         },
         2: {
           species: 0,
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 7,
-          water: true,
-          color: 'blue',
         },
         3: {
-          species: 3,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 8,
-          color: 'yellow',
         },
       },
       {
         0: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 9,
-          color: 'red',
         },
         1: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 10,
-          color: 'red',
         },
         2: {
           species: 0,
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 11,
         },
@@ -133,59 +135,120 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 12,
         },
       },
       {
         0: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 13,
-          color: 'red',
         },
         1: {
           species: 0,
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 14,
         },
         2: {
-          species: 1,
-          pGRI: 20,
-          nGRI: 10,
-          pBI: 200,
-          fNear: true,
+          species: 0,
+          pGRI: 0,
+          nGRI: 0,
+          pBI: 0,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 15,
-          color: 'red',
         },
         3: {
           species: 0,
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
-          fNear: true,
+          GRiTotal: 0,
+          fNear: false,
           wNear: false,
           tileNumber: 16,
         },
       },
     ],
-    plants: [],
+    plants: [
+      {
+        gridLoc: [0, 0],
+        dna: 'AaBbCcdDeEFfGgHhIiJjLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 0],
+        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 1],
+        dna: 'aabbcCdDeeFfGgHhIiJjLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 2,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 1],
+        dna: 'aabbcCDDeeFfGgHhIiJjLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 2,
+        age: 0,
+      },
+      {
+        gridLoc: [2, 2],
+        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 9,
+        age: 0,
+      },
+      {
+        gridLoc: [2, 2],
+        dna: 'AABBccdDeEFfGghhIiJJLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 9,
+        age: 0,
+      },
+    ],
     turnData: [],
   };
 
   checkAdjacentGRI = (cord1, cord2) => {
     let GRITotal = 0;
     let water = false;
+    let friendly = false;
     if (cord1 - 1 >= 0) {
       //check above for a adjacent plants of opposite species to see if it negatively affects them
       if (
@@ -194,20 +257,21 @@ class App extends Component {
         this.state.grid[cord1 - 1][cord2].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1 - 1][cord2].nGRI;
-        console.log('Subtracting ' + this.state.grid[cord1 - 1][cord2].nGRI);
+        //console.log('Subtracting ' + this.state.grid[cord1 - 1][cord2].nGRI);
       }
       if (
         this.state.grid[cord1 - 1][cord2].species ===
         this.state.grid[cord1][cord2].species
       ) {
         GRITotal += this.state.grid[cord1 - 1][cord2].pGRI;
-        console.log('Adding ' + this.state.grid[cord1 - 1][cord2].pGRI);
+        friendly = true;
+        //console.log('Adding ' + this.state.grid[cord1 - 1][cord2].pGRI);
       }
       if (this.state.grid[cord1 - 1][cord2].water === true) {
-        console.log('water one tile above');
+        //console.log('water one tile above');
         water = true;
       }
-      console.log('One above');
+      //console.log('One above');
     }
 
     if (cord1 + 1 <= 3) {
@@ -218,20 +282,21 @@ class App extends Component {
         this.state.grid[cord1 + 1][cord2].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1 + 1][cord2].nGRI;
-        console.log('Subtracting ' + this.state.grid[cord1 + 1][cord2].nGRI);
+        // console.log('Subtracting ' + this.state.grid[cord1 + 1][cord2].nGRI);
       }
       if (
         this.state.grid[cord1 + 1][cord2].species ===
         this.state.grid[cord1][cord2].species
       ) {
         GRITotal += this.state.grid[cord1 + 1][cord2].pGRI;
-        console.log('Adding ' + this.state.grid[cord1 + 1][cord2].pGRI);
+        friendly = true;
+        //console.log('Adding ' + this.state.grid[cord1 + 1][cord2].pGRI);
       }
       if (this.state.grid[cord1 + 1][cord2].water === true) {
-        console.log('water one tile below');
+        //console.log('water one tile below');
         water = true;
       }
-      console.log('One below');
+      //console.log('One below');
     }
 
     if (cord2 - 1 >= 0) {
@@ -242,20 +307,21 @@ class App extends Component {
         this.state.grid[cord1][cord2 - 1].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1][cord2 - 1].nGRI;
-        console.log('Subtracting ' + this.state.grid[cord1][cord2 - 1].nGRI);
+        //console.log('Subtracting ' + this.state.grid[cord1][cord2 - 1].nGRI);
       }
       if (
         this.state.grid[cord1][cord2 - 1].species ===
         this.state.grid[cord1][cord2].species
       ) {
         GRITotal += this.state.grid[cord1][cord2 - 1].pGRI;
-        console.log('Adding ' + this.state.grid[cord1][cord2 - 1].pGRI);
+        friendly = true;
+        //console.log('Adding ' + this.state.grid[cord1][cord2 - 1].pGRI);
       }
       if (this.state.grid[cord1][cord2 - 1].water === true) {
-        console.log('water one tile to the left');
+        //console.log('water one tile to the left');
         water = true;
       }
-      console.log('One to the left');
+      //console.log('One to the left');
     }
 
     if (cord2 + 1 <= 3) {
@@ -266,23 +332,24 @@ class App extends Component {
         this.state.grid[cord1][cord2 + 1].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1][cord2 + 1].nGRI;
-        console.log('Subtracting ' + this.state.grid[cord1][cord2 + 1].nGRI);
+        //console.log('Subtracting ' + this.state.grid[cord1][cord2 + 1].nGRI);
       }
       if (
         this.state.grid[cord1][cord2 + 1].species ===
         this.state.grid[cord1][cord2].species
       ) {
         GRITotal += this.state.grid[cord1][cord2 + 1].pGRI;
-        console.log('Adding ' + this.state.grid[cord1][cord2 + 1].pGRI);
+        friendly = true;
+        //console.log('Adding ' + this.state.grid[cord1][cord2 + 1].pGRI);
       }
       if (this.state.grid[cord1][cord2 + 1].water === true) {
-        console.log('water one tile to the right');
+        //console.log('water one tile to the right');
         water = true;
       }
-      console.log('One to the right');
+      //console.log('One to the right');
     }
 
-    let info = [GRITotal, water];
+    let info = [GRITotal, water, friendly];
 
     return info;
   };
@@ -358,6 +425,37 @@ class App extends Component {
       return [newCord1, newCord2, possible];
     }
   }
+
+  selfGridCheck() {
+    //iterate over all the grids and check what plants are in them, and what their self buffs are
+    //then once that is done, check how this affects each other
+    let grid = this.state.grid;
+    console.log(grid);
+
+    this.state.plants.map((data, index) => {
+      let dna = DnaHelper.getDNAValues(data.dna);
+      console.log(dna.B[0]);
+      grid[data.gridLoc[0]][data.gridLoc[1]].pGRI += dna.C[0] + dna.D[0];
+      grid[data.gridLoc[0]][data.gridLoc[1]].nGRI += dna.A[0] + dna.B[0];
+      grid[data.gridLoc[0]][data.gridLoc[1]].pBI += dna.E[0] + dna.F[0];
+      grid[data.gridLoc[0]][data.gridLoc[1]].species = data.species;
+    });
+
+    let i = 0;
+    grid.map((tileRow, index) => {
+      for (i = 0; i < 4; i++) {
+        let check = this.checkAdjacentGRI(index, i);
+        grid[index][i].GRiTotal = check[0];
+        grid[index][i].wNear = check[1];
+        grid[index][i].fNear = check[2];
+      }
+    });
+    console.log(grid);
+  }
+  updateGrid = (grid) => {
+    this.setState({ grid: grid });
+  };
+
   render() {
     let cord1 = 0;
     let cord2 = 2;
@@ -366,8 +464,9 @@ class App extends Component {
     //console.log(DnaHelper.breeding(dna1, dna2));
     //console.log(this.checkAdjacentGRI(cord1, cord2));
     //console.log(DnaHelper.getDNAValues(dna1));
-    console.log(this.checkAdjacentEmpty(cord1, cord2));
+    //console.log(this.checkAdjacentEmpty(cord1, cord2));
     //console.log(this.state.grid[1][1].test);
+    this.selfGridCheck();
 
     const value = {
       grid: this.state.grid,
