@@ -187,7 +187,7 @@ class App extends Component {
     plants: [
       {
         gridLoc: [0, 0],
-        dna: 'AaBbCcdDeEFfGgHhIiJjLlMmNnOoPp',
+        dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
         tileNumber: 1,
@@ -195,7 +195,7 @@ class App extends Component {
       },
       {
         gridLoc: [0, 0],
-        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
         tileNumber: 1,
@@ -203,31 +203,31 @@ class App extends Component {
       },
       {
         gridLoc: [1, 0],
-        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        dna: 'AaBbcCdDeEFfGgHhIiJjKKLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 1],
-        dna: 'aabbcCdDeeFfGgHhIiJjLlMmNnOoPp',
-        species: 2,
-        BioMass: 10,
         tileNumber: 2,
         age: 0,
       },
       {
         gridLoc: [0, 1],
-        dna: 'aabbcCDDeeFfGgHhIiJjLlMmNnOoPp',
+        dna: 'aabbcCdDeeFfGgHhIiJjKKLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 2,
+        tileNumber: 5,
+        age: 10,
+      },
+      {
+        gridLoc: [0, 1],
+        dna: 'aabbcCDDeeFfGgHhIiJjKKLlMmNnOoPp',
+        species: 2,
+        BioMass: 1000,
+        tileNumber: 5,
         age: 0,
       },
       {
         gridLoc: [2, 2],
-        dna: 'AaBbcCdDeEFfGgHhIiJjLlMmNnOoPp',
+        dna: 'AaBbcCdDeEFfGgHhIiJjkKLlMmNnOoPp',
         species: 2,
         BioMass: 10,
         tileNumber: 9,
@@ -235,7 +235,7 @@ class App extends Component {
       },
       {
         gridLoc: [2, 2],
-        dna: 'AABBccdDeEFfGghhIiJJLlMmNnOoPp',
+        dna: 'AABBccdDeEFfGghhIiJJkKLlMmNnOoPp',
         species: 2,
         BioMass: 10,
         tileNumber: 9,
@@ -430,11 +430,9 @@ class App extends Component {
     //iterate over all the grids and check what plants are in them, and what their self buffs are
     //then once that is done, check how this affects each other
     let grid = this.state.grid;
-    console.log(grid);
 
     this.state.plants.map((data, index) => {
       let dna = DnaHelper.getDNAValues(data.dna);
-      console.log(dna.B[0]);
       grid[data.gridLoc[0]][data.gridLoc[1]].pGRI += dna.C[0] + dna.D[0];
       grid[data.gridLoc[0]][data.gridLoc[1]].nGRI += dna.A[0] + dna.B[0];
       grid[data.gridLoc[0]][data.gridLoc[1]].pBI += dna.E[0] + dna.F[0];
@@ -450,11 +448,42 @@ class App extends Component {
         grid[index][i].fNear = check[2];
       }
     });
-    console.log(grid);
+    return grid;
   }
   updateGrid = (grid) => {
     this.setState({ grid: grid });
   };
+
+  plantCheck() {
+    let plants = this.state.plants;
+    let dna;
+    let grimReapersToDo = [];
+    let maturePlants = { 1: [], 2: [], 3: [], 4: [] };
+    //plants.splice(index, 1);
+    plants.map((plant, index) => {
+      dna = DnaHelper.getDNAValues(plant.dna);
+      if (plant.age > dna.N[0] + dna.O[0] + dna.P[0]) {
+        grimReapersToDo.push(index);
+      } else {
+        let gri =
+          dna.K[0] +
+          dna.L[0] +
+          dna.M[0] +
+          this.state.grid[plant.gridLoc[0]][plant.gridLoc[1]].GRiTotal / 4;
+        plant.BioMass += gri;
+        if (plant.BioMass < 0) {
+          grimReapersToDo.push(index);
+        } else {
+          plant.age += 1;
+        }
+        if (plant.BioMass >= 500) {
+          maturePlants[plant.species].push(index);
+        }
+        console.log(grimReapersToDo);
+        console.log(maturePlants);
+      }
+    });
+  }
 
   render() {
     let cord1 = 0;
@@ -467,6 +496,7 @@ class App extends Component {
     //console.log(this.checkAdjacentEmpty(cord1, cord2));
     //console.log(this.state.grid[1][1].test);
     this.selfGridCheck();
+    this.plantCheck();
 
     const value = {
       grid: this.state.grid,
