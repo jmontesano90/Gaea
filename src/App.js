@@ -21,6 +21,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -31,6 +32,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -41,6 +43,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -51,6 +54,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -63,6 +67,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -73,6 +78,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -83,6 +89,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -93,6 +100,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -105,6 +113,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -115,6 +124,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -125,6 +135,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -135,6 +146,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -147,6 +159,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -157,6 +170,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -167,6 +181,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -177,6 +192,7 @@ class App extends Component {
           pGRI: 0,
           nGRI: 0,
           pBI: 0,
+          plantCount: 0,
           GRiTotal: 0,
           fNear: false,
           wNear: false,
@@ -189,7 +205,7 @@ class App extends Component {
         gridLoc: [0, 0],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
-        BioMass: 10,
+        BioMass: 1000,
         tileNumber: 1,
         age: 0,
       },
@@ -197,7 +213,15 @@ class App extends Component {
         gridLoc: [0, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
-        BioMass: 10,
+        BioMass: 1000,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 1000,
         tileNumber: 1,
         age: 0,
       },
@@ -213,7 +237,7 @@ class App extends Component {
         gridLoc: [0, 1],
         dna: 'aabbcCdDeeFfGgHhIiJjKKLlMmNnOoPp',
         species: 2,
-        BioMass: 10,
+        BioMass: 1050,
         tileNumber: 5,
         age: 10,
       },
@@ -221,7 +245,7 @@ class App extends Component {
         gridLoc: [0, 1],
         dna: 'aabbcCDDeeFfGgHhIiJjKKLlMmNnOoPp',
         species: 2,
-        BioMass: 1000,
+        BioMass: 10,
         tileNumber: 5,
         age: 0,
       },
@@ -229,7 +253,7 @@ class App extends Component {
         gridLoc: [2, 2],
         dna: 'AaBbcCdDeEFfGgHhIiJjkKLlMmNnOoPp',
         species: 2,
-        BioMass: 10,
+        BioMass: 1050,
         tileNumber: 9,
         age: 0,
       },
@@ -430,6 +454,13 @@ class App extends Component {
     //iterate over all the grids and check what plants are in them, and what their self buffs are
     //then once that is done, check how this affects each other
     let grid = this.state.grid;
+    let i = 0;
+    grid.map((tileRow, index) => {
+      for (i = 0; i < 4; i++) {
+        let check = this.checkAdjacentGRI(index, i);
+        grid[index][i].plantCount = 0;
+      }
+    });
 
     this.state.plants.map((data, index) => {
       let dna = DnaHelper.getDNAValues(data.dna);
@@ -437,9 +468,9 @@ class App extends Component {
       grid[data.gridLoc[0]][data.gridLoc[1]].nGRI += dna.A[0] + dna.B[0];
       grid[data.gridLoc[0]][data.gridLoc[1]].pBI += dna.E[0] + dna.F[0];
       grid[data.gridLoc[0]][data.gridLoc[1]].species = data.species;
+      grid[data.gridLoc[0]][data.gridLoc[1]].plantCount += 1;
     });
 
-    let i = 0;
     grid.map((tileRow, index) => {
       for (i = 0; i < 4; i++) {
         let check = this.checkAdjacentGRI(index, i);
@@ -455,10 +486,15 @@ class App extends Component {
   };
 
   plantCheck() {
+    //This function performs a lot, so I'll paraphrase its purpose here
+    //first checks the plants lifespan vs its current to see if its dies at the end of this turn
+    //Then grows according to its own growth rate plus the grids self buff/debuff for gr
+    //increase the age of the plant by one
+    //checks to see if its viable to breed, then breeds compatible species
     let plants = this.state.plants;
     let dna;
     let grimReapersToDo = [];
-    let maturePlants = { 1: [], 2: [], 3: [], 4: [] };
+    let maturePlants = [];
     //plants.splice(index, 1);
     plants.map((plant, index) => {
       dna = DnaHelper.getDNAValues(plant.dna);
@@ -477,12 +513,71 @@ class App extends Component {
           plant.age += 1;
         }
         if (plant.BioMass >= 500) {
-          maturePlants[plant.species].push(index);
+          maturePlants.push(plant);
         }
-        console.log(grimReapersToDo);
-        console.log(maturePlants);
+
+        //console.log(grimReapersToDo);
+        //console.log(maturePlants[1]);
       }
     });
+    //console.log(maturePlants);
+    let i;
+    let breedingLottery = [];
+    if (maturePlants.length > 0) {
+      breedingLottery.push(maturePlants[0]);
+      //console.log(breedingLottery);
+      for (i = 0; i < maturePlants.length; i++) {
+        if (maturePlants[i].tileNumber === breedingLottery[0].tileNumber) {
+          breedingLottery.push(maturePlants[i]);
+        } else {
+          let y = 0;
+          let lotteryWinners = [];
+          for (y = 0; y < breedingLottery.length; y++) {
+            let breedingChance =
+              this.state.grid[breedingLottery[y].gridLoc[0]][
+                breedingLottery[y].gridLoc[1]
+              ].pBI / 450;
+            if (breedingChance > Math.random()) {
+              lotteryWinners.push(breedingLottery[y]);
+            }
+          }
+          let z = 0;
+          for (z = 1; z < lotteryWinners.length; z += 2) {
+            let childDna = DnaHelper.breeding(
+              lotteryWinners[z].dna,
+              lotteryWinners[z - 1].dna
+            );
+            let newPlant = {
+              gridLoc: lotteryWinners[z].gridLoc,
+              dna: childDna,
+              species: lotteryWinners[z].species,
+              BioMass: 10,
+              tileNumber: lotteryWinners[z].tileNumber,
+              age: 0,
+            };
+            if (
+              this.state.grid[lotteryWinners[z].gridLoc[0]][
+                lotteryWinners[z].gridLoc[1]
+              ].plantCount >= 4
+            ) {
+              if (Math.random() > 0.7) {
+                let newH = this.checkAdjacentEmpty(
+                  lotteryWinners[z].gridLoc[0],
+                  lotteryWinners[z].gridLoc[1]
+                );
+                let newHome = [newH[0], newH[1]];
+                newPlant.gridLoc = newHome;
+                plants.push(newPlant);
+              } else {
+                plants.push(newPlant);
+              }
+            }
+          }
+        }
+      }
+    }
+    console.log(this.state.grid);
+    console.log(plants);
   }
 
   render() {
@@ -493,7 +588,7 @@ class App extends Component {
     //console.log(DnaHelper.breeding(dna1, dna2));
     //console.log(this.checkAdjacentGRI(cord1, cord2));
     //console.log(DnaHelper.getDNAValues(dna1));
-    //console.log(this.checkAdjacentEmpty(cord1, cord2));
+    console.log(this.checkAdjacentEmpty(cord1, cord2));
     //console.log(this.state.grid[1][1].test);
     this.selfGridCheck();
     this.plantCheck();
