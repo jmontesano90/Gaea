@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TileHolder from './simulationComponents/tileHolder/tileHolder';
 import GridContext from './GridContext';
 import DnaHelper from './dnaHelper';
+import NextButton from './buttons/nextButton/nextButton';
 
 class App extends Component {
   //Explanation of variables in grid
@@ -205,7 +206,7 @@ class App extends Component {
         gridLoc: [0, 0],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
-        BioMass: 1000,
+        BioMass: 10,
         tileNumber: 1,
         age: 0,
       },
@@ -213,7 +214,7 @@ class App extends Component {
         gridLoc: [0, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
-        BioMass: 1000,
+        BioMass: 10,
         tileNumber: 1,
         age: 0,
       },
@@ -221,7 +222,15 @@ class App extends Component {
         gridLoc: [0, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
-        BioMass: 1000,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
         tileNumber: 1,
         age: 0,
       },
@@ -237,7 +246,7 @@ class App extends Component {
         gridLoc: [0, 1],
         dna: 'aabbcCdDeeFfGgHhIiJjKKLlMmNnOoPp',
         species: 2,
-        BioMass: 1050,
+        BioMass: 10,
         tileNumber: 5,
         age: 10,
       },
@@ -253,7 +262,7 @@ class App extends Component {
         gridLoc: [2, 2],
         dna: 'AaBbcCdDeEFfGgHhIiJjkKLlMmNnOoPp',
         species: 2,
-        BioMass: 1050,
+        BioMass: 10,
         tileNumber: 9,
         age: 0,
       },
@@ -383,12 +392,14 @@ class App extends Component {
     let newCord2;
     let possible = true;
     let info = {};
+    console.log(this.state.grid[cord1][cord2].plantCount);
     if (cord1 - 1 >= 0) {
       //check above to see if above is empty
       if (
         this.state.grid[cord1 - 1][cord2].species ===
-          this.state.grid[cord1][cord2].species &&
-        this.state.grid[cord1 - 1][cord2].water === false
+          this.state.grid[cord1][cord2].species ||
+        (this.state.grid[cord1 - 1][cord2].water === false &&
+          this.state.grid[cord1 - 1][cord2].plantCount <= 6)
       ) {
         newCord1 = [cord1 - 1];
         newCord2 = [cord2];
@@ -403,8 +414,9 @@ class App extends Component {
       //check below to see if below is empty
       if (
         this.state.grid[cord1 + 1][cord2].species ===
-          this.state.grid[cord1][cord2].species &&
-        this.state.grid[cord1 + 1][cord2].water === false
+          this.state.grid[cord1][cord2].species ||
+        (this.state.grid[cord1 + 1][cord2].water === false &&
+          this.state.grid[cord1 + 1][cord2].plantCount <= 6)
       ) {
         newCord1 = [cord1 + 1];
         newCord2 = [cord2];
@@ -418,8 +430,9 @@ class App extends Component {
       //check below to see if to the left is empty
       if (
         this.state.grid[cord1][cord2 - 1].species ===
-          this.state.grid[cord1][cord2].species &&
-        this.state.grid[cord1][cord2 - 1].water === false
+          this.state.grid[cord1][cord2].species ||
+        (this.state.grid[cord1][cord2 - 1].water === false &&
+          this.state.grid[cord1][cord2 - 1].plantCount <= 6)
       ) {
         newCord1 = [cord1];
         newCord2 = [cord2 - 1];
@@ -435,7 +448,8 @@ class App extends Component {
       if (
         this.state.grid[cord1][cord2 + 1].species ===
           this.state.grid[cord1][cord2].species ||
-        this.state.grid[cord1][cord2 + 1].water === false
+        (this.state.grid[cord1][cord2 + 1].water === false &&
+          this.state.grid[cord1][cord2 + 1].plantCount <= 6)
       ) {
         newCord1 = [cord1];
         newCord2 = [cord2 + 1];
@@ -455,10 +469,13 @@ class App extends Component {
     //then once that is done, check how this affects each other
     let grid = this.state.grid;
     let i = 0;
+    //console.log(this.state.grid);
     grid.map((tileRow, index) => {
       for (i = 0; i < 4; i++) {
-        let check = this.checkAdjacentGRI(index, i);
         grid[index][i].plantCount = 0;
+        grid[index][i].pBI = 0;
+        grid[index][i].nGRI = 0;
+        grid[index][i].pGRI = 0;
       }
     });
 
@@ -512,7 +529,7 @@ class App extends Component {
         } else {
           plant.age += 1;
         }
-        if (plant.BioMass >= 500) {
+        if (plant.BioMass >= 300) {
           maturePlants.push(plant);
         }
 
@@ -521,6 +538,7 @@ class App extends Component {
       }
     });
     //console.log(maturePlants);
+
     let i;
     let breedingLottery = [];
     if (maturePlants.length > 0) {
@@ -536,9 +554,12 @@ class App extends Component {
             let breedingChance =
               this.state.grid[breedingLottery[y].gridLoc[0]][
                 breedingLottery[y].gridLoc[1]
-              ].pBI / 450;
+              ].pBI / 500;
+            //console.log('Rolling to breed...');
+            //console.log(breedingChance);
             if (breedingChance > Math.random()) {
               lotteryWinners.push(breedingLottery[y]);
+              //console.log('Plant entered the breeding lottery!');
             }
           }
           let z = 0;
@@ -555,48 +576,86 @@ class App extends Component {
               tileNumber: lotteryWinners[z].tileNumber,
               age: 0,
             };
+            //console.log('New Plant Added!');
+            //plants.push(newPlant);
             if (
               this.state.grid[lotteryWinners[z].gridLoc[0]][
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
+              //console.log(lotteryWinners);
+              //console.log(lotteryWinners[z].gridLoc[1]);
               if (Math.random() > 0.7) {
+                console.log('attempting to put new plant in a different grid');
                 let newH = this.checkAdjacentEmpty(
                   lotteryWinners[z].gridLoc[0],
                   lotteryWinners[z].gridLoc[1]
                 );
-                let newHome = [newH[0], newH[1]];
-                newPlant.gridLoc = newHome;
-                plants.push(newPlant);
-              } else {
-                plants.push(newPlant);
+                console.log(newH[2]);
+                if (newH[2] === true) {
+                  let newHome = [newH[0], newH[1]];
+                  newPlant.gridLoc = newHome;
+                  plants.push(newPlant);
+                  console.log('New PLant added in a different grid!');
+                }
               }
+            }
+            if (
+              this.state.grid[lotteryWinners[z].gridLoc[0]][
+                lotteryWinners[z].gridLoc[1]
+              ].plantCount < 6
+            ) {
+              console.log('New Plant Added in same grid!');
+              plants.push(newPlant);
+            } else {
+              console.log('No Room for new plant!');
             }
           }
         }
       }
     }
-    console.log(this.state.grid);
-    console.log(plants);
+    //console.log(grimReapersToDo);
+    let m = 0;
+    while (m < grimReapersToDo.length) {
+      plants.splice(grimReapersToDo[m], 1);
+      m++;
+    }
+    // console.log(this.state.grid);
+    // console.log(plants);
+    plants.sort((a, b) => (a.tileNumber > b.tileNumber ? 1 : -1));
+    return plants;
   }
+
+  updatePlants = (plants) => {
+    this.setState({ plants: plants });
+  };
+
+  timePass = () => {
+    let updatedGrid = this.selfGridCheck();
+    //console.log(updatedGrid);
+    this.updateGrid(updatedGrid);
+    let updatedPlants = this.plantCheck();
+    console.log(updatedPlants);
+    this.updatePlants(updatedPlants);
+  };
 
   render() {
     let cord1 = 0;
-    let cord2 = 2;
+    let cord2 = 0;
     //let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
     //let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
     //console.log(DnaHelper.breeding(dna1, dna2));
     //console.log(this.checkAdjacentGRI(cord1, cord2));
     //console.log(DnaHelper.getDNAValues(dna1));
-    console.log(this.checkAdjacentEmpty(cord1, cord2));
+    //console.log(this.checkAdjacentEmpty(cord1, cord2));
     //console.log(this.state.grid[1][1].test);
-    this.selfGridCheck();
-    this.plantCheck();
+    //this.selfGridCheck();
+    //this.plantCheck();
 
     const value = {
       grid: this.state.grid,
       plants: this.state.plants,
-
+      timePass: this.timePass,
       turnData: this.state.turnData,
       checkAdjacent: this.checkAdjacent,
     };
@@ -604,6 +663,7 @@ class App extends Component {
       <GridContext.Provider value={value}>
         <main className='App'>
           <TileHolder></TileHolder>
+          <NextButton></NextButton>
         </main>
       </GridContext.Provider>
     );
