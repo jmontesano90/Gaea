@@ -686,28 +686,28 @@ class App extends Component {
               //console.log(' Lottery winners: ');
               //console.log(lotteryWinners);
               //console.log(lotteryWinners[z].gridLoc[1]);
-              let chanceAtMigration = 1;
+              let chanceAtMigration = Math.random();
               //console.log(chanceAtMigration);
-              // if (chanceAtMigration > 0.000001) {
-              //console.log('attempting to put new plant in a different grid');
-              console.log(lotteryWinners[z]);
-              console.log(lotteryWinners[z].gridLoc[0]);
-              console.log(lotteryWinners[z].gridLoc[1]);
-              let newH = this.checkAdjacentEmpty(
-                parseInt(lotteryWinners[z].gridLoc[0]),
-                parseInt(lotteryWinners[z].gridLoc[1])
-              );
-              console.log(newH);
-              if (newH[2] === true) {
-                let newHome = [newH[0], newH[1]];
-                newPlant.gridLoc = newHome;
-                plants.push(newPlant);
-                breedingLottery = [];
-                breedingLottery.push(maturePlants[i]);
-                //console.log('New PLant added in a different grid!');
-                //console.log(newPlant);
+              if (chanceAtMigration > 0.3) {
+                //console.log('attempting to put new plant in a different grid');
+                console.log(lotteryWinners[z]);
+                console.log(lotteryWinners[z].gridLoc[0]);
+                console.log(lotteryWinners[z].gridLoc[1]);
+                let newH = this.checkAdjacentEmpty(
+                  parseInt(lotteryWinners[z].gridLoc[0]),
+                  parseInt(lotteryWinners[z].gridLoc[1])
+                );
+                console.log(newH);
+                if (newH[2] === true) {
+                  let newHome = [newH[0], newH[1]];
+                  newPlant.gridLoc = newHome;
+                  plants.push(newPlant);
+                  breedingLottery = [];
+                  breedingLottery.push(maturePlants[i]);
+                  //console.log('New PLant added in a different grid!');
+                  //console.log(newPlant);
+                }
               }
-              //}
             } else if (
               this.state.grid[lotteryWinners[z].gridLoc[0]][
                 lotteryWinners[z].gridLoc[1]
