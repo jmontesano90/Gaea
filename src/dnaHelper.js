@@ -8,10 +8,10 @@ const DnaHelper = {
     c: [-5],
     D: [15],
     d: [5],
-    E: [40],
+    E: [60],
     e: [1],
-    F: [15],
-    f: [40],
+    F: [30],
+    f: [80],
     G: [1],
     g: [2],
     H: [-1],
@@ -52,7 +52,8 @@ const DnaHelper = {
       dnaO.push(dnaD2[y]);
       //combines the new genes to form a child offspring
     }
-    return dnaO.toString();
+
+    return dnaO.join('');
   },
 
   getDNAValues(dna) {

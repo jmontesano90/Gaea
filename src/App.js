@@ -203,75 +203,147 @@ class App extends Component {
     ],
     plants: [
       {
-        gridLoc: [0, 0],
+        gridLoc: [1, 3],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 3],
+        dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 3],
+        dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 3],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 3],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [1, 3],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 1,
+        BioMass: 10,
+        tileNumber: 8,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 1],
+        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
+        species: 2,
+        BioMass: 10,
+        tileNumber: 14,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        species: 3,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        species: 3,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        species: 3,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        species: 3,
+        BioMass: 10,
+        tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [0, 0],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        species: 3,
+        BioMass: 10,
         tileNumber: 1,
         age: 0,
       },
       {
         gridLoc: [0, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
-        species: 1,
+        species: 3,
         BioMass: 10,
         tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
-        species: 1,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
-        species: 1,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [1, 0],
-        dna: 'AaBbcCdDeEFfGgHhIiJjKKLlMmNnOoPp',
-        species: 1,
-        BioMass: 10,
-        tileNumber: 2,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 1],
-        dna: 'aabbcCdDeeFfGgHhIiJjKKLlMmNnOoPp',
-        species: 2,
-        BioMass: 10,
-        tileNumber: 5,
-        age: 10,
-      },
-      {
-        gridLoc: [0, 1],
-        dna: 'aabbcCDDeeFfGgHhIiJjKKLlMmNnOoPp',
-        species: 2,
-        BioMass: 10,
-        tileNumber: 5,
-        age: 0,
-      },
-      {
-        gridLoc: [2, 2],
-        dna: 'AaBbcCdDeEFfGgHhIiJjkKLlMmNnOoPp',
-        species: 2,
-        BioMass: 10,
-        tileNumber: 9,
-        age: 0,
-      },
-      {
-        gridLoc: [2, 2],
-        dna: 'AABBccdDeEFfGghhIiJJkKLlMmNnOoPp',
-        species: 2,
-        BioMass: 10,
-        tileNumber: 9,
         age: 0,
       },
     ],
@@ -388,78 +460,82 @@ class App extends Component {
   };
 
   checkAdjacentEmpty(cord1, cord2) {
-    let newCord1;
-    let newCord2;
-    let possible = true;
+    let newCord1 = -1;
+    let newCord2 = -1;
+    let possible = false;
     let info = {};
-    console.log(this.state.grid[cord1][cord2].plantCount);
-    if (cord1 - 1 >= 0) {
+    let direction = Math.round(Math.random() * 4);
+    console.log(direction);
+
+    if (direction === 1 && cord1 - 1 >= 0) {
       //check above to see if above is empty
       if (
-        this.state.grid[cord1 - 1][cord2].species ===
-          this.state.grid[cord1][cord2].species ||
-        (this.state.grid[cord1 - 1][cord2].water === false &&
-          this.state.grid[cord1 - 1][cord2].plantCount <= 6)
+        (this.state.grid[cord1 - 1][cord2].species ===
+          this.state.grid[cord1][cord2].species &&
+          this.state.grid[cord1 - 1][cord2].plantCount <= 6) ||
+        this.state.grid[cord1 - 1][cord2].species === 0
       ) {
         newCord1 = [cord1 - 1];
         newCord2 = [cord2];
+        possible = true;
         info = [newCord1, newCord2, possible];
         return info;
       }
 
       console.log('One above');
     }
-
-    if (cord1 + 1 <= 3) {
+    if (direction === 2 && cord1 + 1 <= 3) {
       //check below to see if below is empty
       if (
-        this.state.grid[cord1 + 1][cord2].species ===
-          this.state.grid[cord1][cord2].species ||
-        (this.state.grid[cord1 + 1][cord2].water === false &&
-          this.state.grid[cord1 + 1][cord2].plantCount <= 6)
+        (this.state.grid[cord1 + 1][cord2].species ===
+          this.state.grid[cord1][cord2].species &&
+          this.state.grid[cord1 + 1][cord2].plantCount <= 6) ||
+        this.state.grid[cord1 + 1][cord2].species === 0
       ) {
         newCord1 = [cord1 + 1];
         newCord2 = [cord2];
+        possible = true;
         info = [newCord1, newCord2, possible];
         return info;
       }
 
       console.log('One below');
     }
-    if (cord2 - 1 >= 0) {
+    if (direction === 3 && cord2 - 1 >= 0) {
       //check below to see if to the left is empty
       if (
-        this.state.grid[cord1][cord2 - 1].species ===
-          this.state.grid[cord1][cord2].species ||
-        (this.state.grid[cord1][cord2 - 1].water === false &&
-          this.state.grid[cord1][cord2 - 1].plantCount <= 6)
+        (this.state.grid[cord1][cord2 - 1].species ===
+          this.state.grid[cord1][cord2].species &&
+          this.state.grid[cord1][cord2 - 1].plantCount <= 6) ||
+        this.state.grid[cord1][cord2 - 1].species === 0
       ) {
         newCord1 = [cord1];
         newCord2 = [cord2 - 1];
+        possible = true;
         info = [newCord1, newCord2, possible];
         return info;
       }
 
       console.log('One to the left');
     }
-
-    if (cord2 + 1 <= 3) {
+    if (direction === 4 && cord2 + 1 <= 3) {
       //check below to see if to the right is empty
       if (
-        this.state.grid[cord1][cord2 + 1].species ===
-          this.state.grid[cord1][cord2].species ||
-        (this.state.grid[cord1][cord2 + 1].water === false &&
-          this.state.grid[cord1][cord2 + 1].plantCount <= 6)
+        (this.state.grid[cord1][cord2 + 1].species ===
+          this.state.grid[cord1][cord2].species &&
+          this.state.grid[cord1][cord2 + 1].plantCount <= 6) ||
+        this.state.grid[cord1][cord2 + 1].species === 0
       ) {
         newCord1 = [cord1];
         newCord2 = [cord2 + 1];
+        possible = true;
         info = [newCord1, newCord2, possible];
         return info;
+      } else {
+        return [newCord1, newCord2, possible];
       }
-
       console.log('One to the right');
     } else {
-      possible = false;
       return [newCord1, newCord2, possible];
     }
   }
@@ -509,6 +585,7 @@ class App extends Component {
     //increase the age of the plant by one
     //checks to see if its viable to breed, then breeds compatible species
     let plants = this.state.plants;
+    //console.log(plants);
     let dna;
     let grimReapersToDo = [];
     let maturePlants = [];
@@ -524,12 +601,12 @@ class App extends Component {
           dna.M[0] +
           this.state.grid[plant.gridLoc[0]][plant.gridLoc[1]].GRiTotal / 4;
         plant.BioMass += gri;
-        if (plant.BioMass < 0) {
+        if (plant.BioMass < 0 || plant.BioMass > 1500) {
           grimReapersToDo.push(index);
         } else {
           plant.age += 1;
         }
-        if (plant.BioMass >= 300) {
+        if (plant.BioMass >= 200) {
           maturePlants.push(plant);
         }
 
@@ -537,24 +614,35 @@ class App extends Component {
         //console.log(maturePlants[1]);
       }
     });
+    //console.log('Mature Plants');
     //console.log(maturePlants);
-
     let i;
     let breedingLottery = [];
-    if (maturePlants.length > 0) {
+    if (maturePlants.length > 1) {
       breedingLottery.push(maturePlants[0]);
+      //console.log('Breeding lottery');
       //console.log(breedingLottery);
       for (i = 0; i < maturePlants.length; i++) {
-        if (maturePlants[i].tileNumber === breedingLottery[0].tileNumber) {
+        if (
+          maturePlants[i].tileNumber === breedingLottery[0].tileNumber &&
+          maturePlants.length - 1 > i
+        ) {
+          //console.log('Add plant to breeding lottery');
           breedingLottery.push(maturePlants[i]);
         } else {
           let y = 0;
+          //console.log(i);
+          let dna = DnaHelper.getDNAValues(maturePlants[i].dna);
+          //console.log(dna);
+          let plantI = parseInt(dna.E) + parseInt(dna.F);
+          //console.log(plantI);
           let lotteryWinners = [];
           for (y = 0; y < breedingLottery.length; y++) {
-            let breedingChance =
+            let gridI =
               this.state.grid[breedingLottery[y].gridLoc[0]][
                 breedingLottery[y].gridLoc[1]
-              ].pBI / 500;
+              ].pBI / 3;
+            let breedingChance = (plantI + gridI) / 300;
             //console.log('Rolling to breed...');
             //console.log(breedingChance);
             if (breedingChance > Math.random()) {
@@ -562,52 +650,76 @@ class App extends Component {
               //console.log('Plant entered the breeding lottery!');
             }
           }
+          //console.log(breedingLottery);
           let z = 0;
           for (z = 1; z < lotteryWinners.length; z += 2) {
+            console.log(lotteryWinners[z].dna);
+            console.log(lotteryWinners[z - 1].dna);
             let childDna = DnaHelper.breeding(
               lotteryWinners[z].dna,
               lotteryWinners[z - 1].dna
             );
+            if (lotteryWinners[z].dna === lotteryWinners[z - 1].dna.length) {
+            }
             let newPlant = {
               gridLoc: lotteryWinners[z].gridLoc,
               dna: childDna,
-              species: lotteryWinners[z].species,
+              species: parseInt(lotteryWinners[z].species),
               BioMass: 10,
-              tileNumber: lotteryWinners[z].tileNumber,
+              tileNumber: parseInt(lotteryWinners[z].tileNumber),
               age: 0,
             };
+            console.log(parseInt(newPlant.gridLoc[0]));
             //console.log('New Plant Added!');
             //plants.push(newPlant);
+            //console.log(lotteryWinners[z]);
+            // console.log(
+            //   this.state.grid[lotteryWinners[z].gridLoc[0]][
+            //     lotteryWinners[z].gridLoc[1]
+            //   ].plantCount
+            // );
             if (
               this.state.grid[lotteryWinners[z].gridLoc[0]][
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
+              //console.log(' Lottery winners: ');
               //console.log(lotteryWinners);
               //console.log(lotteryWinners[z].gridLoc[1]);
-              if (Math.random() > 0.7) {
-                console.log('attempting to put new plant in a different grid');
-                let newH = this.checkAdjacentEmpty(
-                  lotteryWinners[z].gridLoc[0],
-                  lotteryWinners[z].gridLoc[1]
-                );
-                console.log(newH[2]);
-                if (newH[2] === true) {
-                  let newHome = [newH[0], newH[1]];
-                  newPlant.gridLoc = newHome;
-                  plants.push(newPlant);
-                  console.log('New PLant added in a different grid!');
-                }
+              let chanceAtMigration = 1;
+              //console.log(chanceAtMigration);
+              // if (chanceAtMigration > 0.000001) {
+              //console.log('attempting to put new plant in a different grid');
+              console.log(lotteryWinners[z]);
+              console.log(lotteryWinners[z].gridLoc[0]);
+              console.log(lotteryWinners[z].gridLoc[1]);
+              let newH = this.checkAdjacentEmpty(
+                parseInt(lotteryWinners[z].gridLoc[0]),
+                parseInt(lotteryWinners[z].gridLoc[1])
+              );
+              console.log(newH);
+              if (newH[2] === true) {
+                let newHome = [newH[0], newH[1]];
+                newPlant.gridLoc = newHome;
+                plants.push(newPlant);
+                breedingLottery = [];
+                breedingLottery.push(maturePlants[i]);
+                //console.log('New PLant added in a different grid!');
+                //console.log(newPlant);
               }
-            }
-            if (
+              //}
+            } else if (
               this.state.grid[lotteryWinners[z].gridLoc[0]][
                 lotteryWinners[z].gridLoc[1]
               ].plantCount < 6
             ) {
               console.log('New Plant Added in same grid!');
+              breedingLottery = [];
+              breedingLottery.push(maturePlants[i]);
               plants.push(newPlant);
             } else {
+              breedingLottery = [];
+              breedingLottery.push(maturePlants[i]);
               console.log('No Room for new plant!');
             }
           }
@@ -635,16 +747,22 @@ class App extends Component {
     //console.log(updatedGrid);
     this.updateGrid(updatedGrid);
     let updatedPlants = this.plantCheck();
-    console.log(updatedPlants);
+    //console.log(updatedPlants);
     this.updatePlants(updatedPlants);
+    // console.log('    ');
+    // console.log('    ');
+    // console.log('    ');
+    // console.log('    ');
+    // console.log('New Turn');
   };
 
   render() {
-    let cord1 = 0;
-    let cord2 = 0;
-    //let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
-    //let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
-    //console.log(DnaHelper.breeding(dna1, dna2));
+    // let cord1 = 0;
+    // let cord2 = 3;
+    let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
+    let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
+    // let dna3 = '';
+    console.log(DnaHelper.breeding(dna1, dna2));
     //console.log(this.checkAdjacentGRI(cord1, cord2));
     //console.log(DnaHelper.getDNAValues(dna1));
     //console.log(this.checkAdjacentEmpty(cord1, cord2));
