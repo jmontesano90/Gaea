@@ -203,99 +203,99 @@ class App extends Component {
     ],
     plants: [
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbCcdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [1, 3],
+        gridLoc: [0, 3],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 1,
         BioMass: 10,
-        tileNumber: 8,
+        tileNumber: 4,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
-        gridLoc: [3, 1],
+        gridLoc: [3, 0],
         dna: 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp',
         species: 2,
         BioMass: 10,
-        tileNumber: 14,
+        tileNumber: 13,
         age: 0,
       },
       {
@@ -324,7 +324,7 @@ class App extends Component {
       },
       {
         gridLoc: [0, 0],
-        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        dna: 'aABbcCddeEFfggHhIiJjkkLlmmNnOoPp',
         species: 3,
         BioMass: 10,
         tileNumber: 1,
@@ -332,7 +332,7 @@ class App extends Component {
       },
       {
         gridLoc: [0, 0],
-        dna: 'aaBbcCddeEFfggHhIiJjkkLlmmNnOoPp',
+        dna: 'aABbcCddeEFfggHhIiJjkkLlmmNnOoPp',
         species: 3,
         BioMass: 10,
         tileNumber: 1,
@@ -344,6 +344,62 @@ class App extends Component {
         species: 3,
         BioMass: 10,
         tileNumber: 1,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeEFfggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeeffggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeeffggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
+        age: 0,
+      },
+      {
+        gridLoc: [3, 3],
+        dna: 'aaBbcCddeeffggHhIiJjkkLlmMNnOoPp',
+        species: 4,
+        BioMass: 16,
+        tileNumber: 16,
         age: 0,
       },
     ],
@@ -552,6 +608,7 @@ class App extends Component {
         grid[index][i].pBI = 0;
         grid[index][i].nGRI = 0;
         grid[index][i].pGRI = 0;
+        grid[index][i].species = 0;
       }
     });
 
@@ -564,6 +621,7 @@ class App extends Component {
       grid[data.gridLoc[0]][data.gridLoc[1]].plantCount += 1;
     });
 
+    console.log(this.state.plants[0].dna);
     grid.map((tileRow, index) => {
       for (i = 0; i < 4; i++) {
         let check = this.checkAdjacentGRI(index, i);
@@ -759,16 +817,17 @@ class App extends Component {
   render() {
     // let cord1 = 0;
     // let cord2 = 3;
-    let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
-    let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
+    //let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
+    //let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
     // let dna3 = '';
-    console.log(DnaHelper.breeding(dna1, dna2));
+    //console.log(DnaHelper.breeding(dna1, dna2));
     //console.log(this.checkAdjacentGRI(cord1, cord2));
     //console.log(DnaHelper.getDNAValues(dna1));
     //console.log(this.checkAdjacentEmpty(cord1, cord2));
     //console.log(this.state.grid[1][1].test);
     //this.selfGridCheck();
     //this.plantCheck();
+    DnaHelper.getDNAExppressionValues(this.state.plants);
 
     const value = {
       grid: this.state.grid,
