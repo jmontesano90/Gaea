@@ -10,7 +10,7 @@ class Tile extends Component {
     if (this.props.grid.species === 1) {
       color = 'red';
     } else if (this.props.grid.species === 2) {
-      color = 'purple';
+      color = 'blue';
     } else if (this.props.grid.species === 3) {
       color = 'black';
     } else if (this.props.grid.species === 4) {
