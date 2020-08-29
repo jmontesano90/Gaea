@@ -12,7 +12,7 @@ class Tile extends Component {
     } else if (this.props.grid.species === 2) {
       color = 'blue';
     } else if (this.props.grid.species === 3) {
-      color = 'black';
+      color = 'green';
     } else if (this.props.grid.species === 4) {
       color = 'blue';
     } else {
@@ -23,7 +23,9 @@ class Tile extends Component {
       <section
         style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}
         className={`${tileName} tile`}
-      ></section>
+      >
+        <div>{this.props.grid.tileNumber}</div>
+      </section>
     );
   }
 }

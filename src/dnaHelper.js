@@ -26,12 +26,12 @@ const DnaHelper = {
     l: [50],
     M: [30],
     m: [15],
-    N: [8],
-    n: [6],
-    O: [5],
-    o: [9],
-    P: [5],
-    p: [4],
+    N: [11],
+    n: [16],
+    O: [8],
+    o: [16],
+    P: [7],
+    p: [14],
   },
 
   breeding(dnaM, dnaD) {
@@ -76,175 +76,41 @@ const DnaHelper = {
     return DNAValues;
   },
 
-  // getDNAExppressionValues(plants) {
-  //   let expressionValues = {
-  //     1: [
-  //       {
-  //         A: [0],
-  //         a: [0],
-  //         B: [0],
-  //         b: [0],
-  //         C: [0],
-  //         c: [0],
-  //         D: [0],
-  //         d: [0],
-  //         E: [0],
-  //         e: [0],
-  //         F: [0],
-  //         f: [0],
-  //         G: [0],
-  //         g: [0],
-  //         H: [0],
-  //         h: [0],
-  //         I: [0],
-  //         i: [0],
-  //         J: [0],
-  //         j: [0],
-  //         K: [0],
-  //         k: [0],
-  //         L: [0],
-  //         l: [0],
-  //         M: [0],
-  //         m: [0],
-  //         N: [0],
-  //         n: [0],
-  //         O: [0],
-  //         o: [0],
-  //         P: [0],
-  //         p: [0],
-  //       },
-  //     ],
-  //     2: [
-  //       {
-  //         A: [0],
-  //         a: [0],
-  //         B: [0],
-  //         b: [0],
-  //         C: [0],
-  //         c: [0],
-  //         D: [0],
-  //         d: [0],
-  //         E: [0],
-  //         e: [0],
-  //         F: [0],
-  //         f: [0],
-  //         G: [0],
-  //         g: [0],
-  //         H: [0],
-  //         h: [0],
-  //         I: [0],
-  //         i: [0],
-  //         J: [0],
-  //         j: [0],
-  //         K: [0],
-  //         k: [0],
-  //         L: [0],
-  //         l: [0],
-  //         M: [0],
-  //         m: [0],
-  //         N: [0],
-  //         n: [0],
-  //         O: [0],
-  //         o: [0],
-  //         P: [0],
-  //         p: [0],
-  //       },
-  //     ],
-  //     3: [
-  //       {
-  //         A: [0],
-  //         a: [0],
-  //         B: [0],
-  //         b: [0],
-  //         C: [0],
-  //         c: [0],
-  //         D: [0],
-  //         d: [0],
-  //         E: [0],
-  //         e: [0],
-  //         F: [0],
-  //         f: [0],
-  //         G: [0],
-  //         g: [0],
-  //         H: [0],
-  //         h: [0],
-  //         I: [0],
-  //         i: [0],
-  //         J: [0],
-  //         j: [0],
-  //         K: [0],
-  //         k: [0],
-  //         L: [0],
-  //         l: [0],
-  //         M: [0],
-  //         m: [0],
-  //         N: [0],
-  //         n: [0],
-  //         O: [0],
-  //         o: [0],
-  //         P: [0],
-  //         p: [0],
-  //       },
-  //     ],
-  //     4: [
-  //       {
-  //         A: [0],
-  //         a: [0],
-  //         B: [0],
-  //         b: [0],
-  //         C: [0],
-  //         c: [0],
-  //         D: [0],
-  //         d: [0],
-  //         E: [0],
-  //         e: [0],
-  //         F: [0],
-  //         f: [0],
-  //         G: [0],
-  //         g: [0],
-  //         H: [0],
-  //         h: [0],
-  //         I: [0],
-  //         i: [0],
-  //         J: [0],
-  //         j: [0],
-  //         K: [0],
-  //         k: [0],
-  //         L: [0],
-  //         l: [0],
-  //         M: [0],
-  //         m: [0],
-  //         N: [0],
-  //         n: [0],
-  //         O: [0],
-  //         o: [0],
-  //         P: [0],
-  //         p: [0],
-  //       },
-  //     ],
-  //   };
-  //   let i = 0;
-  //   let allele;
-  //   for (i = 0; i < plants.length; i++) {
-  //     let y;
-  //     for (y = 0; y < plants[i].dna.length; y += 2) {
-  //       if (
-  //         plants[i].dna.charAt(y) === plants[i].dna.charAt(y).toUpperCase() ||
-  //         plants[i].dna.charAt(y + 1) === plants[i].dna.charAt(y).toUpperCase()
-  //       ) {
-  //         allele = plants[i].dna.charAt[y].toUpperCase();
-  //         expressionValues[plants[i].species][0].allele =
-  //           parseInt(expressionValues[plants[i].species][0].allele) + 1;
-  //       } else {
-  //         allele = plants[i].dna.charAt[y].toLowerCase();
-  //         expressionValues[plants[i].species][0].allele =
-  //           parseInt(expressionValues[plants[i].species][0].allele) + 1;
-  //       }
-  //     }
-  //   }
-  //   console.log(expressionValues[plants[2].species][0].A + 1);
-  //   return expressionValues;
-  // },
+  getDNAExppressionValues(plants) {
+    let expressionValues = { 1: { A: 0 }, 2: {}, 3: {}, 4: {} };
+    let dnaTemplate = 'AaBbCcDdEdFfGgHhIiJjKkLlMmNnOoPp';
+    let m = 0;
+    let n = 1;
+    let key = '';
+    for (n = 1; n < 5; n++) {
+      for (m = 0; m < dnaTemplate.length; m++) {
+        key = dnaTemplate.charAt(m);
+        expressionValues[n][key] = 0;
+      }
+    }
+
+    // let i = 0;
+    // let allele;
+    // for (i = 0; i < plants.length; i++) {
+    //   let y;
+    //   for (y = 0; y < plants[i].dna.length; y += 2) {
+    //     if (
+    //       plants[i].dna.charAt(y) === plants[i].dna.charAt(y).toUpperCase() ||
+    //       plants[i].dna.charAt(y + 1) === plants[i].dna.charAt(y).toUpperCase()
+    //     ) {
+    //       allele = plants[i].dna.charAt[y].toUpperCase();
+    //       expressionValues[plants[i].species][0].allele =
+    //         parseInt(expressionValues[plants[i].species][0].allele) + 1;
+    //     } else {
+    //       allele = plants[i].dna.charAt[y].toLowerCase();
+    //       expressionValues[plants[i].species][0].allele =
+    //         parseInt(expressionValues[plants[i].species][0].allele) + 1;
+    //     }
+    //   }
+    // }
+    // console.log(expressionValues[plants[2].species][0].A + 1);
+    return expressionValues;
+  },
 
   randomDNAStrand() {
     let dnaTemplate = 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp';
@@ -260,12 +126,29 @@ const DnaHelper = {
   },
 
   randomPlantGeneration() {
-    let dna = this.randomDNAStrand();
+    let dna = [this.randomDNAStrand(), this.randomDNAStrand()];
     let species = 1;
-    let grid1 = Math.round(Math.random() * 3);
-    let grid2 = Math.round(Math.random() * 3);
-    let gridLoc = [grid1, grid2];
-    let tileNumber = grid1 * 4 + grid2;
+    let gridNumber = 0;
+
+    let grids = [
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+    ];
+    let z = 1;
+    for (z = 1; z < grids.length; z++) {
+      if (
+        grids[z] === null ||
+        (grids[z][0] === grids[z - 1][0] && grids[z][1] === grids[z - 1][1])
+      ) {
+        grids[z] = [
+          Math.round(Math.random() * 3),
+          Math.round(Math.random() * 3),
+        ];
+      }
+    }
+
+    let tileNumber = grids[0][0] * 4 + grids[0][1] + 1;
     let plants = [];
     let plant = {};
     let i = 1;
@@ -273,15 +156,13 @@ const DnaHelper = {
       if (i % 6 === 0) {
         console.log('New Species info');
         species += 1;
-        dna = this.randomDNAStrand();
-        grid1 = Math.round(Math.random() * 3);
-        grid2 = Math.round(Math.random() * 3);
-        gridLoc = [grid1, grid2];
-        tileNumber = grid1 * 4 + grid2;
+        gridNumber += 1;
+        dna = [this.randomDNAStrand(), this.randomDNAStrand()];
+        tileNumber = grids[gridNumber][0] * 4 + grids[gridNumber][1] + 1;
       }
       plant = {
-        gridLoc: gridLoc,
-        dna: dna,
+        gridLoc: grids[gridNumber],
+        dna: dna[Math.round(Math.random() * 1)],
         species: species,
         BioMass: 10,
         tileNumber: tileNumber,
@@ -289,7 +170,7 @@ const DnaHelper = {
       };
       plants.push(plant);
     }
-
+    console.log(plants[0]);
     return plants;
   },
 };

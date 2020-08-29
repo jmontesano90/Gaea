@@ -409,7 +409,7 @@ class App extends Component {
   componentDidMount() {
     let plants = DnaHelper.randomPlantGeneration();
     this.updatePlants(plants);
-    console.log('Hello?');
+    //console.log('Hello?');
   }
 
   checkAdjacentGRI = (cord1, cord2) => {
@@ -424,7 +424,9 @@ class App extends Component {
         this.state.grid[cord1 - 1][cord2].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1 - 1][cord2].nGRI;
-        //console.log('Subtracting ' + this.state.grid[cord1 - 1][cord2].nGRI);
+        // console.log('Subtracting ' + this.state.grid[cord1 - 1][cord2].nGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (
         this.state.grid[cord1 - 1][cord2].species ===
@@ -432,7 +434,9 @@ class App extends Component {
       ) {
         GRITotal += this.state.grid[cord1 - 1][cord2].pGRI;
         friendly = true;
-        //console.log('Adding ' + this.state.grid[cord1 - 1][cord2].pGRI);
+        // console.log('Adding ' + this.state.grid[cord1 - 1][cord2].pGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (this.state.grid[cord1 - 1][cord2].water === true) {
         //console.log('water one tile above');
@@ -450,6 +454,8 @@ class App extends Component {
       ) {
         GRITotal -= this.state.grid[cord1 + 1][cord2].nGRI;
         // console.log('Subtracting ' + this.state.grid[cord1 + 1][cord2].nGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (
         this.state.grid[cord1 + 1][cord2].species ===
@@ -457,13 +463,15 @@ class App extends Component {
       ) {
         GRITotal += this.state.grid[cord1 + 1][cord2].pGRI;
         friendly = true;
-        //console.log('Adding ' + this.state.grid[cord1 + 1][cord2].pGRI);
+        // console.log('Adding ' + this.state.grid[cord1 + 1][cord2].pGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (this.state.grid[cord1 + 1][cord2].water === true) {
         //console.log('water one tile below');
         water = true;
       }
-      //console.log('One below');
+      console.log('One below');
     }
 
     if (cord2 - 1 >= 0) {
@@ -474,7 +482,9 @@ class App extends Component {
         this.state.grid[cord1][cord2 - 1].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1][cord2 - 1].nGRI;
-        //console.log('Subtracting ' + this.state.grid[cord1][cord2 - 1].nGRI);
+        // console.log('Subtracting ' + this.state.grid[cord1][cord2 - 1].nGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (
         this.state.grid[cord1][cord2 - 1].species ===
@@ -482,7 +492,9 @@ class App extends Component {
       ) {
         GRITotal += this.state.grid[cord1][cord2 - 1].pGRI;
         friendly = true;
-        //console.log('Adding ' + this.state.grid[cord1][cord2 - 1].pGRI);
+        // console.log('Adding ' + this.state.grid[cord1][cord2 - 1].pGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (this.state.grid[cord1][cord2 - 1].water === true) {
         //console.log('water one tile to the left');
@@ -499,7 +511,9 @@ class App extends Component {
         this.state.grid[cord1][cord2 + 1].species !== 0
       ) {
         GRITotal -= this.state.grid[cord1][cord2 + 1].nGRI;
-        //console.log('Subtracting ' + this.state.grid[cord1][cord2 + 1].nGRI);
+        // console.log('Subtracting ' + this.state.grid[cord1][cord2 + 1].nGRI);
+        // console.log('[' + cord1 + ',' + cord2 + ']');
+        // console.log('  ');
       }
       if (
         this.state.grid[cord1][cord2 + 1].species ===
@@ -527,7 +541,7 @@ class App extends Component {
     let possible = false;
     let info = {};
     let direction = Math.round(Math.random() * 4);
-    console.log(direction);
+    //console.log(direction);
 
     if (direction === 1 && cord1 - 1 >= 0) {
       //check above to see if above is empty
@@ -544,7 +558,7 @@ class App extends Component {
         return info;
       }
 
-      console.log('One above');
+      //console.log('One above');
     }
     if (direction === 2 && cord1 + 1 <= 3) {
       //check below to see if below is empty
@@ -561,7 +575,7 @@ class App extends Component {
         return info;
       }
 
-      console.log('One below');
+      //console.log('One below');
     }
     if (direction === 3 && cord2 - 1 >= 0) {
       //check below to see if to the left is empty
@@ -578,7 +592,7 @@ class App extends Component {
         return info;
       }
 
-      console.log('One to the left');
+      //console.log('One to the left');
     }
     if (direction === 4 && cord2 + 1 <= 3) {
       //check below to see if to the right is empty
@@ -605,19 +619,21 @@ class App extends Component {
   selfGridCheck() {
     //iterate over all the grids and check what plants are in them, and what their self buffs are
     //then once that is done, check how this affects each other
-    let grid = this.state.grid;
+    let grid = this.state.grid.slice();
     let i = 0;
+    let y = 0;
     //console.log(this.state.grid);
-    grid.map((tileRow, index) => {
+    console.log(grid);
+    for (y = 0; y < grid.length; y++) {
       for (i = 0; i < 4; i++) {
-        grid[index][i].plantCount = 0;
-        grid[index][i].pBI = 0;
-        grid[index][i].nGRI = 0;
-        grid[index][i].pGRI = 0;
-        grid[index][i].species = 0;
+        grid[y][i].plantCount = 0;
+        grid[y][i].pBI = 0;
+        grid[y][i].nGRI = 0;
+        grid[y][i].pGRI = 0;
+        grid[y][i].species = 0;
       }
-    });
-
+    }
+    console.log(grid);
     this.state.plants.map((data, index) => {
       let dna = DnaHelper.getDNAValues(data.dna);
       grid[data.gridLoc[0]][data.gridLoc[1]].pGRI += dna.C[0] + dna.D[0];
@@ -626,8 +642,8 @@ class App extends Component {
       grid[data.gridLoc[0]][data.gridLoc[1]].species = data.species;
       grid[data.gridLoc[0]][data.gridLoc[1]].plantCount += 1;
     });
-
-    console.log(this.state.plants[0].dna);
+    console.log(grid);
+    //console.log(this.state.plants[0].dna);
     grid.map((tileRow, index) => {
       for (i = 0; i < 4; i++) {
         let check = this.checkAdjacentGRI(index, i);
@@ -636,6 +652,7 @@ class App extends Component {
         grid[index][i].fNear = check[2];
       }
     });
+    console.log(grid);
     return grid;
   }
   updateGrid = (grid) => {
@@ -657,6 +674,7 @@ class App extends Component {
     plants.map((plant, index) => {
       dna = DnaHelper.getDNAValues(plant.dna);
       if (plant.age > dna.N[0] + dna.O[0] + dna.P[0]) {
+        console.log('Plant died of old age');
         grimReapersToDo.push(index);
       } else {
         let gri =
@@ -665,7 +683,8 @@ class App extends Component {
           dna.M[0] +
           this.state.grid[plant.gridLoc[0]][plant.gridLoc[1]].GRiTotal / 4;
         plant.BioMass += gri;
-        if (plant.BioMass < 0 || plant.BioMass > 1500) {
+        if (plant.BioMass < 0) {
+          console.log('Plant 2 smol');
           grimReapersToDo.push(index);
         } else {
           plant.age += 1;
@@ -717,8 +736,8 @@ class App extends Component {
           //console.log(breedingLottery);
           let z = 0;
           for (z = 1; z < lotteryWinners.length; z += 2) {
-            console.log(lotteryWinners[z].dna);
-            console.log(lotteryWinners[z - 1].dna);
+            //console.log(lotteryWinners[z].dna);
+            //console.log(lotteryWinners[z - 1].dna);
             let childDna = DnaHelper.breeding(
               lotteryWinners[z].dna,
               lotteryWinners[z - 1].dna
@@ -733,38 +752,24 @@ class App extends Component {
               tileNumber: parseInt(lotteryWinners[z].tileNumber),
               age: 0,
             };
-            console.log(parseInt(newPlant.gridLoc[0]));
-            //console.log('New Plant Added!');
-            //plants.push(newPlant);
-            //console.log(lotteryWinners[z]);
-            // console.log(
-            //   this.state.grid[lotteryWinners[z].gridLoc[0]][
-            //     lotteryWinners[z].gridLoc[1]
-            //   ].plantCount
-            // );
             if (
               this.state.grid[lotteryWinners[z].gridLoc[0]][
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
-              //console.log(' Lottery winners: ');
-              //console.log(lotteryWinners);
-              //console.log(lotteryWinners[z].gridLoc[1]);
-              let chanceAtMigration = Math.random();
+              let chanceAtMigration = this.state.plants.length / 300;
               //console.log(chanceAtMigration);
-              if (chanceAtMigration > 0.3) {
-                //console.log('attempting to put new plant in a different grid');
-                console.log(lotteryWinners[z]);
-                console.log(lotteryWinners[z].gridLoc[0]);
-                console.log(lotteryWinners[z].gridLoc[1]);
+              if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
                   parseInt(lotteryWinners[z].gridLoc[0]),
                   parseInt(lotteryWinners[z].gridLoc[1])
                 );
-                console.log(newH);
+
                 if (newH[2] === true) {
                   let newHome = [newH[0], newH[1]];
                   newPlant.gridLoc = newHome;
+                  newPlant.tileNumber =
+                    parseInt(newH[0]) * 4 + parseInt(newH[1]) + 1;
                   plants.push(newPlant);
                   breedingLottery = [];
                   breedingLottery.push(maturePlants[i]);
@@ -777,14 +782,14 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount < 6
             ) {
-              console.log('New Plant Added in same grid!');
+              //console.log('New Plant Added in same grid!');
               breedingLottery = [];
               breedingLottery.push(maturePlants[i]);
               plants.push(newPlant);
             } else {
               breedingLottery = [];
               breedingLottery.push(maturePlants[i]);
-              console.log('No Room for new plant!');
+              //console.log('No Room for new plant!');
             }
           }
         }
@@ -808,34 +813,14 @@ class App extends Component {
 
   timePass = () => {
     let updatedGrid = this.selfGridCheck();
-    //console.log(updatedGrid);
     this.updateGrid(updatedGrid);
     let updatedPlants = this.plantCheck();
-    //console.log(updatedPlants);
     this.updatePlants(updatedPlants);
-    // console.log('    ');
-    // console.log('    ');
-    // console.log('    ');
-    // console.log('    ');
-    // console.log('New Turn');
   };
 
   render() {
-    // let cord1 = 0;
-    // let cord2 = 3;
-    //let dna1 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
-    //let dna2 = 'AaBBCCDdeeffgGhHiIjJlLJJKK';
-    // let dna3 = '';
-    //console.log(DnaHelper.breeding(dna1, dna2));
-    //console.log(this.checkAdjacentGRI(cord1, cord2));
-    //console.log(DnaHelper.getDNAValues(dna1));
-    //console.log(this.checkAdjacentEmpty(cord1, cord2));
-    //console.log(this.state.grid[1][1].test);
-    //this.selfGridCheck();
-    //this.plantCheck();
-    //DnaHelper.getDNAExppressionValues(this.state.plants);
-    //console.log(DnaHelper.randomPlantGeneration());
-
+    //console.log(this.checkAdjacentGRI(0, 0));
+    //console.log(DnaHelper.getDNAExppressionValues(this.state.plants));
     const value = {
       grid: this.state.grid,
       plants: this.state.plants,
