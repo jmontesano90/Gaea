@@ -623,7 +623,6 @@ class App extends Component {
     let i = 0;
     let y = 0;
     //console.log(this.state.grid);
-    console.log(grid);
     for (y = 0; y < grid.length; y++) {
       for (i = 0; i < 4; i++) {
         grid[y][i].plantCount = 0;
@@ -633,7 +632,7 @@ class App extends Component {
         grid[y][i].species = 0;
       }
     }
-    console.log(grid);
+    //console.log(grid);
     this.state.plants.map((data, index) => {
       let dna = DnaHelper.getDNAValues(data.dna);
       grid[data.gridLoc[0]][data.gridLoc[1]].pGRI += dna.C[0] + dna.D[0];
@@ -642,7 +641,7 @@ class App extends Component {
       grid[data.gridLoc[0]][data.gridLoc[1]].species = data.species;
       grid[data.gridLoc[0]][data.gridLoc[1]].plantCount += 1;
     });
-    console.log(grid);
+    //console.log(grid);
     //console.log(this.state.plants[0].dna);
     grid.map((tileRow, index) => {
       for (i = 0; i < 4; i++) {
@@ -652,7 +651,7 @@ class App extends Component {
         grid[index][i].fNear = check[2];
       }
     });
-    console.log(grid);
+    //console.log(grid);
     return grid;
   }
   updateGrid = (grid) => {
@@ -705,6 +704,8 @@ class App extends Component {
       breedingLottery.push(maturePlants[0]);
       //console.log('Breeding lottery');
       //console.log(breedingLottery);
+      console.log(maturePlants);
+
       for (i = 0; i < maturePlants.length; i++) {
         if (
           maturePlants[i].tileNumber === breedingLottery[0].tileNumber &&
@@ -714,6 +715,7 @@ class App extends Component {
           breedingLottery.push(maturePlants[i]);
         } else {
           let y = 0;
+          console.log(breedingLottery);
           //console.log(i);
           let dna = DnaHelper.getDNAValues(maturePlants[i].dna);
           //console.log(dna);
@@ -773,7 +775,7 @@ class App extends Component {
                   plants.push(newPlant);
                   breedingLottery = [];
                   breedingLottery.push(maturePlants[i]);
-                  //console.log('New PLant added in a different grid!');
+                  console.log('New PLant added in a different grid!');
                   //console.log(newPlant);
                 }
               }
@@ -782,15 +784,16 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount < 6
             ) {
-              //console.log('New Plant Added in same grid!');
+              console.log('New Plant Added in same grid!');
               breedingLottery = [];
               breedingLottery.push(maturePlants[i]);
               plants.push(newPlant);
-            } else {
-              breedingLottery = [];
-              breedingLottery.push(maturePlants[i]);
-              //console.log('No Room for new plant!');
             }
+          }
+          {
+            breedingLottery = [];
+            breedingLottery.push(maturePlants[i]);
+            //console.log('No Room for new plant!');
           }
         }
       }
