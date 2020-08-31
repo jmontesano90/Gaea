@@ -1,8 +1,8 @@
 const DnaHelper = {
   dnaKey: {
-    A: [10],
-    a: [-5],
-    B: [5],
+    A: [12],
+    a: [5],
+    B: [15],
     b: [-15],
     C: [10],
     c: [-5],
@@ -77,7 +77,13 @@ const DnaHelper = {
   },
 
   getDNAExppressionValues(plants) {
-    let expressionValues = { 1: { A: 0 }, 2: {}, 3: {}, 4: {} };
+    let expressionValues = {
+      1: { total: 0 },
+      2: { total: 0 },
+      3: { total: 0 },
+      4: { total: 0 },
+    };
+
     let dnaTemplate = 'AaBbCcDdEdFfGgHhIiJjKkLlMmNnOoPp';
     let m = 0;
     let n = 1;
@@ -89,26 +95,33 @@ const DnaHelper = {
       }
     }
 
-    // let i = 0;
-    // let allele;
-    // for (i = 0; i < plants.length; i++) {
-    //   let y;
-    //   for (y = 0; y < plants[i].dna.length; y += 2) {
-    //     if (
-    //       plants[i].dna.charAt(y) === plants[i].dna.charAt(y).toUpperCase() ||
-    //       plants[i].dna.charAt(y + 1) === plants[i].dna.charAt(y).toUpperCase()
-    //     ) {
-    //       allele = plants[i].dna.charAt[y].toUpperCase();
-    //       expressionValues[plants[i].species][0].allele =
-    //         parseInt(expressionValues[plants[i].species][0].allele) + 1;
-    //     } else {
-    //       allele = plants[i].dna.charAt[y].toLowerCase();
-    //       expressionValues[plants[i].species][0].allele =
-    //         parseInt(expressionValues[plants[i].species][0].allele) + 1;
-    //     }
-    //   }
-    // }
-    // console.log(expressionValues[plants[2].species][0].A + 1);
+    let z = 0;
+    for (z = 0; z < plants.length; z++) {
+      expressionValues[plants[z].species].total++;
+    }
+
+    let i = 0;
+    let gene = '';
+    for (i = 0; i < plants.length; i++) {
+      let y;
+      for (y = 0; y < plants[i].dna.length; y += 2) {
+        if (
+          plants[i].dna.charAt(y) === plants[i].dna.charAt(y).toUpperCase() ||
+          plants[i].dna.charAt(y + 1) === plants[i].dna.charAt(y).toUpperCase()
+        ) {
+          // gene = plants[i].dna.toString();
+          // console.log(gene.charAt(y));
+          gene = plants[i].dna.charAt(y).toUpperCase();
+          expressionValues[plants[i].species][gene] =
+            parseInt(expressionValues[plants[i].species][gene]) + 1;
+        } else {
+          gene = plants[i].dna.charAt(y).toLowerCase();
+          expressionValues[plants[i].species][gene] =
+            parseInt(expressionValues[plants[i].species][gene]) + 1;
+        }
+      }
+    }
+
     return expressionValues;
   },
 

@@ -24,7 +24,7 @@ class Tile extends Component {
         style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}
         className={`${tileName} tile`}
       >
-        <div>{this.props.grid.tileNumber}</div>
+        {/* <div>{this.props.grid.tileNumber}</div> */}
       </section>
     );
   }

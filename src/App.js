@@ -3,7 +3,7 @@ import TileHolder from './simulationComponents/tileHolder/tileHolder';
 import GridContext from './GridContext';
 import DnaHelper from './dnaHelper';
 import NextButton from './buttons/nextButton/nextButton';
-
+import InfoHolder from './simulationComponents/infoHolder/infoHolder';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -471,7 +471,7 @@ class App extends Component {
         //console.log('water one tile below');
         water = true;
       }
-      console.log('One below');
+      //console.log('One below');
     }
 
     if (cord2 - 1 >= 0) {
@@ -665,6 +665,7 @@ class App extends Component {
     //increase the age of the plant by one
     //checks to see if its viable to breed, then breeds compatible species
     let plants = this.state.plants;
+    let plantLength = this.state.plants.length;
     //console.log(plants);
     let dna;
     let grimReapersToDo = [];
@@ -704,7 +705,7 @@ class App extends Component {
       breedingLottery.push(maturePlants[0]);
       //console.log('Breeding lottery');
       //console.log(breedingLottery);
-      console.log(maturePlants);
+      //console.log(maturePlants);
 
       for (i = 0; i < maturePlants.length; i++) {
         if (
@@ -715,7 +716,7 @@ class App extends Component {
           breedingLottery.push(maturePlants[i]);
         } else {
           let y = 0;
-          console.log(breedingLottery);
+          //console.log(breedingLottery);
           //console.log(i);
           let dna = DnaHelper.getDNAValues(maturePlants[i].dna);
           //console.log(dna);
@@ -759,8 +760,8 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
-              let chanceAtMigration = this.state.plants.length / 300;
-              //console.log(chanceAtMigration);
+              let chanceAtMigration = plantLength / 96;
+              console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
                   parseInt(lotteryWinners[z].gridLoc[0]),
@@ -774,8 +775,9 @@ class App extends Component {
                     parseInt(newH[0]) * 4 + parseInt(newH[1]) + 1;
                   plants.push(newPlant);
                   breedingLottery = [];
+                  this.updateGrid(this.selfGridCheck());
                   breedingLottery.push(maturePlants[i]);
-                  console.log('New PLant added in a different grid!');
+                  //console.log('New PLant added in a different grid!');
                   //console.log(newPlant);
                 }
               }
@@ -784,7 +786,7 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount < 6
             ) {
-              console.log('New Plant Added in same grid!');
+              //console.log('New Plant Added in same grid!');
               breedingLottery = [];
               breedingLottery.push(maturePlants[i]);
               plants.push(newPlant);
@@ -819,6 +821,7 @@ class App extends Component {
     this.updateGrid(updatedGrid);
     let updatedPlants = this.plantCheck();
     this.updatePlants(updatedPlants);
+    console.log('Button pushed');
   };
 
   render() {
@@ -836,6 +839,11 @@ class App extends Component {
         <main className='App'>
           <TileHolder></TileHolder>
           <NextButton></NextButton>
+          <InfoHolder
+            expressionValues={DnaHelper.getDNAExppressionValues(
+              this.state.plants
+            )}
+          ></InfoHolder>
         </main>
       </GridContext.Provider>
     );
