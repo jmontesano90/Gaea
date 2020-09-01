@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './infoTile.css';
+import { Link } from 'react-router-dom';
 
 class InfoTile extends Component {
   render() {
@@ -10,11 +12,36 @@ class InfoTile extends Component {
     } else if (this.props.species === 2) {
       color = 'Green';
     }
-    let message = this.props.expressionValues.total + ' of species ' + color;
-    if (this.props.expressionValues.total === 0) {
+
+    let message =
+      this.props.expressionValues[this.props.expressionValues.length - 1][
+        this.props.species + 1
+      ].total +
+      ' ' +
+      color;
+    if (
+      this.props.expressionValues[this.props.expressionValues.length - 1][
+        this.props.species + 1
+      ].total === 0
+    ) {
       message = color + ' has gone extinct.';
     }
-    return <div> {message}</div>;
+    return (
+      <div className='infoTile'>
+        <Link
+          to={{
+            pathname: `/genes/${color}`,
+            state: {
+              expressionValues: this.props.expressionValues[
+                this.props.expressionValues.length - 1
+              ][this.props.species + 1],
+            },
+          }}
+        >
+          {message}
+        </Link>
+      </div>
+    );
   }
 }
 

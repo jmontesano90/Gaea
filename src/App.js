@@ -3,7 +3,9 @@ import TileHolder from './simulationComponents/tileHolder/tileHolder';
 import GridContext from './GridContext';
 import DnaHelper from './dnaHelper';
 import NextButton from './buttons/nextButton/nextButton';
+import { Route } from 'react-router-dom';
 import InfoHolder from './simulationComponents/infoHolder/infoHolder';
+import GeneHolder from './simulationComponents/geneHolder/geneHolder';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -689,7 +691,7 @@ class App extends Component {
         } else {
           plant.age += 1;
         }
-        if (plant.BioMass >= 500) {
+        if (plant.BioMass >= 1000) {
           maturePlants.push(plant);
         }
 
@@ -815,12 +817,18 @@ class App extends Component {
   updatePlants = (plants) => {
     this.setState({ plants: plants });
   };
+  updateTurns = () => {
+    let turnData = this.state.turnData;
+    turnData.push(DnaHelper.getDNAExppressionValues(this.state.plants));
+    this.setState({ turnData: turnData });
+  };
 
   timePass = () => {
     let updatedGrid = this.selfGridCheck();
     this.updateGrid(updatedGrid);
     let updatedPlants = this.plantCheck();
     this.updatePlants(updatedPlants);
+    this.updateTurns();
     console.log('Button pushed');
   };
 
@@ -839,11 +847,8 @@ class App extends Component {
         <main className='App'>
           <TileHolder></TileHolder>
           <NextButton></NextButton>
-          <InfoHolder
-            expressionValues={DnaHelper.getDNAExppressionValues(
-              this.state.plants
-            )}
-          ></InfoHolder>
+          <Route path='/' component={InfoHolder} />
+          <Route exact path='/genes/:color' component={GeneHolder}></Route>
         </main>
       </GridContext.Provider>
     );
