@@ -1,0 +1,17 @@
+.geneCategory {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.geneInformation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.geneTile {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 3px;
+}

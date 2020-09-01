@@ -3,6 +3,10 @@ import './infoTile.css';
 import { Link } from 'react-router-dom';
 
 class InfoTile extends Component {
+  state = {
+    expressionValues: this.props.expressionValues,
+    species: this.props.species,
+  };
   render() {
     let color = '';
     if (this.props.species === 0) {
@@ -32,9 +36,10 @@ class InfoTile extends Component {
           to={{
             pathname: `/genes/${color}`,
             state: {
-              expressionValues: this.props.expressionValues[
-                this.props.expressionValues.length - 1
-              ][this.props.species + 1],
+              species: color,
+              expressionValues: this.state.expressionValues[
+                this.state.expressionValues.length - 1
+              ][this.state.species + 1],
             },
           }}
         >

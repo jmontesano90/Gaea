@@ -6,6 +6,7 @@ import NextButton from './buttons/nextButton/nextButton';
 import { Route } from 'react-router-dom';
 import InfoHolder from './simulationComponents/infoHolder/infoHolder';
 import GeneHolder from './simulationComponents/geneHolder/geneHolder';
+import GeneTile from './simulationComponents/geneTile/geneTile';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -848,7 +849,8 @@ class App extends Component {
           <TileHolder></TileHolder>
           <NextButton></NextButton>
           <Route path='/' component={InfoHolder} />
-          <Route exact path='/genes/:color' component={GeneHolder}></Route>
+          <Route exact path='/genes/:color' component={GeneHolder} />
+          <Route exact path='/genes/:color/:genes' component={GeneTile} />
         </main>
       </GridContext.Provider>
     );
