@@ -37,7 +37,9 @@ class InfoTile extends Component {
             pathname: `/genes/${color}`,
             state: {
               species: color,
-              expressionValues: this.state.expressionValues[
+              speciesNumber: this.props.species,
+              expressionValues: this.state.expressionValues,
+              currentValues: this.state.expressionValues[
                 this.state.expressionValues.length - 1
               ][this.state.species + 1],
             },
