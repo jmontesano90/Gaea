@@ -60,7 +60,7 @@ class GeneHolder extends Component {
                       this.props.location.state.currentValues.total) *
                     100,
                   D:
-                    (this.props.location.state.currentValues.d /
+                    (this.props.location.state.currentValues.D /
                       this.props.location.state.currentValues.total) *
                     100,
                   d:
@@ -149,7 +149,7 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/LS`,
                 state: {
                   name: 'LS',
-                  listofGenes: 'NnOoPp',
+                  listOfGenes: 'NnOoPp',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
                   N:
