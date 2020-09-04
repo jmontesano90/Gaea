@@ -7,7 +7,14 @@ import './geneTile.css';
 class GeneTile extends Component {
   render() {
     let genes = this.props.location.state.listOfGenes.split('');
-
+    let color = '';
+    if (this.props.location.state.speciesNumber === 0) {
+      color = 'Red';
+    } else if (this.props.location.state.speciesNumber === 1) {
+      color = 'Blue';
+    } else if (this.props.location.state.speciesNumber === 2) {
+      color = 'Green';
+    }
     let valuesClass = '';
     let valuesO = '';
     if (genes.length == 4) {
@@ -43,7 +50,9 @@ class GeneTile extends Component {
     ));
     return (
       <div className='traitInformation'>
-        <h2 className='title'>{this.props.location.state.name}</h2>
+        <h2 className='title'>
+          {color}: {this.props.location.state.name}
+        </h2>
 
         <div>
           <div className='valueTitles'>

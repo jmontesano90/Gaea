@@ -1,7 +1,7 @@
 const DnaHelper = {
   dnaKey: {
-    A: [10],
-    a: [5],
+    A: [-2],
+    a: [6],
     B: [7],
     b: [-15],
     C: [10],

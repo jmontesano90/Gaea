@@ -7,6 +7,8 @@ import { Route } from 'react-router-dom';
 import InfoHolder from './simulationComponents/infoHolder/infoHolder';
 import GeneHolder from './simulationComponents/geneHolder/geneHolder';
 import GeneTile from './simulationComponents/geneTile/geneTile';
+import Nav from './supplementary/nav/nav';
+import HomePage from './supplementary/homePage/homePage';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -763,7 +765,7 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
-              let chanceAtMigration = plantLength / 96;
+              let chanceAtMigration = plantLength / 120;
               console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
@@ -846,6 +848,9 @@ class App extends Component {
     return (
       <GridContext.Provider value={value}>
         <main className='App'>
+          <Route path='/' component={Nav} />
+          <Route path='/home' component={HomePage} />
+          <Route path='simulation' component={TileHolder} />
           <TileHolder></TileHolder>
           <NextButton></NextButton>
           <Route path='/' component={InfoHolder} />
