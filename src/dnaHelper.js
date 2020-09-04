@@ -34,6 +34,19 @@ const DnaHelper = {
     p: [14],
   },
 
+  traitExplanation: {
+    nGRi:
+      'nGRi stands for Negative Growth Rate Influence, and these genes determine how much of a negative impact this plant will have on adjacent plants of differing species.  Higher numbers have a larger impact, negative numbers actually help other species of plants.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+    pGRi:
+      'pGRi stands for Positive Growth Rate Influence, and these genes determine how much of a positive influence this plant has on adjacent plants of the same species.  Higher is better.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+    pBi:
+      'pBi stands for Positive Breeding Influence, and these genes increase the chances of breeding for plants in the same tile.  Higher is better.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+    GR:
+      'GR stands for Growth Rate, and these genes influence how much biomass is gained per "turn".  This stat is influenced by pGRi and nGRi.  Plants will not breed until they hit a biomass treshold, so having a higher growth rate means they will start breeding earlier.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+    LS:
+      'LS stands for Life Span, and these genes influence how long the plants stay alive.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+  },
+
   breeding(dnaM, dnaD) {
     let dnaM2 = [];
     let dnaD2 = [];
@@ -149,24 +162,27 @@ const DnaHelper = {
       [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
     ];
     let z = 1;
-    for (z = 1; z < grids.length; z++) {
-      if (
-        grids[z] === null ||
-        (grids[z][0] === grids[z - 1][0] && grids[z][1] === grids[z - 1][1])
-      ) {
-        grids[z] = [
-          Math.round(Math.random() * 3),
-          Math.round(Math.random() * 3),
-        ];
+    let hackFrauds = 1;
+    for (hackFrauds = 1; hackFrauds < grids.length; hackFrauds++) {
+      for (z = 1; z < grids.length; z++) {
+        if (
+          grids[z] === null ||
+          (grids[z][0] === grids[z - 1][0] && grids[z][1] === grids[z - 1][1])
+        ) {
+          grids[z] = [
+            Math.round(Math.random() * 3),
+            Math.round(Math.random() * 3),
+          ];
+        }
       }
     }
 
     let tileNumber = grids[0][0] * 4 + grids[0][1] + 1;
     let plants = [];
     let plant = {};
-    let i = 1;
-    for (i = 1; i <= 17; i++) {
-      if (i % 6 === 0) {
+    let i = 0;
+    for (i = 0; i < 18; i++) {
+      if (i % 6 === 0 && i !== 0) {
         console.log('New Species info');
         species += 1;
         gridNumber += 1;

@@ -17,6 +17,11 @@ class InfoTile extends Component {
       color = 'Green';
     }
 
+    console.log(
+      this.props.expressionValues[this.props.expressionValues.length - 1][
+        this.props.species + 1
+      ].total
+    );
     let message =
       this.props.expressionValues[this.props.expressionValues.length - 1][
         this.props.species + 1

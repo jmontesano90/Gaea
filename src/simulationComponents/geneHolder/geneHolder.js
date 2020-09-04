@@ -6,8 +6,7 @@ class GeneHolder extends Component {
   render() {
     return (
       <div className='geneCategory'>
-        <div>{this.props.location.state.species}</div>
-        <div>{this.props.location.state.currentValues.total}</div>
+        <h2 className='title'>{this.props.location.state.species}</h2>
         <section className='geneInformation'>
           <div className='geneTile'>
             {' '}
@@ -16,25 +15,29 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/nGRi`,
                 state: {
                   name: 'nGRi',
-                  listOfGenes: 'AaBb',
+                  listOfGenes: 'ABab',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
-                  A:
+                  A: Math.round(
                     (this.props.location.state.currentValues.A /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  a:
+                      100
+                  ),
+                  a: Math.round(
                     (this.props.location.state.currentValues.a /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  B:
+                      100
+                  ),
+                  B: Math.round(
                     (this.props.location.state.currentValues.B /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  b:
+                      100
+                  ),
+                  b: Math.round(
                     (this.props.location.state.currentValues.b /
                       this.props.location.state.currentValues.total) *
-                    100,
+                      100
+                  ),
                 },
               }}
             >
@@ -48,25 +51,29 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/pGRi`,
                 state: {
                   name: 'pGRi',
-                  listOfGenes: 'CcDd',
+                  listOfGenes: 'CDcd',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
-                  C:
+                  C: Math.round(
                     (this.props.location.state.currentValues.C /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  c:
+                      100
+                  ),
+                  c: Math.round(
                     (this.props.location.state.currentValues.c /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  D:
+                      100
+                  ),
+                  D: Math.round(
                     (this.props.location.state.currentValues.D /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  d:
+                      100
+                  ),
+                  d: Math.round(
                     (this.props.location.state.currentValues.d /
                       this.props.location.state.currentValues.total) *
-                    100,
+                      100
+                  ),
                 },
               }}
             >
@@ -79,25 +86,29 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/pBi`,
                 state: {
                   name: 'pBi',
-                  listOfGenes: 'EeFf',
+                  listOfGenes: 'EFef',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
-                  E:
+                  E: Math.round(
                     (this.props.location.state.currentValues.E /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  e:
+                      100
+                  ),
+                  e: Math.round(
                     (this.props.location.state.currentValues.e /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  F:
+                      100
+                  ),
+                  F: Math.round(
                     (this.props.location.state.currentValues.F /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  f:
+                      100
+                  ),
+                  f: Math.round(
                     (this.props.location.state.currentValues.f /
                       this.props.location.state.currentValues.total) *
-                    100,
+                      100
+                  ),
                 },
               }}
             >
@@ -110,33 +121,39 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/GR`,
                 state: {
                   name: 'GR',
-                  listOfGenes: 'KkLlMm',
+                  listOfGenes: 'KLMklm',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
-                  K:
+                  K: Math.round(
                     (this.props.location.state.currentValues.K /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  k:
+                      100
+                  ),
+                  k: Math.round(
                     (this.props.location.state.currentValues.k /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  L:
+                      100
+                  ),
+                  L: Math.round(
                     (this.props.location.state.currentValues.L /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  l:
+                      100
+                  ),
+                  l: Math.round(
                     (this.props.location.state.currentValues.l /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  M:
+                      100
+                  ),
+                  M: Math.round(
                     (this.props.location.state.currentValues.M /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  m:
+                      100
+                  ),
+                  m: Math.round(
                     (this.props.location.state.currentValues.m /
                       this.props.location.state.currentValues.total) *
-                    100,
+                      100
+                  ),
                 },
               }}
             >
@@ -149,33 +166,41 @@ class GeneHolder extends Component {
                 pathname: `/genes/${this.props.location.state.species}/LS`,
                 state: {
                   name: 'LS',
-                  listOfGenes: 'NnOoPp',
+                  listOfGenes: 'NPOnpo',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
-                  N:
+                  N: Math.round(
                     (this.props.location.state.currentValues.N /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  n:
-                    (this.props.location.state.currentValues.n /
-                      this.props.location.state.currentValues.total) *
-                    100,
-                  O:
+                      100
+                  ),
+                  O: Math.round(
                     (this.props.location.state.currentValues.O /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  o:
-                    (this.props.location.state.currentValues.o /
-                      this.props.location.state.currentValues.total) *
-                    100,
-                  P:
+                      100
+                  ),
+                  P: Math.round(
                     (this.props.location.state.currentValues.P /
                       this.props.location.state.currentValues.total) *
-                    100,
-                  p:
+                      100
+                  ),
+                  n: Math.round(
+                    (this.props.location.state.currentValues.n /
+                      this.props.location.state.currentValues.total) *
+                      100
+                  ),
+
+                  o: Math.round(
+                    (this.props.location.state.currentValues.o /
+                      this.props.location.state.currentValues.total) *
+                      100
+                  ),
+
+                  p: Math.round(
                     (this.props.location.state.currentValues.p /
                       this.props.location.state.currentValues.total) *
-                    100,
+                      100
+                  ),
                 },
               }}
             >

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
+import './nextButton.css';
 
 class nextButton extends Component {
   static contextType = GridContext;
@@ -29,7 +30,7 @@ class nextButton extends Component {
   render() {
     //console.log(this.state.break);
     return (
-      <section>
+      <section className='simulationButtons'>
         <button onClick={this.context.timePass}>Next!</button>
         <button onClick={this.keepItRolling}>Watch it go!</button>
         <button onClick={this.breakTheCycle}>Stop</button>
