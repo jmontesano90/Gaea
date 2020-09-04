@@ -12,7 +12,7 @@ class GeneHolder extends Component {
             {' '}
             <Link
               to={{
-                pathname: `/genes/${this.props.location.state.species}/nGRi`,
+                pathname: `/simulation/genes/${this.props.location.state.species}/nGRi`,
                 state: {
                   name: 'nGRi',
                   listOfGenes: 'ABab',
@@ -48,7 +48,7 @@ class GeneHolder extends Component {
             {' '}
             <Link
               to={{
-                pathname: `/genes/${this.props.location.state.species}/pGRi`,
+                pathname: `/simulation/genes/${this.props.location.state.species}/pGRi`,
                 state: {
                   name: 'pGRi',
                   listOfGenes: 'CDcd',
@@ -83,7 +83,7 @@ class GeneHolder extends Component {
           <div className='geneTile'>
             <Link
               to={{
-                pathname: `/genes/${this.props.location.state.species}/pBi`,
+                pathname: `/simulation/genes/${this.props.location.state.species}/pBi`,
                 state: {
                   name: 'pBi',
                   listOfGenes: 'EFef',
@@ -118,7 +118,7 @@ class GeneHolder extends Component {
           <div className='geneTile'>
             <Link
               to={{
-                pathname: `/genes/${this.props.location.state.species}/GR`,
+                pathname: `/simulation/genes/${this.props.location.state.species}/GR`,
                 state: {
                   name: 'GR',
                   listOfGenes: 'KLMklm',
@@ -163,7 +163,7 @@ class GeneHolder extends Component {
           <div className='geneTile'>
             <Link
               to={{
-                pathname: `/genes/${this.props.location.state.species}/LS`,
+                pathname: `/simulation/genes/${this.props.location.state.species}/LS`,
                 state: {
                   name: 'LS',
                   listOfGenes: 'NPOnpo',

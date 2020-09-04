@@ -9,6 +9,8 @@ import GeneHolder from './simulationComponents/geneHolder/geneHolder';
 import GeneTile from './simulationComponents/geneTile/geneTile';
 import Nav from './supplementary/nav/nav';
 import HomePage from './supplementary/homePage/homePage';
+import GettingStarted from './supplementary/gettingStarted/gettingStarted';
+import CoreIdeas from './supplementary/coreIdeas/coreIdeas';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -735,7 +737,7 @@ class App extends Component {
               ].pBI / 3;
             let breedingChance = (plantI + gridI) / 300;
             //console.log('Rolling to breed...');
-            //console.log(breedingChance);
+            console.log(breedingChance);
             if (breedingChance > Math.random()) {
               lotteryWinners.push(breedingLottery[y]);
               //console.log('Plant entered the breeding lottery!');
@@ -844,18 +846,24 @@ class App extends Component {
       timePass: this.timePass,
       turnData: this.state.turnData,
       checkAdjacent: this.checkAdjacent,
+      updatePlants: this.updatePlants,
     };
     return (
       <GridContext.Provider value={value}>
         <main className='App'>
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />
-          <Route path='simulation' component={TileHolder} />
-          <TileHolder></TileHolder>
-          <NextButton></NextButton>
-          <Route path='/' component={InfoHolder} />
-          <Route exact path='/genes/:color' component={GeneHolder} />
-          <Route exact path='/genes/:color/:genes' component={GeneTile} />
+          <Route path='/gettingStarted' component={GettingStarted} />
+          <Route path='/CoreIdeas' component={CoreIdeas} />
+          <Route path='/simulation' component={TileHolder} />
+          <Route path='/simulation' component={NextButton} />
+          <Route path='/simulation' component={InfoHolder} />
+          <Route exact path='/simulation/genes/:color' component={GeneHolder} />
+          <Route
+            exact
+            path='/simulation/genes/:color/:genes'
+            component={GeneTile}
+          />
         </main>
       </GridContext.Provider>
     );

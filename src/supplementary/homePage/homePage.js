@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import './homePage.css';
 class HomePage extends Component {
   render() {
     return (
-      <section>
+      <section className='homePage'>
         <h1>Gaea</h1>
         <Link
+          className='link'
           to={{
             pathname: `/simulation`,
           }}
@@ -14,6 +15,7 @@ class HomePage extends Component {
           Run a Simulation!
         </Link>
         <Link
+          className='link'
           to={{
             pathname: `/GettingStarted`,
           }}
@@ -21,6 +23,7 @@ class HomePage extends Component {
           Getting Started
         </Link>
         <Link
+          className='link'
           to={{
             pathname: `/CoreIdeas`,
           }}
@@ -28,6 +31,7 @@ class HomePage extends Component {
           Core Ideas to keep in mind
         </Link>
         <Link
+          className='link'
           to={{
             pathname: `/HowThisWorks`,
           }}

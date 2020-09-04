@@ -39,7 +39,7 @@ class InfoTile extends Component {
       <div className='infoTile'>
         <Link
           to={{
-            pathname: `/genes/${color}`,
+            pathname: `/simulation/genes/${color}`,
             state: {
               species: color,
               speciesNumber: this.props.species,
