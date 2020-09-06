@@ -1,0 +1,13 @@
+.geneGroup {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  border: 1px black solid;
+  margin: 2px;
+}
+
+.genePair {
+  display: flex;
+  direction: column;
+  justify-content: space-between;
+}

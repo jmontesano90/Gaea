@@ -11,6 +11,8 @@ import Nav from './supplementary/nav/nav';
 import HomePage from './supplementary/homePage/homePage';
 import GettingStarted from './supplementary/gettingStarted/gettingStarted';
 import CoreIdeas from './supplementary/coreIdeas/coreIdeas';
+import HowDoesThisWork from './supplementary/howDoesThisWork/howDoesThisWork';
+import CustomDnaForm from './customDna/customDnaForm/customDnaForm';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -855,6 +857,8 @@ class App extends Component {
           <Route path='/home' component={HomePage} />
           <Route path='/gettingStarted' component={GettingStarted} />
           <Route path='/CoreIdeas' component={CoreIdeas} />
+          <Route path='/HowThisWorks' component={HowDoesThisWork} />
+          <Route path='/customDnaForm' component={CustomDnaForm} />
           <Route path='/simulation' component={TileHolder} />
           <Route path='/simulation' component={NextButton} />
           <Route path='/simulation' component={InfoHolder} />

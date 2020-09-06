@@ -38,6 +38,14 @@ class HomePage extends Component {
         >
           How This Works
         </Link>
+        <Link
+          className='link'
+          to={{
+            pathname: `/customDnaForm`,
+          }}
+        >
+          Custom Dna Form
+        </Link>
       </section>
     );
   }
