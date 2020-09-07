@@ -21,7 +21,137 @@ class CustomDnaForm extends Component {
     );
     this.setState({ dnaStrand: tempDna });
   };
+
   render() {
+    let ngriStat =
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(0))[
+          this.state.dnaStrand.charAt(0).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(1))[
+          this.state.dnaStrand.charAt(1).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(2))[
+          this.state.dnaStrand.charAt(2).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(3))[
+          this.state.dnaStrand.charAt(3).toUpperCase()
+        ]
+      );
+
+    let pgriStat =
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(4))[
+          this.state.dnaStrand.charAt(4).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(5))[
+          this.state.dnaStrand.charAt(5).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(6))[
+          this.state.dnaStrand.charAt(6).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(7))[
+          this.state.dnaStrand.charAt(7).toUpperCase()
+        ]
+      );
+
+    let pbiStat =
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(8))[
+          this.state.dnaStrand.charAt(8).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(9))[
+          this.state.dnaStrand.charAt(9).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(10))[
+          this.state.dnaStrand.charAt(10).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(11))[
+          this.state.dnaStrand.charAt(11).toUpperCase()
+        ]
+      );
+
+    let grStat =
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(12))[
+          this.state.dnaStrand.charAt(12).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(13))[
+          this.state.dnaStrand.charAt(13).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(14))[
+          this.state.dnaStrand.charAt(14).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(15))[
+          this.state.dnaStrand.charAt(15).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(16))[
+          this.state.dnaStrand.charAt(16).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(17))[
+          this.state.dnaStrand.charAt(17).toUpperCase()
+        ]
+      );
+
+    let lsStat =
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(18))[
+          this.state.dnaStrand.charAt(18).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(19))[
+          this.state.dnaStrand.charAt(19).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(20))[
+          this.state.dnaStrand.charAt(20).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(21))[
+          this.state.dnaStrand.charAt(21).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(22))[
+          this.state.dnaStrand.charAt(22).toUpperCase()
+        ]
+      ) +
+      parseInt(
+        DnaHelper.getDNAValues(this.state.dnaStrand.charAt(23))[
+          this.state.dnaStrand.charAt(23).toUpperCase()
+        ]
+      );
     return (
       <section className='homePage'>
         <h1>Custom Dna Form</h1>
@@ -35,10 +165,11 @@ class CustomDnaForm extends Component {
         <h3>{this.state.dnaStrand}</h3>
         <Collapsible trigger='nGRi' className='customTrait'>
           <form action='idk'>
+            <div>nGRi value: {ngriStat}</div>
             <div className='geneTitle'>Gene 1</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='A'>
+                <label htmlFor='A'>
                   A
                   <input
                     type='radio'
@@ -47,7 +178,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='a'>
+                <label htmlFor='a'>
                   a
                   <input
                     type='radio'
@@ -58,7 +189,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label for='B'>
+                <label htmlFor='B'>
                   B
                   <input
                     type='radio'
@@ -67,7 +198,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='b'>
+                <label htmlFor='b'>
                   b
                   <input
                     type='radio'
@@ -81,7 +212,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='A'>
+                <label htmlFor='A'>
                   A
                   <input
                     type='radio'
@@ -90,7 +221,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='a'>
+                <label htmlFor='a'>
                   a
                   <input
                     type='radio'
@@ -102,7 +233,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='B'>
+                <label htmlFor='B'>
                   B
                   <input
                     type='radio'
@@ -111,7 +242,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='b'>
+                <label htmlFor='b'>
                   b
                   <input
                     type='radio'
@@ -130,9 +261,10 @@ class CustomDnaForm extends Component {
         <Collapsible trigger='pGRi' className='customTrait'>
           <form action='idk'>
             <div className='geneTitle'>Gene 1</div>
+            <div>pGRi value: {pgriStat}</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='C'>
+                <label htmlFor='C'>
                   C
                   <input
                     type='radio'
@@ -141,7 +273,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='c'>
+                <label htmlFor='c'>
                   c
                   <input
                     type='radio'
@@ -153,7 +285,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='D'>
+                <label htmlFor='D'>
                   D
                   <input
                     type='radio'
@@ -162,7 +294,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='d'>
+                <label htmlFor='d'>
                   d
                   <input
                     type='radio'
@@ -176,7 +308,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='C'>
+                <label htmlFor='C'>
                   C
                   <input
                     type='radio'
@@ -185,7 +317,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='c'>
+                <label htmlFor='c'>
                   c
                   <input
                     type='radio'
@@ -197,7 +329,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='D'>
+                <label htmlFor='D'>
                   D
                   <input
                     type='radio'
@@ -206,7 +338,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='d'>
+                <label htmlFor='d'>
                   d
                   <input
                     type='radio'
@@ -225,9 +357,10 @@ class CustomDnaForm extends Component {
         <Collapsible trigger='pBi' className='customTrait'>
           <form action='idk'>
             <div className='geneTitle'>Gene 1</div>
+            <div>pBi value: {pbiStat}</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='E'>
+                <label htmlFor='E'>
                   E
                   <input
                     type='radio'
@@ -236,7 +369,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='e'>
+                <label htmlFor='e'>
                   e
                   <input
                     type='radio'
@@ -248,7 +381,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='F'>
+                <label htmlFor='F'>
                   F
                   <input
                     type='radio'
@@ -257,7 +390,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='f'>
+                <label htmlFor='f'>
                   f
                   <input
                     type='radio'
@@ -271,7 +404,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='E'>
+                <label htmlFor='E'>
                   E
                   <input
                     type='radio'
@@ -280,7 +413,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='e'>
+                <label htmlFor='e'>
                   e
                   <input
                     type='radio'
@@ -292,7 +425,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='F'>
+                <label htmlFor='F'>
                   F
                   <input
                     type='radio'
@@ -301,7 +434,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='f'>
+                <label htmlFor='f'>
                   f
                   <input
                     type='radio'
@@ -320,9 +453,10 @@ class CustomDnaForm extends Component {
         <Collapsible trigger='GR' className='customTrait'>
           <form action='idk'>
             <div className='geneTitle'>Gene 1</div>
+            <div>GR value: {grStat}</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='K'>
+                <label htmlFor='K'>
                   K
                   <input
                     type='radio'
@@ -331,7 +465,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='k'>
+                <label htmlFor='k'>
                   k
                   <input
                     type='radio'
@@ -343,7 +477,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='L'>
+                <label htmlFor='L'>
                   L
                   <input
                     type='radio'
@@ -352,7 +486,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='l'>
+                <label htmlFor='l'>
                   l
                   <input
                     type='radio'
@@ -363,7 +497,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label for='M'>
+                <label htmlFor='M'>
                   M
                   <input
                     type='radio'
@@ -372,7 +506,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='m'>
+                <label htmlFor='m'>
                   m
                   <input
                     type='radio'
@@ -386,7 +520,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='K'>
+                <label htmlFor='K'>
                   K
                   <input
                     type='radio'
@@ -395,7 +529,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='k'>
+                <label htmlFor='k'>
                   k
                   <input
                     type='radio'
@@ -407,7 +541,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='L'>
+                <label htmlFor='L'>
                   L
                   <input
                     type='radio'
@@ -416,7 +550,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='l'>
+                <label htmlFor='l'>
                   l
                   <input
                     type='radio'
@@ -427,7 +561,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label for='M'>
+                <label htmlFor='M'>
                   M
                   <input
                     type='radio'
@@ -436,7 +570,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='m'>
+                <label htmlFor='m'>
                   m
                   <input
                     type='radio'
@@ -455,9 +589,10 @@ class CustomDnaForm extends Component {
         <Collapsible trigger='LS' className='customTrait'>
           <form action='idk'>
             <div className='geneTitle'>Gene 1</div>
+            <div>LS value: {lsStat}</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='N'>
+                <label htmlFor='N'>
                   N
                   <input
                     type='radio'
@@ -466,7 +601,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='n'>
+                <label htmlFor='n'>
                   n
                   <input
                     type='radio'
@@ -478,7 +613,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='O'>
+                <label htmlFor='O'>
                   O
                   <input
                     type='radio'
@@ -487,7 +622,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='o'>
+                <label htmlFor='o'>
                   o
                   <input
                     type='radio'
@@ -498,7 +633,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label for='P'>
+                <label htmlFor='P'>
                   P
                   <input
                     type='radio'
@@ -507,7 +642,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='p'>
+                <label htmlFor='p'>
                   p
                   <input
                     type='radio'
@@ -521,7 +656,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label for='N'>
+                <label htmlFor='N'>
                   N
                   <input
                     type='radio'
@@ -530,7 +665,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='n'>
+                <label htmlFor='n'>
                   n
                   <input
                     type='radio'
@@ -542,7 +677,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label for='O'>
+                <label htmlFor='O'>
                   O
                   <input
                     type='radio'
@@ -551,7 +686,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='o'>
+                <label htmlFor='o'>
                   o
                   <input
                     type='radio'
@@ -562,7 +697,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label for='P'>
+                <label htmlFor='P'>
                   P
                   <input
                     type='radio'
@@ -571,7 +706,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label for='p'>
+                <label htmlFor='p'>
                   p
                   <input
                     type='radio'
