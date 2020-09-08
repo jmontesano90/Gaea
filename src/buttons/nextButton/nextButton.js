@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './nextButton.css';
-import DnaHelper from '../../dnaHelper';
 
 class nextButton extends Component {
   static contextType = GridContext;

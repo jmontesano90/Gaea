@@ -97,7 +97,7 @@ const DnaHelper = {
       4: { total: 0 },
     };
 
-    let dnaTemplate = 'AaBbCcDdEdFfGgHhIiJjKkLlMmNnOoPp';
+    let dnaTemplate = 'AaBbCcDdEedFfGgHhIiJjKkLlMmNnOoPp';
     let m = 0;
     let n = 1;
     let key = '';
@@ -162,8 +162,8 @@ const DnaHelper = {
       [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
     ];
     let z = 1;
-    let hackFrauds = 1;
-    for (hackFrauds = 1; hackFrauds < grids.length; hackFrauds++) {
+    let hackFrauds = 0;
+    for (hackFrauds = 0; hackFrauds < grids.length; hackFrauds++) {
       for (z = 1; z < grids.length; z++) {
         if (
           grids[z] === null ||

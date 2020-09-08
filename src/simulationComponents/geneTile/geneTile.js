@@ -17,7 +17,7 @@ class GeneTile extends Component {
     }
     let valuesClass = '';
     let valuesO = '';
-    if (genes.length == 4) {
+    if (genes.length === 4) {
       valuesClass = 'values4';
       valuesO = 'valuesO4';
     } else {

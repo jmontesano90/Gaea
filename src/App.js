@@ -13,6 +13,9 @@ import GettingStarted from './supplementary/gettingStarted/gettingStarted';
 import CoreIdeas from './supplementary/coreIdeas/coreIdeas';
 import HowDoesThisWork from './supplementary/howDoesThisWork/howDoesThisWork';
 import CustomDnaForm from './customDna/customDnaForm/customDnaForm';
+import LoginForm from './supplementary/LoginForm/LoginForm';
+import FunBackground from './supplementary/particles/funBackground';
+import './App.css';
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -619,7 +622,6 @@ class App extends Component {
       } else {
         return [newCord1, newCord2, possible];
       }
-      console.log('One to the right');
     } else {
       return [newCord1, newCord2, possible];
     }
@@ -850,8 +852,19 @@ class App extends Component {
       checkAdjacent: this.checkAdjacent,
       updatePlants: this.updatePlants,
     };
+    // window.onload = function () {
+    //   Particles.init({
+    //     selector: '.background',
+    //   });
+    // };
     return (
       <GridContext.Provider value={value}>
+        <head>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&family=Roboto&display=swap'
+            rel='stylesheet'
+          />{' '}
+        </head>
         <main className='App'>
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />
@@ -868,6 +881,8 @@ class App extends Component {
             path='/simulation/genes/:color/:genes'
             component={GeneTile}
           />
+          <Route path='/login' component={FunBackground} />
+          {/* <FunBackground className='particles' /> */}
         </main>
       </GridContext.Provider>
     );

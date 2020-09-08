@@ -6,7 +6,6 @@ import GridContext from '../../GridContext';
 class InfoHolder extends Component {
   static contextType = GridContext;
   render() {
-    //console.log(this.props.expressionValues[1]);
     let testArray = [1, 2, 3];
     let infoTiles;
     if (this.context.turnData.length > 0) {
