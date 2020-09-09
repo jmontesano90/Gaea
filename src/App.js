@@ -14,8 +14,11 @@ import CoreIdeas from './supplementary/coreIdeas/coreIdeas';
 import HowDoesThisWork from './supplementary/howDoesThisWork/howDoesThisWork';
 import CustomDnaForm from './customDna/customDnaForm/customDnaForm';
 import LoginForm from './supplementary/LoginForm/LoginForm';
+import CustomDnaList from './customDna/customDnaList/customDnaList';
+import CustomDnaSingle from './customDna/customDnaSingle/customDnaSingle';
 import FunBackground from './supplementary/particles/funBackground';
 import './App.css';
+
 class App extends Component {
   //Explanation of variables in grid
   //Species: species could be 1-4
@@ -416,6 +419,7 @@ class App extends Component {
       },
     ],
     turnData: [],
+    customDna: [],
   };
 
   componentDidMount() {
@@ -832,6 +836,18 @@ class App extends Component {
     this.setState({ turnData: turnData });
   };
 
+  updateCustomDna = (customDna) => {
+    let customDnaArray = this.state.customDna;
+    customDnaArray.push(customDna);
+    this.setState({ customDna: customDnaArray });
+  };
+
+  restart = () => {
+    this.updateGrid(this.selfGridCheck());
+    this.updatePlants(DnaHelper.randomPlantGeneration());
+    let turnData = [];
+    this.setState({ turnData: turnData });
+  };
   timePass = () => {
     let updatedGrid = this.selfGridCheck();
     this.updateGrid(updatedGrid);
@@ -851,6 +867,9 @@ class App extends Component {
       turnData: this.state.turnData,
       checkAdjacent: this.checkAdjacent,
       updatePlants: this.updatePlants,
+      restart: this.restart,
+      updateCustomDna: this.updateCustomDna,
+      customDna: this.state.customDna,
     };
     // window.onload = function () {
     //   Particles.init({
@@ -882,6 +901,8 @@ class App extends Component {
             component={GeneTile}
           />
           <Route path='/login' component={FunBackground} />
+          <Route path='/customDnaList' component={CustomDnaList} />
+          <Route path='/customDnaList/:dnaName' component={CustomDnaSingle} />
           {/* <FunBackground className='particles' /> */}
         </main>
       </GridContext.Provider>

@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import Collapsible from 'react-collapsible';
 import './customDnaForm.css';
 import DnaHelper from '../../dnaHelper';
+import GridContext from '../../GridContext';
 
 class CustomDnaForm extends Component {
   state = {
     dnaStrand: 'AaBbCcDdEeFfKkLlMmNnOoPp',
+    comment: '',
+    name: '',
   };
+  static contextType = GridContext;
 
   setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;
@@ -22,6 +26,12 @@ class CustomDnaForm extends Component {
     this.setState({ dnaStrand: tempDna });
   };
 
+  commentChange = (e) => {
+    this.setState({ comment: e.target.value });
+  };
+  nameChange = (e) => {
+    this.setState({ name: e.target.value });
+  };
   render() {
     let ngriStat =
       parseInt(
@@ -163,6 +173,12 @@ class CustomDnaForm extends Component {
         </p>
 
         <h3>{this.state.dnaStrand}</h3>
+        <input
+          type='text'
+          placeholder='Name of DNA'
+          onChange={this.nameChange}
+          id='dnaName'
+        ></input>
         <Collapsible trigger='nGRi' className='customTrait'>
           <form action='idk'>
             <div>nGRi value: {ngriStat}</div>
@@ -722,6 +738,19 @@ class CustomDnaForm extends Component {
             {DnaHelper.traitExplanation.LS}
           </Collapsible>
         </Collapsible>
+        <input
+          type='text'
+          placeholder='Input comments on your custom Dna Strand!'
+          onChange={this.commentChange}
+          id='dnaComment'
+        ></input>
+        <button
+          type='button'
+          onClick={() => this.context.updateCustomDna(this.state)}
+        >
+          {' '}
+          Save values
+        </button>
       </section>
     );
   }
