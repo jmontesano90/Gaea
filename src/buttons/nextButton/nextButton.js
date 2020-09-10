@@ -44,16 +44,27 @@ class nextButton extends Component {
     console.log(this.context);
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
-      restartButton = <button onClick={this.context.restart}>Restart</button>;
+      restartButton = (
+        <button className='restartButton' onClick={this.context.restart}>
+          Restart
+        </button>
+      );
     }
 
     return (
-      <section className='simulationButtons'>
-        <button onClick={this.context.timePass}>> </button>
-        <br></br>
-        <button onClick={this.goForwardByTen}> >>></button>
-        {restartButton}
-      </section>
+      <div className='buttonContainer'>
+        <section className='simulationButtons'>
+          <button className='simulationButton' onClick={this.context.timePass}>
+            >{' '}
+          </button>
+          <br></br>
+          <button className='simulationButton' onClick={this.goForwardByTen}>
+            {' '}
+            >>>
+          </button>
+        </section>
+        <section className='simulationButtons'>{restartButton}</section>
+      </div>
     );
   }
 }
