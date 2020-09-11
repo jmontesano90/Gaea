@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './homePage.css';
 import GridContext from '../../GridContext';
+import TokenService from '../../services/token-service';
 class HomePage extends Component {
   static contextType = GridContext;
   render() {
@@ -19,7 +20,22 @@ class HomePage extends Component {
         </Link>
       );
     }
+    let customDnaForm = (
+      <div>Log in to be able to make custom dna strands!</div>
+    );
 
+    if (TokenService.hasAuthToken() === true) {
+      customDnaForm = (
+        <Link
+          className='link'
+          to={{
+            pathname: `/customDnaForm`,
+          }}
+        >
+          Custom Dna Form
+        </Link>
+      );
+    }
     return (
       <section className='homePage'>
         <h1>Gaea</h1>
@@ -55,14 +71,7 @@ class HomePage extends Component {
         >
           How This Works
         </Link>
-        <Link
-          className='link'
-          to={{
-            pathname: `/customDnaForm`,
-          }}
-        >
-          Custom Dna Form
-        </Link>
+        {customDnaForm}
         {customDna}
       </section>
     );

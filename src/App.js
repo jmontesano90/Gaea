@@ -16,7 +16,8 @@ import CustomDnaForm from './customDna/customDnaForm/customDnaForm';
 import LoginForm from './supplementary/LoginForm/LoginForm';
 import CustomDnaList from './customDna/customDnaList/customDnaList';
 import CustomDnaSingle from './customDna/customDnaSingle/customDnaSingle';
-import FunBackground from './supplementary/particles/funBackground';
+import PublicOnlyRoute from './utils/PublicOnlyRoute';
+import PrivateOnlyRoute from './utils/PrivateRoute';
 import './App.css';
 
 class App extends Component {
@@ -689,7 +690,7 @@ class App extends Component {
     plants.map((plant, index) => {
       dna = DnaHelper.getDNAValues(plant.dna);
       if (plant.age > dna.N[0] + dna.O[0] + dna.P[0]) {
-        console.log('Plant died of old age');
+        //console.log('Plant died of old age');
         grimReapersToDo.push(index);
       } else {
         let gri =
@@ -699,7 +700,7 @@ class App extends Component {
           this.state.grid[plant.gridLoc[0]][plant.gridLoc[1]].GRiTotal / 4;
         plant.BioMass += gri;
         if (plant.BioMass < 0) {
-          console.log('Plant 2 smol');
+          //console.log('Plant 2 smol');
           grimReapersToDo.push(index);
         } else {
           plant.age += 1;
@@ -745,7 +746,7 @@ class App extends Component {
               ].pBI / 3;
             let breedingChance = (plantI + gridI) / 300;
             //console.log('Rolling to breed...');
-            console.log(breedingChance);
+            //console.log(breedingChance);
             if (breedingChance > Math.random()) {
               lotteryWinners.push(breedingLottery[y]);
               //console.log('Plant entered the breeding lottery!');
@@ -776,7 +777,7 @@ class App extends Component {
               ].plantCount >= 4
             ) {
               let chanceAtMigration = plantLength / 120;
-              console.log(chanceAtMigration);
+              //console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
                   parseInt(lotteryWinners[z].gridLoc[0]),
@@ -854,12 +855,20 @@ class App extends Component {
     let updatedPlants = this.plantCheck();
     this.updatePlants(updatedPlants);
     this.updateTurns();
-    console.log('Button pushed');
+    //console.log('Button pushed');
   };
 
+  customStart = (customDna) => {
+    this.updateGrid(this.selfGridCheck());
+    this.updatePlants(DnaHelper.customPlantGeneration(customDna));
+    let turnData = [];
+    this.setState({ turnData: turnData });
+  };
   render() {
     //console.log(this.checkAdjacentGRI(0, 0));
     //console.log(DnaHelper.getDNAExppressionValues(this.state.plants));
+    console.log(DnaHelper.randomPlantGeneration());
+    console.log(DnaHelper.customPlantGeneration('aabbccddeeffkkllmmnnoopp'));
     const value = {
       grid: this.state.grid,
       plants: this.state.plants,
@@ -870,6 +879,7 @@ class App extends Component {
       restart: this.restart,
       updateCustomDna: this.updateCustomDna,
       customDna: this.state.customDna,
+      customStart: this.customStart,
     };
     // window.onload = function () {
     //   Particles.init({
@@ -890,7 +900,7 @@ class App extends Component {
           <Route path='/gettingStarted' component={GettingStarted} />
           <Route path='/CoreIdeas' component={CoreIdeas} />
           <Route path='/HowThisWorks' component={HowDoesThisWork} />
-          <Route path='/customDnaForm' component={CustomDnaForm} />
+          <PrivateOnlyRoute path='/customDnaForm' component={CustomDnaForm} />
           <Route path='/simulation' component={TileHolder} />
           <Route path='/simulation' component={NextButton} />
           <Route path='/simulation' component={InfoHolder} />
@@ -900,9 +910,12 @@ class App extends Component {
             path='/simulation/genes/:color/:genes'
             component={GeneTile}
           />
-          <Route path='/login' component={FunBackground} />
-          <Route path='/customDnaList' component={CustomDnaList} />
-          <Route path='/customDnaList/:dnaName' component={CustomDnaSingle} />
+          <PublicOnlyRoute path='/login' component={LoginForm} />
+          <PrivateOnlyRoute path='/customDnaList' component={CustomDnaList} />
+          <PrivateOnlyRoute
+            path='/customDnaList/:dnaName'
+            component={CustomDnaSingle}
+          />
           {/* <FunBackground className='particles' /> */}
         </main>
       </GridContext.Provider>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './customDnaList.css';
 import GridContext from '../../GridContext';
-import Collapsible from 'react-collapsible';
 import { Link } from 'react-router-dom';
 
 class CustomDnaList extends Component {

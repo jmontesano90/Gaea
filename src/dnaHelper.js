@@ -183,7 +183,7 @@ const DnaHelper = {
     let i = 0;
     for (i = 0; i < 18; i++) {
       if (i % 6 === 0 && i !== 0) {
-        console.log('New Species info');
+        //console.log('New Species info');
         species += 1;
         gridNumber += 1;
         dna = [this.randomDNAStrand(), this.randomDNAStrand()];
@@ -199,7 +199,58 @@ const DnaHelper = {
       };
       plants.push(plant);
     }
-    console.log(plants[0]);
+    //console.log(plants[0]);
+    return plants;
+  },
+  customPlantGeneration(customDna) {
+    let dna = [customDna, customDna];
+    let species = 1;
+    let gridNumber = 0;
+
+    let grids = [
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+    ];
+    let z = 1;
+    let hackFrauds = 0;
+    for (hackFrauds = 0; hackFrauds < grids.length; hackFrauds++) {
+      for (z = 1; z < grids.length; z++) {
+        if (
+          grids[z] === null ||
+          (grids[z][0] === grids[z - 1][0] && grids[z][1] === grids[z - 1][1])
+        ) {
+          grids[z] = [
+            Math.round(Math.random() * 3),
+            Math.round(Math.random() * 3),
+          ];
+        }
+      }
+    }
+
+    let tileNumber = grids[0][0] * 4 + grids[0][1] + 1;
+    let plants = [];
+    let plant = {};
+    let i = 0;
+    for (i = 0; i < 18; i++) {
+      if (i % 6 === 0 && i !== 0) {
+        //console.log('New Species info');
+        species += 1;
+        gridNumber += 1;
+        dna = [this.randomDNAStrand(), this.randomDNAStrand()];
+        tileNumber = grids[gridNumber][0] * 4 + grids[gridNumber][1] + 1;
+      }
+      plant = {
+        gridLoc: grids[gridNumber],
+        dna: dna[Math.round(Math.random() * 1)],
+        species: species,
+        BioMass: 10,
+        tileNumber: tileNumber,
+        age: 0,
+      };
+      plants.push(plant);
+    }
+    //console.log(plants[0]);
     return plants;
   },
 };

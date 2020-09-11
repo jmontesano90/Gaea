@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './nextButton.css';
-import DnaHelper from '../../dnaHelper';
 
 class nextButton extends Component {
   static contextType = GridContext;
@@ -22,12 +21,21 @@ class nextButton extends Component {
       }
     }
   };
+  goForwardByOne = () => {
+    let i = 0;
+    for (i = 0; i < 2; i++) {
+      setTimeout(this.context.timePass, 10);
+    }
+
+    this.props.history.replace('/simulation');
+  };
   goForwardByTen = () => {
     let i = 0;
     for (i = 0; i < 10; i++) {
       setTimeout(this.context.timePass, 10);
-      console.log(i);
+      //console.log(i);
     }
+    this.props.history.replace('/simulation');
   };
   startTheCycle = () => {
     this.setState({ break: false });
@@ -41,7 +49,7 @@ class nextButton extends Component {
   // };
 
   render() {
-    console.log(this.context);
+    //console.log(this.context);
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
       restartButton = (
@@ -54,7 +62,7 @@ class nextButton extends Component {
     return (
       <div className='buttonContainer'>
         <section className='simulationButtons'>
-          <button className='simulationButton' onClick={this.context.timePass}>
+          <button className='simulationButton' onClick={this.goForwardByOne}>
             >{' '}
           </button>
           <br></br>

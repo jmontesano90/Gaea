@@ -26,6 +26,10 @@ class CustomDnaForm extends Component {
     this.setState({ dnaStrand: tempDna });
   };
 
+  saveValues = () => {
+    this.context.updateCustomDna(this.state);
+    this.props.history.push('/customDnaList');
+  };
   commentChange = (e) => {
     this.setState({ comment: e.target.value });
   };
@@ -744,10 +748,7 @@ class CustomDnaForm extends Component {
           onChange={this.commentChange}
           id='dnaComment'
         ></input>
-        <button
-          type='button'
-          onClick={() => this.context.updateCustomDna(this.state)}
-        >
+        <button type='button' onClick={this.saveValues}>
           {' '}
           Save values
         </button>
