@@ -13,6 +13,7 @@ class GeneHolder extends Component {
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/nGRi`,
+                key: 'nGRi',
                 state: {
                   name: 'nGRi',
                   listOfGenes: 'ABab',
@@ -49,8 +50,10 @@ class GeneHolder extends Component {
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/pGRi`,
+                key: 'pGRi',
                 state: {
                   name: 'pGRi',
+
                   listOfGenes: 'CDcd',
                   speciesNumber: this.props.location.state.speciesNumber,
                   expressionValues: this.props.location.state.expressionValues,
@@ -84,6 +87,7 @@ class GeneHolder extends Component {
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/pBi`,
+                key: 'pBi',
                 state: {
                   name: 'pBi',
                   listOfGenes: 'EFef',
@@ -119,6 +123,7 @@ class GeneHolder extends Component {
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/GR`,
+                key: 'GR',
                 state: {
                   name: 'GR',
                   listOfGenes: 'KLMklm',
@@ -164,6 +169,7 @@ class GeneHolder extends Component {
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/LS`,
+                key: 'LS',
                 state: {
                   name: 'LS',
                   listOfGenes: 'NPOnpo',

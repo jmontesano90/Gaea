@@ -649,7 +649,7 @@ class App extends Component {
       }
     }
     //console.log(grid);
-    this.state.plants.map((data, index) => {
+    this.state.plants.forEach((data, index) => {
       let dna = DnaHelper.getDNAValues(data.dna);
       grid[data.gridLoc[0]][data.gridLoc[1]].pGRI += dna.C[0] + dna.D[0];
       grid[data.gridLoc[0]][data.gridLoc[1]].nGRI += dna.A[0] + dna.B[0];
@@ -659,7 +659,7 @@ class App extends Component {
     });
     //console.log(grid);
     //console.log(this.state.plants[0].dna);
-    grid.map((tileRow, index) => {
+    grid.forEach((tileRow, index) => {
       for (i = 0; i < 4; i++) {
         let check = this.checkAdjacentGRI(index, i);
         grid[index][i].GRiTotal = check[0];
@@ -687,7 +687,7 @@ class App extends Component {
     let grimReapersToDo = [];
     let maturePlants = [];
     //plants.splice(index, 1);
-    plants.map((plant, index) => {
+    plants.forEach((plant, index) => {
       dna = DnaHelper.getDNAValues(plant.dna);
       if (plant.age > dna.N[0] + dna.O[0] + dna.P[0]) {
         //console.log('Plant died of old age');
@@ -808,11 +808,11 @@ class App extends Component {
               plants.push(newPlant);
             }
           }
-          {
-            breedingLottery = [];
-            breedingLottery.push(maturePlants[i]);
-            //console.log('No Room for new plant!');
-          }
+          // {
+          //   breedingLottery = [];
+          //   breedingLottery.push(maturePlants[i]);
+          //   //console.log('No Room for new plant!');
+          // }
         }
       }
     }
@@ -867,8 +867,8 @@ class App extends Component {
   render() {
     //console.log(this.checkAdjacentGRI(0, 0));
     //console.log(DnaHelper.getDNAExppressionValues(this.state.plants));
-    console.log(DnaHelper.randomPlantGeneration());
-    console.log(DnaHelper.customPlantGeneration('aabbccddeeffkkllmmnnoopp'));
+    // console.log(DnaHelper.randomPlantGeneration());
+    // console.log(DnaHelper.customPlantGeneration('aabbccddeeffkkllmmnnoopp'));
     const value = {
       grid: this.state.grid,
       plants: this.state.plants,
@@ -888,13 +888,8 @@ class App extends Component {
     // };
     return (
       <GridContext.Provider value={value}>
-        <head>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&family=Roboto&display=swap'
-            rel='stylesheet'
-          />{' '}
-        </head>
         <main className='App'>
+          <Route exact path='/' component={HomePage} />
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />
           <Route path='/gettingStarted' component={GettingStarted} />
