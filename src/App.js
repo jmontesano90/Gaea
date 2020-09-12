@@ -808,11 +808,11 @@ class App extends Component {
               plants.push(newPlant);
             }
           }
-          // {
-          //   breedingLottery = [];
-          //   breedingLottery.push(maturePlants[i]);
-          //   //console.log('No Room for new plant!');
-          // }
+          {
+            breedingLottery = [];
+            breedingLottery.push(maturePlants[i]);
+            //console.log('No Room for new plant!');
+          }
         }
       }
     }
