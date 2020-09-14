@@ -752,7 +752,7 @@ class App extends Component {
               //console.log('Plant entered the breeding lottery!');
             }
           }
-          //console.log(breedingLottery);
+          console.log(breedingLottery);
           let z = 0;
           for (z = 1; z < lotteryWinners.length; z += 2) {
             //console.log(lotteryWinners[z].dna);
@@ -777,7 +777,7 @@ class App extends Component {
               ].plantCount >= 4
             ) {
               let chanceAtMigration = plantLength / 120;
-              //console.log(chanceAtMigration);
+              console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
                   parseInt(lotteryWinners[z].gridLoc[0]),
@@ -855,7 +855,7 @@ class App extends Component {
     let updatedPlants = this.plantCheck();
     this.updatePlants(updatedPlants);
     this.updateTurns();
-    //console.log('Button pushed');
+    console.log('Button pushed');
   };
 
   customStart = (customDna) => {
