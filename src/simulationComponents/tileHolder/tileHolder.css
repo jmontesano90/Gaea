@@ -5,6 +5,7 @@
   margin-top: 50px;
   margin-left: 5px;
   margin-right: 5px;
-  border: 1px black solid;
-  border-radius: 5px;
+  /* border: 1px black solid;
+  border-radius: 5px; */
+  background-color: rgb(96, 75, 53);
 }

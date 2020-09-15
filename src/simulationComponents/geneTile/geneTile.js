@@ -7,6 +7,7 @@ import './geneTile.css';
 class GeneTile extends Component {
   render() {
     let genes = this.props.location.state.listOfGenes.split('');
+    console.log(genes);
     let color = '';
     if (this.props.location.state.speciesNumber === 0) {
       color = 'Red';

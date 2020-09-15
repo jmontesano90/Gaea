@@ -8,6 +8,12 @@ class InfoHolder extends Component {
   render() {
     let testArray = [1, 2, 3];
     let infoTiles;
+    let loadingStats;
+    if (this.context.imageReady === false) {
+      loadingStats = <div>Loading!</div>;
+    } else {
+      loadingStats = <div></div>;
+    }
     if (this.context.turnData.length > 0) {
       infoTiles = testArray.map((data, index) => (
         <InfoTile
@@ -20,7 +26,12 @@ class InfoHolder extends Component {
       infoTiles = <div>Click Above to start the game</div>;
     }
 
-    return <div className='infoTiles'>{infoTiles}</div>;
+    return (
+      <div>
+        <div className='infoTiles'>{infoTiles}</div>
+        {loadingStats}
+      </div>
+    );
   }
 }
 

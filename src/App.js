@@ -422,13 +422,16 @@ class App extends Component {
     turnData: [],
     customDna: [],
     images: [],
+    imageReady: false,
   };
 
   componentDidMount() {
     let plants = DnaHelper.randomPlantGeneration();
     this.updatePlants(plants);
     this.preloadImages();
-    //console.log('Hello?');
+    //this.areImagesLoaded();
+    console.log('Hello?');
+    setTimeout(this.areImagesLoaded, 2000);
   }
 
   preloadImages = () => {
@@ -465,6 +468,22 @@ class App extends Component {
         };
       }),
     });
+  };
+
+  areImagesLoaded = () => {
+    let images = this.state.images;
+    let notReady = 0;
+    images.forEach((image) => {
+      if (image.loaded === false) {
+        notReady++;
+        console.log('A check...');
+      }
+    });
+    if (notReady === 0) {
+      this.setState({ imageReady: true });
+      console.log('All images loaded!');
+      clearInterval();
+    }
   };
 
   handleImageLoad = (index) => {
@@ -796,7 +815,7 @@ class App extends Component {
               //console.log('Plant entered the breeding lottery!');
             }
           }
-          console.log(breedingLottery);
+          //console.log(breedingLottery);
           let z = 0;
           for (z = 1; z < lotteryWinners.length; z += 2) {
             //console.log(lotteryWinners[z].dna);
@@ -899,7 +918,7 @@ class App extends Component {
     let updatedPlants = this.plantCheck();
     this.updatePlants(updatedPlants);
     this.updateTurns();
-    console.log('Button pushed');
+    //console.log('Button pushed');
   };
 
   customStart = (customDna) => {
@@ -913,6 +932,9 @@ class App extends Component {
     //console.log(DnaHelper.getDNAExppressionValues(this.state.plants));
     // console.log(DnaHelper.randomPlantGeneration());
     // console.log(DnaHelper.customPlantGeneration('aabbccddeeffkkllmmnnoopp'));
+
+    //setTimeout(this.areImagesLoaded, 2000);
+
     const value = {
       grid: this.state.grid,
       plants: this.state.plants,
@@ -925,6 +947,7 @@ class App extends Component {
       customDna: this.state.customDna,
       customStart: this.customStart,
       images: this.state.images,
+      imageReady: this.state.imageReady,
     };
     // window.onload = function () {
     //   Particles.init({

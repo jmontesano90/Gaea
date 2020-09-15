@@ -6,27 +6,44 @@ class Tile extends Component {
   static contextType = GridContext;
   render() {
     let tileName = 'tile' + this.props.number;
-    let transparency = this.props.grid.plantCount / 6;
+    // let transparency = this.props.grid.plantCount / 6;
 
     let color;
+    let image;
+    let species;
+    let currentPlants;
+
+    if (this.props.grid.plantCount > 6) {
+      currentPlants = 6;
+    } else {
+      currentPlants = this.props.grid.plantCount;
+    }
     if (this.props.grid.species === 1) {
+      species = 0 + currentPlants;
       color = 'red';
     } else if (this.props.grid.species === 2) {
+      species = 6 + currentPlants;
       color = 'blue';
     } else if (this.props.grid.species === 3) {
+      species = 12 + currentPlants;
       color = 'green';
-    } else if (this.props.grid.species === 4) {
-      color = 'blue';
     } else {
-      color = 'black';
+      species = 0;
+      color = 'gray';
+    }
+    //console.log(species);
+    if (this.context.imageReady === true) {
+      image = this.context.images[species].url;
+      console.log(this.context.images[species].url);
     }
 
     return (
       <section
-        style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}
+        // style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}
+        style={{ backgroundImage: `url(${image})` }}
         className={`${tileName} tile`}
       >
-        {/* <div>{this.props.grid.tileNumber}</div> */}
+        {/* <img className='tileImage' src={image}></img> */}
       </section>
     );
   }

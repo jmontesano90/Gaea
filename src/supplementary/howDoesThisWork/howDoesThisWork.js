@@ -24,6 +24,11 @@ class HowDoesThisWork extends Component {
           a combination of the parents.This will continue until the plants die
           of old age.
         </p>
+        <p>
+          Plants exchange DNA and express traits given the guidelines of
+          Mendelian genetics, which can be read about{' '}
+          <a href='https://knowgenetics.org/mendelian-genetics/'>here</a>
+        </p>
       </section>
     );
   }

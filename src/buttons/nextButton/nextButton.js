@@ -49,8 +49,8 @@ class nextButton extends Component {
   // };
 
   render() {
-    console.log(this.context.images[0]);
-    console.log(this.context.plants[0]);
+    //console.log(this.context.images[0].url);
+    // console.log(this.context.plants[0]);
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
       restartButton = (
@@ -73,7 +73,6 @@ class nextButton extends Component {
           </button>
         </section>
         <section className='simulationButtons'>{restartButton}</section>
-        <div></div>
       </div>
     );
   }
