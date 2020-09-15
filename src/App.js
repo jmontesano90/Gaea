@@ -421,13 +421,57 @@ class App extends Component {
     ],
     turnData: [],
     customDna: [],
+    images: [],
   };
 
   componentDidMount() {
     let plants = DnaHelper.randomPlantGeneration();
     this.updatePlants(plants);
+    this.preloadImages();
     //console.log('Hello?');
   }
+
+  preloadImages = () => {
+    let links = [
+      'https://imgur.com/VebDwxO.png',
+      'https://imgur.com/sz1rnoU.png',
+      'https://imgur.com/DTrsI0r.png',
+      'https://imgur.com/LVfDkg1.png',
+      'https://imgur.com/Yj82Dll.png',
+      'https://imgur.com/acIGWuA.png',
+      'https://imgur.com/y3V2YlB.png',
+      'https://imgur.com/tm2zxEs.png',
+      'https://imgur.com/0aRe68E.png',
+      'https://imgur.com/1740OoT.png',
+      'https://imgur.com/6TyzlXC.png',
+      'https://imgur.com/ajG1iEK.png',
+      'https://imgur.com/5qFk49X.png',
+      'https://imgur.com/FKebz7J.png',
+      'https://imgur.com/hARj6XM.png',
+      'https://imgur.com/jJVXrkK.png',
+      'https://imgur.com/Jt3nkhY.png',
+      'https://imgur.com/Hge2MhM.png',
+      'https://imgur.com/Iy0kK4x.png',
+    ];
+
+    this.setState({
+      images: links.map((link, i) => {
+        let img = new Image();
+        img.onload = () => this.handleImageLoad(i);
+        img.src = link;
+        return {
+          url: link,
+          loaded: false,
+        };
+      }),
+    });
+  };
+
+  handleImageLoad = (index) => {
+    let { images } = this.state;
+    images[index].loaded = true;
+    this.setState({ images });
+  };
 
   checkAdjacentGRI = (cord1, cord2) => {
     let GRITotal = 0;
@@ -880,6 +924,7 @@ class App extends Component {
       updateCustomDna: this.updateCustomDna,
       customDna: this.state.customDna,
       customStart: this.customStart,
+      images: this.state.images,
     };
     // window.onload = function () {
     //   Particles.init({

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './tile.css';
+import GridContext from '../../GridContext';
 
 class Tile extends Component {
+  static contextType = GridContext;
   render() {
     let tileName = 'tile' + this.props.number;
     let transparency = this.props.grid.plantCount / 6;
