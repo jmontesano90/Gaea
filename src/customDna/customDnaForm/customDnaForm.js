@@ -9,6 +9,7 @@ class CustomDnaForm extends Component {
     dnaStrand: 'AaBbCcDdEeFfKkLlMmNnOoPp',
     comment: '',
     name: '',
+    error: '',
   };
   static contextType = GridContext;
 
@@ -26,9 +27,19 @@ class CustomDnaForm extends Component {
     this.setState({ dnaStrand: tempDna });
   };
 
+  nameValidation() {
+    if (this.state.name === '') {
+      return 'Dna Strands must be named';
+    }
+  }
+
   saveValues = () => {
-    this.context.updateCustomDna(this.state);
-    this.props.history.push('/customDnaList');
+    if (this.state.name != '') {
+      this.context.updateCustomDna(this.state);
+      this.props.history.push('/customDnaList');
+    } else {
+      this.setState({ error: 'Name is required!' });
+    }
   };
   commentChange = (e) => {
     this.setState({ comment: e.target.value });
@@ -183,6 +194,7 @@ class CustomDnaForm extends Component {
           onChange={this.nameChange}
           id='dnaName'
         ></input>
+        <div>{this.state.error}</div>
         <Collapsible trigger='nGRi' className='customTrait'>
           <form action='idk'>
             <div>nGRi value: {ngriStat}</div>

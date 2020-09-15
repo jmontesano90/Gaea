@@ -28,12 +28,12 @@ class GettingStarted extends Component {
         </ul>
         <p>
           With these two core concepts in mind you can start utilizing Gaea to
-          witness how these things function in an environment! So Gaea will
-          spawn 3 species of plants (with randomized dna strands) randomly
-          within the field, and generally the very beginning of the simulation
-          is the most tumultuous. This is an ideal time to see natural
-          selection, as generally one or two species quickly perish while one
-          takes over.
+          witness how these things function in an environment! Gaea will spawn 3
+          species of plants (with randomized dna strands) randomly within the
+          field, and they will grow and breed naturally! Generally the very
+          beginning of the simulation is the most tumultuous with one or two
+          species quickly being overtaken. This is an ideal time to see natural
+          selection, as you can witness what traits succeed in real time.
         </p>
         <p>
           Initially when you start just run the simulation several times to get
@@ -42,34 +42,38 @@ class GettingStarted extends Component {
           get more accustomed to it, you should be able to accurately predict
           which species will do poorly!
         </p>
+        <h4>Some easy things to look out for</h4>
         <p>
-          <h4>But how do I do that, there's so much going on!</h4>
-          It’s not as bad as it seems! Every trait has an explanation beneath it
-          of how it functions in the simulation. I’d recommend just trying to
-          focus on one trait initially, perhap nGRi (Negative growth rate
-          influence) for example. Negative growth rate influence means any other
-          species in an adjacent tile grows slower. So if on the initial seeding
-          of plants you see one species is adjacent to both other species it is
-          likely it will do poorly compared to them.
-        </p>
-        <p>
-          However it's important to check what genes they have and what genes
-          are being expressed, as it's possible they actually have a negative
-          nGRi, meaning that they actually help adjacent plants!
-        </p>
-        <p>
-          <h4>Some easy things to look out for.</h4>
           I’d recommend just trying to focus on one trait initially, LS (Life
           Span). This trait is very easy to interpret, longer life span means
           more chances to breed, so longer life span will almost always succeed.
           As you can see if you can check the trait values, all the recessive
-          traits are much better than the dominant genes in this case. So
+          traits are much better than the dominant genes for this trait. So
           despite being rare to express they should become more prominent over
           time. Simply let the simulation run a minute and check the remaining
           species, they will almost assuredly be expressing the recessive traits
           for LS in higher numbers then they started. An excellent example of
           Natural Selection!{' '}
         </p>
+        <p>
+          <h4>Other things to look for!</h4>
+          Every trait has an explanation beneath it explaining how it functions
+          in the simulation. I’d recommend just trying to focus on one trait
+          initially, perhap nGRi (Negative growth rate influence) for example.
+          Negative growth rate influence means any other species in an adjacent
+          tile grows slower. So if on the initial seeding of plants you see one
+          species is adjacent to both other species it is likely it will do
+          poorly compared to them. However it's important to check what genes
+          they have and what genes are being expressed, as it's possible they
+          actually have a negative nGRi, meaning that they actually help
+          adjacent plants!
+        </p>
+        <p>
+          However it's important to check what genes they have and what genes
+          are being expressed, as it's possible they actually have a negative
+          nGRi, meaning that they actually help adjacent plants!
+        </p>
+
         <p>
           It's important to note that if the original values show 100% for a
           recessive gene, that means the dominant gene does not exist for that

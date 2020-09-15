@@ -99,6 +99,16 @@ class CoreIdeas extends Component {
           for them? Can you even universally say if a trait is bad or not in
           different scenarios?
         </p>
+
+        <h2>Mendelian Genetics</h2>
+        <p>
+          Understanding Mendelian Genetics is not absolutely necessary to
+          appreciate Gaea. However since Gaea does operate on Mendelian Genetics
+          it is important to understand how Mendelian genetics work in order to
+          appreciate what traits are being expressed. A brief explanation can be
+          <a href='https://knowgenetics.org/mendelian-genetics/'>found here</a>,
+          which should explain everything you need.
+        </p>
       </section>
     );
   }
