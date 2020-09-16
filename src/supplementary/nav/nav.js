@@ -43,7 +43,7 @@ export default class Nav extends Component {
               className='icon'
               style={{ textDecoration: 'none' }}
             >
-              <img alt='logo' src='https://imgur.com/wB7hyOH.jpg'></img>
+              <img alt='logo' src='https://imgur.com/MBeiHN0.jpg'></img>
             </Link>
 
             {TokenService.hasAuthToken()
