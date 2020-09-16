@@ -18,6 +18,7 @@ import CustomDnaList from './customDna/customDnaList/customDnaList';
 import CustomDnaSingle from './customDna/customDnaSingle/customDnaSingle';
 import PublicOnlyRoute from './utils/PublicOnlyRoute';
 import PrivateOnlyRoute from './utils/PrivateRoute';
+import SplashPage from './supplementary/splashPage/splashPage';
 import './App.css';
 
 class App extends Component {
@@ -423,6 +424,7 @@ class App extends Component {
     customDna: [],
     images: [],
     imageReady: false,
+    userId: '',
   };
 
   componentDidMount() {
@@ -433,6 +435,10 @@ class App extends Component {
     console.log('Hello?');
     setTimeout(this.areImagesLoaded, 2000);
   }
+
+  updateUserId = (userId) => {
+    this.setState({ userId: userId });
+  };
 
   preloadImages = () => {
     let links = [
@@ -948,6 +954,7 @@ class App extends Component {
       customStart: this.customStart,
       images: this.state.images,
       imageReady: this.state.imageReady,
+      updateUserId: this.updateUserId,
     };
     // window.onload = function () {
     //   Particles.init({
@@ -957,7 +964,7 @@ class App extends Component {
     return (
       <GridContext.Provider value={value}>
         <main className='App'>
-          <Route exact path='/' component={HomePage} />
+          <Route exact path='/' component={SplashPage} />
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />
           <Route path='/gettingStarted' component={GettingStarted} />

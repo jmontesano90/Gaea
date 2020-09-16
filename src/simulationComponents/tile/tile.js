@@ -34,7 +34,6 @@ class Tile extends Component {
     //console.log(species);
     if (this.context.imageReady === true) {
       image = this.context.images[species].url;
-      console.log(this.context.images[species].url);
     }
 
     return (
