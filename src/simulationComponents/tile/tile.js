@@ -40,7 +40,12 @@ class Tile extends Component {
     return (
       <section
         // style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}
-        style={{ backgroundImage: `url(${image})` }}
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
         className={`${tileName} tile`}
       >
         {/* <img className='tileImage' src={image}></img> */}

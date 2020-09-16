@@ -7,7 +7,6 @@ import './geneTile.css';
 class GeneTile extends Component {
   render() {
     let genes = this.props.location.state.listOfGenes.split('');
-    console.log(genes);
     let color = '';
     if (this.props.location.state.speciesNumber === 0) {
       color = 'Red';
@@ -25,6 +24,46 @@ class GeneTile extends Component {
       valuesClass = 'values6';
       valuesO = 'valuesO6';
     }
+
+    let half = Math.ceil(genes.length / 2);
+    let genesTest = genes.splice(0, half);
+    console.log(genesTest);
+    let currentValuesTest = genesTest.map((data, index) => (
+      <section className='oneTrait'>
+        <div>
+          {data}/{genes[index]}
+        </div>
+        <div>
+          {this.props.location.state[data]}/
+          {this.props.location.state[genes[index]]}
+        </div>
+      </section>
+    ));
+
+    let originalValuesTest = genesTest.map((data, index) => (
+      <section className='oneTrait'>
+        <div>
+          {data}/{genes[index]}
+        </div>
+        <div>
+          {Math.round(
+            (this.props.location.state.expressionValues[0][
+              this.props.location.state.speciesNumber + 1
+            ][data] /
+              6) *
+              100
+          )}
+          /
+          {Math.round(
+            (this.props.location.state.expressionValues[0][
+              this.props.location.state.speciesNumber + 1
+            ][genes[index]] /
+              6) *
+              100
+          )}
+        </div>
+      </section>
+    ));
 
     let currentValues = genes.map((data, index) => (
       <section className={data.toUpperCase()}>
@@ -44,11 +83,13 @@ class GeneTile extends Component {
         %
       </section>
     ));
-    let dnaValues = genes.map((data, index) => (
-      <section>
-        {data}: {dnaHelper.dnaKey[data]}
-      </section>
-    ));
+    let dnaValues = this.props.location.state.listOfGenes
+      .split('')
+      .map((data, index) => (
+        <section>
+          {data}: {dnaHelper.dnaKey[data]}
+        </section>
+      ));
     return (
       <div className='traitInformation'>
         <h2 className='title'>
@@ -61,8 +102,8 @@ class GeneTile extends Component {
             <h4>Original Values</h4>
           </div>
           <div className='valuesBox'>
-            <section className={valuesClass}>{currentValues}</section>
-            <section className={valuesClass}>{originalValues}</section>
+            <section className={valuesClass}>{currentValuesTest}</section>
+            <section className={valuesClass}>{originalValuesTest}</section>
           </div>
         </div>
         <Collapsible trigger='Trait Explanation' className='explanation'>
