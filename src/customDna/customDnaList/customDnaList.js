@@ -29,6 +29,14 @@ class CustomDnaList extends Component {
         <h3>
           Here you will find a list of all the custom dna you have created!
         </h3>
+        <h5>
+          Click one of your custom DNA strands, and then load it into the
+          simulation!{' '}
+        </h5>
+        <h6>
+          Once loaded, it will be injected into the Red plant species and watch
+          it play out!
+        </h6>
         {customDna}
       </section>
     );

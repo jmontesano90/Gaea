@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './splashPage.css';
 import RegistrationForm from '../registrationForm/registrationForm';
+import { Link } from 'react-router-dom';
 
 class SplashPage extends Component {
   render() {
@@ -46,6 +47,14 @@ class SplashPage extends Component {
               as Life span, growth rate and others and watch them change in real
               time!
             </p>
+            <Link
+              className='link'
+              to={{
+                pathname: `/simulation`,
+              }}
+            >
+              Click here to run a simulation right now!
+            </Link>
           </section>
 
           <section className='splashSection'>
