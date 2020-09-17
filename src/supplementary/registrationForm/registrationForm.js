@@ -10,7 +10,7 @@ export default class RegistrationForm extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { full_name, user_name, password } = ev.target;
+    const { user_name, password } = ev.target;
 
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(user_name.value, password.value)
@@ -25,6 +25,7 @@ export default class RegistrationForm extends Component {
           user_name: user_name.value,
           password: password.value,
         }).then((res) => {
+          console.log('Step 1');
           TokenService.saveAuthToken(res.authToken);
           AuthApiService.getUserId(user_name.value)
             .then((data) => {
@@ -48,18 +49,7 @@ export default class RegistrationForm extends Component {
     const { error } = this.state;
     return (
       <form className='RegistrationForm' onSubmit={this.handleSubmit}>
-        <div role='alert'>{error && <p className='red'>{error}</p>}</div>
-        <div className='full_name'>
-          <label htmlFor='RegistrationForm__full_name'>
-            Full name <Required />
-          </label>
-          <Input
-            name='full_name'
-            type='text'
-            required
-            id='RegistrationForm__full_name'
-          ></Input>
-        </div>
+        {/* <div role='alert'>{error && <p className='red'>{error}</p>}</div> */}
         <div className='user_name'>
           <label htmlFor='RegistrationForm__user_name'>
             User name <Required />

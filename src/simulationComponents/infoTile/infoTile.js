@@ -16,6 +16,7 @@ class InfoTile extends Component {
     } else if (this.props.species === 2) {
       color = 'Green';
     }
+   
 
     // console.log(
     //   this.props.expressionValues[this.props.expressionValues.length - 1][
