@@ -36,6 +36,7 @@
   border: 1px black solid;
   margin-left: 33%;
   margin-right: 33%;
+  padding-top: 5px;
 }
 
 .valuesBox {
@@ -66,5 +67,13 @@
   margin: 4px;
   border: 1px black solid;
   padding: 4px;
+  background-color: white;
+}
+
+.geneTile {
+  background-color: white;
+}
+
+.Collapsible__contentInner {
   background-color: white;
 }
