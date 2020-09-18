@@ -46,7 +46,7 @@ class InfoHolder extends Component {
       <div>
         {dayCount}
         <div className='infoTiles'>{infoTiles}</div>
-        {loadingStats}
+         {loadingStats}
       </div>
     );
   }

@@ -37,20 +37,29 @@ class nextButton extends Component {
     }
     this.props.history.replace('/simulation');
   };
+
+  intervalId;
+
   startTheCycle = () => {
-    this.setState({ break: false });
+    this.intervalId = window.setInterval(this.context.timePass, 500);
   };
+
   breakTheCycle = () => {
-    this.setState({ break: true });
+    clearInterval(this.intervalId);
   };
+
+  // startTheCycle = () => {
+  //   this.setState({ break: false });
+  // };
+  // breakTheCycle = () => {
+  //   this.setState({ break: true });
+  // };
   // continueButton = () =>  {
   //   this.context.timePass;
   //   this.props.history.push('./simulation');
   // };
 
   render() {
-    //console.log(this.context.images[0].url);
-    // console.log(this.context.plants[0]);
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
       restartButton = (
@@ -64,12 +73,18 @@ class nextButton extends Component {
       <div className='buttonContainer'>
         <section className='simulationButtons'>
           <button className='simulationButton' onClick={this.goForwardByOne}>
-            >{' '}
+            &gt;
           </button>
           <br></br>
           <button className='simulationButton' onClick={this.goForwardByTen}>
+            &gt;&gt;&gt;
+          </button>
+          <button className='simulationButton' onClick={this.startTheCycle}>
+            &#8734;
+          </button>
+          <button className='simulationButton' onClick={this.breakTheCycle}>
             {' '}
-            >>>
+            NO
           </button>
         </section>
         <section className='simulationButtons'>{restartButton}</section>
