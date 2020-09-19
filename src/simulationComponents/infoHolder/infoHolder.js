@@ -37,16 +37,26 @@ class InfoHolder extends Component {
       dayCount = (
         <div className='dayCountContainer'>
           <div className='dayCount'>
-            {this.context.turnData.length / 2} days have passed.
+            {Math.round(this.context.turnData.length / 2)} days have passed.
           </div>
         </div>
+      );
+    }
+
+    let restartButton = <div></div>;
+    if (this.context.turnData.length !== 0) {
+      restartButton = (
+        <button className='restartButton' onClick={this.context.restart}>
+          Restart
+        </button>
       );
     }
     return (
       <div>
         {dayCount}
         <div className='infoTiles'>{infoTiles}</div>
-         {loadingStats}
+        {loadingStats}
+        <section className='simulationButtons'>{restartButton}</section>
       </div>
     );
   }

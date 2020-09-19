@@ -813,9 +813,9 @@ class App extends Component {
               this.state.grid[breedingLottery[y].gridLoc[0]][
                 breedingLottery[y].gridLoc[1]
               ].pBI / 3;
-            let breedingChance = (plantI + gridI) / 300;
-            //console.log('Rolling to breed...');
-            //console.log(breedingChance);
+            let breedingChance = (plantI + gridI) / 400;
+            // console.log('Rolling to breed...');
+            // console.log(breedingChance);
             if (breedingChance > Math.random()) {
               lotteryWinners.push(breedingLottery[y]);
               //console.log('Plant entered the breeding lottery!');
@@ -845,7 +845,7 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
-              let chanceAtMigration = plantLength / 120;
+              let chanceAtMigration = plantLength / 70;
               console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(

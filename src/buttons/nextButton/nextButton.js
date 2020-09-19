@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './nextButton.css';
+import Collapsible from 'react-collapsible';
 
 class nextButton extends Component {
   static contextType = GridContext;
   state = {
-    break: false,
+    onGoing: false,
   };
-  keepItRolling = () => {
-    this.startTheCycle();
-    let i = 0;
-    let y = 1;
-    while (i < y) {
-      if (this.state.break === true) {
-        break;
-      } else {
-        setTimeout(this.context.timePass, 500);
-        i++;
-        y++;
-      }
-    }
-  };
+
   goForwardByOne = () => {
     let i = 0;
     for (i = 0; i < 2; i++) {
@@ -42,24 +30,54 @@ class nextButton extends Component {
 
   startTheCycle = () => {
     this.intervalId = window.setInterval(this.context.timePass, 500);
+    this.setState({ onGoing: true });
   };
 
   breakTheCycle = () => {
     clearInterval(this.intervalId);
+    this.setState({ onGoing: false });
   };
 
-  // startTheCycle = () => {
-  //   this.setState({ break: false });
-  // };
-  // breakTheCycle = () => {
-  //   this.setState({ break: true });
-  // };
-  // continueButton = () =>  {
-  //   this.context.timePass;
-  //   this.props.history.push('./simulation');
+  // restart = () => {
+  //   this.context.restart;
+  //   this.setState({ onGoing: false });
   // };
 
   render() {
+    let loading;
+    let infiniteButton = <div></div>;
+    let forwardByOne;
+    let forwardbyTen;
+    if (this.context.imageReady === false) {
+      loading = <div>Loading!</div>;
+    } else {
+      forwardByOne = (
+        <button className='simulationButton' onClick={this.goForwardByOne}>
+          &gt;
+        </button>
+      );
+
+      forwardbyTen = (
+        <button className='simulationButton' onClick={this.goForwardByTen}>
+          &gt;&gt;&gt;
+        </button>
+      );
+
+      if (this.state.onGoing === false) {
+        infiniteButton = (
+          <button className='simulationButton' onClick={this.startTheCycle}>
+            &#8734;
+          </button>
+        );
+      } else {
+        infiniteButton = (
+          <button className='simulationButton' onClick={this.breakTheCycle}>
+            {' '}
+            Stop
+          </button>
+        );
+      }
+    }
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
       restartButton = (
@@ -72,22 +90,12 @@ class nextButton extends Component {
     return (
       <div className='buttonContainer'>
         <section className='simulationButtons'>
-          <button className='simulationButton' onClick={this.goForwardByOne}>
-            &gt;
-          </button>
+          {loading}
+          {forwardByOne}
           <br></br>
-          <button className='simulationButton' onClick={this.goForwardByTen}>
-            &gt;&gt;&gt;
-          </button>
-          <button className='simulationButton' onClick={this.startTheCycle}>
-            &#8734;
-          </button>
-          <button className='simulationButton' onClick={this.breakTheCycle}>
-            {' '}
-            NO
-          </button>
+          {forwardbyTen}
         </section>
-        <section className='simulationButtons'>{restartButton}</section>
+        <section className='simulationButtons'>{infiniteButton}</section>
       </div>
     );
   }
