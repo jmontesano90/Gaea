@@ -31,6 +31,7 @@ export default class RegistrationForm extends Component {
             .then((data) => {
               this.context.updateUserId(data.id);
             })
+            .then(() => this.context.handleUpdateDna())
             .then(() => console.log('supposedly updated id'));
           // .then(() => this.context.handleUpdateTemplates())
           // .then(() => this.context.handleUpdateGrids());

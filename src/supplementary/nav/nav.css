@@ -14,7 +14,7 @@ nav {
   float: left;
   margin-left: 2px;
 }
-.log {
+/* .log {
   float: right;
   margin: 3px;
   margin-top: 5px;
@@ -34,7 +34,7 @@ nav {
   padding: 6px 8px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-}
+} */
 
 img {
   width: 40px;
@@ -42,9 +42,38 @@ img {
   margin: 0px;
 }
 
-.log:hover {
+/* .log:hover {
   background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
   background-color: #ccc2a6;
+}
+.log:active {
+  position: relative;
+  top: 1px;
+} */
+
+.log {
+  float: right;
+  margin: 3px;
+  margin-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  box-shadow: 4px 4px 3px -2px #403925;
+  background: linear-gradient(to bottom, #ffffff 5%, #575757 100%);
+  background-color: #ffffff;
+  border-radius: 22px;
+  font-family: Arial;
+  border: 1px solid #333029;
+  cursor: pointer;
+  color: #000000;
+  font-size: 14px;
+  padding: 6px 8px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #73573b;
+}
+.log:hover {
+  background: linear-gradient(to bottom, #575757 5%, #ffffff 100%);
+  background-color: #575757;
+  box-shadow: 0px 0px 26px 0px #ffffff;
 }
 .log:active {
   position: relative;

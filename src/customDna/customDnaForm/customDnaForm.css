@@ -31,9 +31,9 @@
   display: block;
   background-color: #f2f2f2;
 }
-.Collapsible > div {
+/* .Collapsible > div {
   padding: 10px;
-}
+} */
 .Collapsible.customTrait > div {
   padding: 0;
 }

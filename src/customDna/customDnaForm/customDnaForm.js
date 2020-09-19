@@ -3,6 +3,7 @@ import Collapsible from 'react-collapsible';
 import './customDnaForm.css';
 import DnaHelper from '../../dnaHelper';
 import GridContext from '../../GridContext';
+import DnaApiService from '../../services/dna-api-service';
 
 class CustomDnaForm extends Component {
   state = {
@@ -34,9 +35,20 @@ class CustomDnaForm extends Component {
   }
 
   saveValues = () => {
+    console.log(this.context.userId);
     if (this.state.name != '') {
-      this.context.updateCustomDna(this.state);
-      this.props.history.push('/customDnaList');
+      DnaApiService.postDna(
+        this.context.userId,
+        this.state.name,
+        this.state.dnaStrand,
+        this.state.comment
+      )
+        .then(() => {
+          this.context.handleUpdateDna();
+        })
+        .then(() => {
+          this.props.history.push('/customDnaList');
+        });
     } else {
       this.setState({ error: 'Name is required!' });
     }

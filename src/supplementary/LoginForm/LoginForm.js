@@ -33,11 +33,12 @@ export default class LoginForm extends Component {
     })
       .then((res) => {
         TokenService.saveAuthToken(res.authToken);
-        AuthApiService.getUserId(user_name.value).then((data) => {
-          this.context.updateUserId(data.id);
-        });
-        // .then(() => this.context.handleUpdateTemplates())
-        // .then(() => this.context.handleUpdateGrids());
+        AuthApiService.getUserId(user_name.value)
+          .then((data) => {
+            this.context.updateUserId(data.id);
+          })
+          .then(() => this.context.handleUpdateDna());
+
         user_name.value = '';
         password.value = '';
 

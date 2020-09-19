@@ -19,6 +19,8 @@ import CustomDnaSingle from './customDna/customDnaSingle/customDnaSingle';
 import PublicOnlyRoute from './utils/PublicOnlyRoute';
 import PrivateOnlyRoute from './utils/PrivateRoute';
 import SplashPage from './supplementary/splashPage/splashPage';
+import DnaApiService from './services/dna-api-service';
+import AuthApiService from './services/auth-api-service';
 import './App.css';
 
 class App extends Component {
@@ -498,6 +500,12 @@ class App extends Component {
     this.setState({ images });
   };
 
+  handleUpdateDna = () => {
+    DnaApiService.getAllDna(this.state.userId).then((dna) => {
+      this.setState({ customDna: dna });
+    });
+  };
+
   checkAdjacentGRI = (cord1, cord2) => {
     let GRITotal = 0;
     let water = false;
@@ -845,7 +853,7 @@ class App extends Component {
                 lotteryWinners[z].gridLoc[1]
               ].plantCount >= 4
             ) {
-              let chanceAtMigration = plantLength / 70;
+              let chanceAtMigration = plantLength / 80;
               console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
@@ -955,6 +963,8 @@ class App extends Component {
       images: this.state.images,
       imageReady: this.state.imageReady,
       updateUserId: this.updateUserId,
+      handleUpdateDna: this.handleUpdateDna,
+      userId: this.state.userId,
     };
     // window.onload = function () {
     //   Particles.init({

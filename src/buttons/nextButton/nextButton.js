@@ -96,6 +96,7 @@ class nextButton extends Component {
           {forwardbyTen}
         </section>
         <section className='simulationButtons'>{infiniteButton}</section>
+        <section className='simulationButtons'>{restartButton}</section>
       </div>
     );
   }

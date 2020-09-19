@@ -1,8 +1,8 @@
 .infoTiles {
   display: flex;
   justify-content: center;
-  border: 1px black solid;
-  background-color: gray;
+  /* border: 1px black solid;
+  background-color: gray; */
   margin-top: 12px;
 }
 

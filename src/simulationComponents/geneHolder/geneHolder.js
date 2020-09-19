@@ -6,7 +6,7 @@ class GeneHolder extends Component {
   render() {
     return (
       <div className='geneCategory'>
-        <h2 className='title'>{this.props.location.state.species}</h2>
+        {/* <h2 className='title'>{this.props.location.state.species}</h2> */}
         <section className='geneInformation'>
           <div className='geneTile'>
             {' '}

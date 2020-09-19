@@ -6,20 +6,24 @@ class CoreIdeas extends Component {
       <section className='homePage'>
         <h1>Core Ideas to Keep in Mind</h1>
         <p>The point of Gaea is to try and hammer home some core concepts:</p>
-        <ul>
-          <li>
-            Natural selection doesn’t necessarily mean the strongest survives,{' '}
-            <b>it simply means the one who reproduces the most.</b>
-          </li>
-          <li>
-            At a very basic level, evolution is the slow change of what genes
-            are being expressed in a species over a long period of time.
-            <b>
-              More favorable traits are passed down, less favorable traits are
-              expressed less or lost over time.
-            </b>
-          </li>
-        </ul>
+        <p>
+          {' '}
+          <ul>
+            <li>
+              Natural selection doesn’t necessarily mean the strongest survives,{' '}
+              <b>it simply means the one who reproduces the most.</b>
+            </li>
+            <li>
+              At a very basic level, evolution is the slow change of what genes
+              are being expressed in a species over a long period of time.
+              <b>
+                More favorable traits are passed down, less favorable traits are
+                expressed less or lost over time.
+              </b>
+            </li>
+          </ul>
+        </p>
+
         <p>
           Here I’d just like to expand on these two points to help make sure you
           as the user understand what to be looking for

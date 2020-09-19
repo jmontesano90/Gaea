@@ -75,5 +75,35 @@
 }
 
 .Collapsible__contentInner {
-  background-color: white;
+  background-color: rgb(190, 190, 190);
+}
+.Collapsible__contentOuter {
+  border: 1px black solid;
+  padding: 0px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background: linear-gradient(to bottom, #ffffff 5%, #b3b3b3 100%);
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 2px solid #000000;
+  color: #000000;
+  font-size: 20px;
+  padding: 7px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #999999;
+}
+h4 {
+  margin: 10px;
+  background: linear-gradient(to bottom, #ffffff 5%, #b3b3b3 100%);
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 2px solid #000000;
+  color: #000000;
+  font-size: 15px;
+  padding: 7px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #999999;
 }

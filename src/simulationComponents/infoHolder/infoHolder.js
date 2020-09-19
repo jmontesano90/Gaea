@@ -56,7 +56,6 @@ class InfoHolder extends Component {
         {dayCount}
         <div className='infoTiles'>{infoTiles}</div>
         {loadingStats}
-        <section className='simulationButtons'>{restartButton}</section>
       </div>
     );
   }

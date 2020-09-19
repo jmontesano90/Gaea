@@ -1,52 +1,33 @@
 import TokenService from './token-service';
 import config from '../config';
 
-const GridApiService = {
+const DnaApiService = {
   stringifyData(data) {},
-  getAllGrids(userId) {
-    return fetch(`${config.API_ENDPOINT}/grids/user/${userId}`, {
+  getAllDna(userId) {
+    return fetch(`${config.API_ENDPOINT}/dna/user/${userId}`, {
       headers: { authorization: `basic ${TokenService.getAuthToken()}` },
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
-  postGrid(
-    templateId,
-    userId,
-    x,
-    y,
-    partial_transect_length,
-    x_partial,
-    y_partial,
-    direction
-  ) {
-    return fetch(`${config.API_ENDPOINT}/grids`, {
+  postDna(user_id, name, dna, comment) {
+    console.log(user_id);
+    return fetch(`${config.API_ENDPOINT}/dna`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
         authorization: `basic ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
-        template_id: templateId,
-        user_id: userId,
-        x,
-        y,
-        partial_transect_length,
-        x_partial,
-        y_partial,
-        direction,
+        user_id: user_id,
+        name: name,
+        dna: dna,
+        comment: comment,
       }),
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
-  },
-  getGrid(gridId) {
-    return fetch(`${config.API_ENDPOINT}/grids/${gridId}`, {
-      headers: { authorization: `basic ${TokenService.getAuthToken()}` },
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
 };
 
-export default GridApiService;
+export default DnaApiService;
