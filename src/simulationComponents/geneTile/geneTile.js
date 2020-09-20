@@ -18,11 +18,14 @@ class GeneTile extends Component {
     let valuesClass = '';
     let valuesO = '';
     if (genes.length === 4) {
-      valuesClass = 'values4';
-      valuesO = 'valuesO4';
+      valuesClass = 'values4 SBG';
+      valuesO = 'valuesO4 SBG';
+    } else if (this.props.location.state.name === 'GR') {
+      valuesClass = 'values6 SBG';
+      valuesO = 'valuesO5 SBG';
     } else {
-      valuesClass = 'values6';
-      valuesO = 'valuesO6';
+      valuesClass = 'values6 SBG';
+      valuesO = 'values6 SBG';
     }
 
     let half = Math.ceil(genes.length / 2);
@@ -65,24 +68,6 @@ class GeneTile extends Component {
       </section>
     ));
 
-    let currentValues = genes.map((data, index) => (
-      <section className={data.toUpperCase()}>
-        {data}: {this.props.location.state[data]}%
-      </section>
-    ));
-    let originalValues = genes.map((data, index) => (
-      <section className='originalValues'>
-        {data}:{' '}
-        {Math.round(
-          (this.props.location.state.expressionValues[0][
-            this.props.location.state.speciesNumber + 1
-          ][data] /
-            6) *
-            100
-        )}
-        %
-      </section>
-    ));
     let dnaValues = this.props.location.state.listOfGenes
       .split('')
       .map((data, index) => (
@@ -92,14 +77,14 @@ class GeneTile extends Component {
       ));
     return (
       <div className='traitInformation'>
-        <h2 className='title'>
+        <h2 className='title SBG'>
           {color}: {this.props.location.state.name}
         </h2>
 
         <div>
           <div className='valueTitles'>
-            <h4>Current Values</h4>
-            <h4>Original Values</h4>
+            <h4 className='SBG'>Current Values</h4>
+            <h4 className='SBG'>Original Values</h4>
           </div>
           <div className='valuesBox'>
             <section className={valuesClass}>{currentValuesTest}</section>

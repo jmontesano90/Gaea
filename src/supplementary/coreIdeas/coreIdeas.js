@@ -4,7 +4,7 @@ class CoreIdeas extends Component {
   render() {
     return (
       <section className='homePage'>
-        <h1>Core Ideas to Keep in Mind</h1>
+        <h1 className='SBG titleAlign'>Core Ideas to Keep in Mind</h1>
         <p>The point of Gaea is to try and hammer home some core concepts:</p>
         <p>
           {' '}
@@ -28,7 +28,7 @@ class CoreIdeas extends Component {
           Here I’d just like to expand on these two points to help make sure you
           as the user understand what to be looking for
         </p>
-        <h2>Natural Selection/Biological Fitness</h2>
+        <h2 className='SBG titleAlign'>Natural Selection/Biological Fitness</h2>
         <p>
           At its core natural selection says that the most biologically fit
           individual succeeds. But what is biological fitness? We’re not talking
@@ -70,7 +70,7 @@ class CoreIdeas extends Component {
           plant species will have some very poor traits, but because its traits
           allow it to reproduce faster than the other two it wins out.
         </p>
-        <h2>Evolution</h2>
+        <h2 className='SBG titleAlign'>Evolution</h2>
         <p>
           Evolution is an incredibly complex and interesting subject but we’re
           going to focus on one very small aspect of it, and it can be
@@ -104,7 +104,7 @@ class CoreIdeas extends Component {
           different scenarios?
         </p>
 
-        <h2>Mendelian Genetics</h2>
+        <h2 className='SBG titleAlign'>Mendelian Genetics</h2>
         <p>
           Understanding Mendelian Genetics is not absolutely necessary to
           appreciate Gaea. However since Gaea does operate on Mendelian Genetics

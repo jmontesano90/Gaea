@@ -8,7 +8,7 @@ class Tile extends Component {
     let tileName = 'tile' + this.props.number;
     // let transparency = this.props.grid.plantCount / 6;
 
-    let color;
+    // let color;
     let image;
     let species;
     let currentPlants;
@@ -20,16 +20,16 @@ class Tile extends Component {
     }
     if (this.props.grid.species === 1) {
       species = 0 + currentPlants;
-      color = 'red';
+      // color = 'red';
     } else if (this.props.grid.species === 2) {
       species = 6 + currentPlants;
-      color = 'blue';
+      // color = 'blue';
     } else if (this.props.grid.species === 3) {
       species = 12 + currentPlants;
-      color = 'green';
+      // color = 'green';
     } else {
       species = 0;
-      color = 'gray';
+      // color = 'gray';
     }
     //console.log(species);
     if (this.context.imageReady === true) {

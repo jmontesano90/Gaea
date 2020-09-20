@@ -4,8 +4,8 @@ class GettingStarted extends Component {
   render() {
     return (
       <section className='homePage'>
-        <h1>Getting Started</h1>
-        <h2>Welcome to Gaea!</h2>
+        <h1 className='SBG'>Getting Started</h1>
+        <h2 className='SBG'>Welcome to Gaea!</h2>
         <p>
           Gaea is a tool meant to demonstrate in real time the very basics of
           Natural Selection, and in turn teach you about evolution while also
@@ -46,7 +46,7 @@ class GettingStarted extends Component {
           get more accustomed to it, you should be able to accurately predict
           which species will do poorly!
         </p>
-        <h2>Some easy things to look out for</h2>
+        <h2 className='SBG titleAlign'>Easy things to look for!</h2>
         <p>
           I’d recommend just trying to focus on one trait initially, LS (Life
           Span). This trait is very easy to interpret, longer life span means

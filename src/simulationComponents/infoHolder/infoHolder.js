@@ -43,14 +43,6 @@ class InfoHolder extends Component {
       );
     }
 
-    let restartButton = <div></div>;
-    if (this.context.turnData.length !== 0) {
-      restartButton = (
-        <button className='restartButton' onClick={this.context.restart}>
-          Restart
-        </button>
-      );
-    }
     return (
       <div>
         {dayCount}

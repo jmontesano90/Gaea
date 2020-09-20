@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './nextButton.css';
-import Collapsible from 'react-collapsible';
 
 class nextButton extends Component {
   static contextType = GridContext;
@@ -81,7 +80,7 @@ class nextButton extends Component {
     let restartButton = <div></div>;
     if (this.context.turnData.length !== 0) {
       restartButton = (
-        <button className='restartButton' onClick={this.context.restart}>
+        <button className='simulationButton' onClick={this.context.restart}>
           Restart
         </button>
       );
@@ -94,8 +93,8 @@ class nextButton extends Component {
           {forwardByOne}
           <br></br>
           {forwardbyTen}
+          {infiniteButton}
         </section>
-        <section className='simulationButtons'>{infiniteButton}</section>
         <section className='simulationButtons'>{restartButton}</section>
       </div>
     );

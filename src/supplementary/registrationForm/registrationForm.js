@@ -31,10 +31,8 @@ export default class RegistrationForm extends Component {
             .then((data) => {
               this.context.updateUserId(data.id);
             })
-            .then(() => this.context.handleUpdateDna())
-            .then(() => console.log('supposedly updated id'));
-          // .then(() => this.context.handleUpdateTemplates())
-          // .then(() => this.context.handleUpdateGrids());
+            .then(() => this.context.handleUpdateDna());
+
           user_name.value = '';
           password.value = '';
 
@@ -50,7 +48,7 @@ export default class RegistrationForm extends Component {
     const { error } = this.state;
     return (
       <form className='RegistrationForm' onSubmit={this.handleSubmit}>
-        {/* <div role='alert'>{error && <p className='red'>{error}</p>}</div> */}
+        <div role='alert'>{error && <p className='red'>{error}</p>}</div>
         <div className='user_name'>
           <label htmlFor='RegistrationForm__user_name'>
             User name <Required />

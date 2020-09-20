@@ -5,7 +5,7 @@ class HowDoesThisWork extends Component {
   render() {
     return (
       <section className='homePage'>
-        <h1>How does this work?</h1>
+        <h1 className='SBG titleAlign'>How does this work?</h1>
         <p>Every single plant has its own DNA strand, biomass, and age.</p>
         <p>
           At the very start, each species is randomly dropped in a grid with 6

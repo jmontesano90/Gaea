@@ -9,8 +9,8 @@ class SplashPage extends Component {
       <section id='outerSection'>
         <main role='main'>
           <header role='banner' className='splashPageTitle'>
-            <h1>Gaea</h1>
-            <h2>Ecology Simulator</h2>
+            <h1 className='SBG'>Gaea</h1>
+            <h2 className='SBG'>Ecology Simulator</h2>
           </header>
 
           <section className='splashSection'>

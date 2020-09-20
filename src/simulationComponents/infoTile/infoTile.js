@@ -16,7 +16,6 @@ class InfoTile extends Component {
     } else if (this.props.species === 2) {
       color = 'Green';
     }
-   
 
     // console.log(
     //   this.props.expressionValues[this.props.expressionValues.length - 1][
@@ -37,7 +36,7 @@ class InfoTile extends Component {
       message = color + ' has gone extinct.';
     }
     return (
-      <div className='infoTile'>
+      <div className='infoTile SBG'>
         <Link
           to={{
             pathname: `/simulation/genes/${color}`,

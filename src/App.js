@@ -20,7 +20,7 @@ import PublicOnlyRoute from './utils/PublicOnlyRoute';
 import PrivateOnlyRoute from './utils/PrivateRoute';
 import SplashPage from './supplementary/splashPage/splashPage';
 import DnaApiService from './services/dna-api-service';
-import AuthApiService from './services/auth-api-service';
+import InitalData from './dummyData/initialData';
 import './App.css';
 
 class App extends Component {
@@ -220,208 +220,7 @@ class App extends Component {
         },
       },
     ],
-    plants: [
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 3],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 1,
-        BioMass: 10,
-        tileNumber: 4,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 2,
-        BioMass: 10,
-        tileNumber: 13,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [0, 0],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 3,
-        BioMass: 10,
-        tileNumber: 1,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-      {
-        gridLoc: [3, 2],
-        dna: DnaHelper.randomDNAStrand(),
-        species: 4,
-        BioMass: 16,
-        tileNumber: 15,
-        age: 0,
-      },
-    ],
+    plants: [],
     turnData: [],
     customDna: [],
     images: [],
@@ -430,11 +229,10 @@ class App extends Component {
   };
 
   componentDidMount() {
+    this.updateGrid(InitalData.grid);
     let plants = DnaHelper.randomPlantGeneration();
     this.updatePlants(plants);
     this.preloadImages();
-    //this.areImagesLoaded();
-    console.log('Hello?');
     setTimeout(this.areImagesLoaded, 2000);
   }
 
@@ -854,7 +652,7 @@ class App extends Component {
               ].plantCount >= 4
             ) {
               let chanceAtMigration = plantLength / 80;
-              console.log(chanceAtMigration);
+              //console.log(chanceAtMigration);
               if (Math.random() > chanceAtMigration) {
                 let newH = this.checkAdjacentEmpty(
                   parseInt(lotteryWinners[z].gridLoc[0]),

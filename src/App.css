@@ -45,46 +45,8 @@ main {
   /* height: 100%; */
 }
 
-/* .link {
-  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-  background-color: #ededed;
-  border-radius: 22px;
-  border: 1px solid #000000;
-  cursor: pointer;
-  color: #2f00ff;
-  font-size: 17px;
-  padding: 7px 10px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #e1e2ed;
-}
-.link:hover {
-  background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-  background-color: #bab1ba;
-  box-shadow: 0px 0px 26px 0px #ffffff;
-}
-.link:active {
-  position: relative;
-  top: 1px;
-} */
-
-/* h1 {
-  box-shadow: inset 0px 1px 0px 0px #a6827e;
-  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
-  background-color: #7d5d3b;
-  border-radius: 3px;
-  border: 1px solid #54381e;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 22px;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #4d3534;
-} */
-
-.link,
+/* .link,
 .infoTile {
-  /* box-shadow: 4px 4px 3px -2px #403925; */
   background: linear-gradient(to bottom, #ffffff 5%, #8b8b8b 100%);
   background-color: #ffffff;
   border-radius: 22px;
@@ -98,7 +60,6 @@ main {
 }
 .link:hover,
 .infoTile:hover {
-  background: linear-gradient(to bottom, #575757 5%, #ffffff 100%);
   background-color: #575757;
   box-shadow: 0px 0px 26px 0px #ffffff;
 }
@@ -106,46 +67,48 @@ main {
 .infoTile:active {
   position: relative;
   top: 1px;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   color: #000000;
   text-shadow: 0px 1px 0px #73573b;
+} */
+
+.SBG {
+  background: linear-gradient(to bottom, #ffffff 5%, #dddddd 100%);
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  color: #000000;
+  text-shadow: 0px 1px 0px #999999;
 }
 
 h1 {
-  background: linear-gradient(to bottom, #ffffff 5%, #dddddd 100%);
-  background-color: #ffffff;
-  border-radius: 8px;
-  border: 2px solid #000000;
-  color: #000000;
   font-size: 30px;
   padding: 15px 50px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #999999;
 }
 
 h2 {
-  background: linear-gradient(to bottom, #ffffff 5%, #dddddd 100%);
-  background-color: #ffffff;
-  border-radius: 8px;
-  border: 2px solid #000000;
-  color: #000000;
   font-size: 25px;
   padding: 15px 40px;
+  margin: 5px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #999999;
 }
 
 h3 {
-  background: linear-gradient(to bottom, #ffffff 5%, #dddddd 100%);
-  background-color: #ffffff;
-  border-radius: 8px;
-  border: 2px solid #000000;
-  color: #000000;
   font-size: 20px;
   padding: 10px 30px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #999999;
+}
+
+h4 {
+  margin: 5px;
+  font-size: 15px;
+  padding: 7px 15px;
+  text-decoration: none;
+}
+.titleAlign {
+  text-align: center;
 }

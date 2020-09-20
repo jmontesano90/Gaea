@@ -11,35 +11,13 @@
 }
 
 .geneTile {
-  border: 1px solid black;
   margin: 5px;
-  padding: 3px;
+  font-size: 14px;
+  padding: 4px 8px;
+  text-decoration: none;
 }
 
 .title {
   display: flex;
   justify-content: center;
-}
-
-.geneTile {
-  /* box-shadow: 4px 4px 3px -2px #403925; */
-  background: linear-gradient(to bottom, #ffffff 5%, #575757 100%);
-  background-color: #ffffff;
-  border-radius: 22px;
-  border: 1px solid #333029;
-  cursor: pointer;
-  color: #000000;
-  font-size: 18px;
-  padding: 4px 8px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #73573b;
-}
-.geneTile:hover {
-  background: linear-gradient(to bottom, #575757 5%, #ffffff 100%);
-  background-color: #575757;
-  box-shadow: 0px 0px 26px 0px #ffffff;
-}
-.geneTile:active {
-  position: relative;
-  top: 1px;
 }

@@ -38,41 +38,43 @@ class HomePage extends Component {
     }
     return (
       <section className='homePage'>
-        <h1>Gaea</h1>
-        <Link
-          className='link'
-          to={{
-            pathname: `/simulation`,
-          }}
-        >
-          Run a Simulation!
-        </Link>
-        <Link
-          className='link'
-          to={{
-            pathname: `/GettingStarted`,
-          }}
-        >
-          Getting Started
-        </Link>
-        <Link
-          className='link'
-          to={{
-            pathname: `/CoreIdeas`,
-          }}
-        >
-          Core Ideas to keep in mind
-        </Link>
-        <Link
-          className='link'
-          to={{
-            pathname: `/HowThisWorks`,
-          }}
-        >
-          How This Works
-        </Link>
-        {customDnaForm}
-        {customDna}
+        <h1 className='SBG'>Gaea</h1>
+        <section className='homeList SBG'>
+          <Link
+            className='link'
+            to={{
+              pathname: `/simulation`,
+            }}
+          >
+            Run a Simulation!
+          </Link>
+          <Link
+            className='link'
+            to={{
+              pathname: `/GettingStarted`,
+            }}
+          >
+            Getting Started
+          </Link>
+          <Link
+            className='link'
+            to={{
+              pathname: `/CoreIdeas`,
+            }}
+          >
+            Core Ideas to keep in mind
+          </Link>
+          <Link
+            className='link'
+            to={{
+              pathname: `/HowThisWorks`,
+            }}
+          >
+            How This Works
+          </Link>
+          {customDnaForm}
+          {customDna}
+        </section>
       </section>
     );
   }
