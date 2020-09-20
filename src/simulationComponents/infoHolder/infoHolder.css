@@ -1,9 +1,11 @@
 .infoTiles {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   /* border: 1px black solid;
   background-color: gray; */
   margin-top: 12px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* .dayCount {

@@ -5,6 +5,9 @@
   justify-content: space-between;
   margin-left: 1%;
   margin-right: 1%;
+  border-right: 1px black dotted;
+  border-left: 1px black dotted;
+  border-radius: 10px;
 }
 .values4 {
   display: flex;
@@ -70,28 +73,35 @@
   justify-content: space-around;
   align-items: center;
   margin: 4px;
-  border: 1px black solid;
   padding: 4px;
-  background-color: white;
 }
 
-.geneTile {
+/* .geneTile {
   background-color: white;
-}
+} */
 
 .Collapsible__contentInner {
   background-color: rgb(190, 190, 190);
 }
-.Collapsible__contentOuter {
+/* .Collapsible__contentOuter {
   border: 1px black solid;
   padding: 0px;
-}
+} */
 
 .title {
   font-size: 20px;
   padding: 7px 15px;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 10%;
   margin-right: 10%;
   text-decoration: none;
+}
+
+.traitInformation {
+  margin-right: 9%;
+  margin-left: 9%;
+}
+
+.align {
+  text-align: center;
 }

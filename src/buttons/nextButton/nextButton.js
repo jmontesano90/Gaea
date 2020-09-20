@@ -28,7 +28,7 @@ class nextButton extends Component {
   intervalId;
 
   startTheCycle = () => {
-    this.intervalId = window.setInterval(this.context.timePass, 500);
+    this.intervalId = window.setInterval(this.goForwardByOne, 500);
     this.setState({ onGoing: true });
   };
 

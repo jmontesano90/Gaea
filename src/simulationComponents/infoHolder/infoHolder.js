@@ -23,7 +23,7 @@ class InfoHolder extends Component {
         ></InfoTile>
       ));
     } else {
-      infoTiles = <div>Click Above to start the game</div>;
+      infoTiles = <div>Click Above to start the simulation</div>;
     }
     let dayCount;
 
@@ -46,7 +46,7 @@ class InfoHolder extends Component {
     return (
       <div>
         {dayCount}
-        <div className='infoTiles'>{infoTiles}</div>
+        <div className='infoTiles SBG'>{infoTiles}</div>
         {loadingStats}
       </div>
     );

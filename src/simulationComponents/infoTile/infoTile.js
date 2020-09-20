@@ -36,7 +36,7 @@ class InfoTile extends Component {
       message = color + ' has gone extinct.';
     }
     return (
-      <div className='infoTile SBG'>
+      <div className='infoTile '>
         <Link
           to={{
             pathname: `/simulation/genes/${color}`,

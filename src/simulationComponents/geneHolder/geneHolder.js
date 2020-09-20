@@ -7,8 +7,8 @@ class GeneHolder extends Component {
     return (
       <div className='geneCategory'>
         {/* <h2 className='title'>{this.props.location.state.species}</h2> */}
-        <section className='geneInformation'>
-          <div className='geneTile SBG'>
+        <section className='geneInformation SBG'>
+          <div className='geneTile'>
             {' '}
             <Link
               to={{
@@ -45,7 +45,7 @@ class GeneHolder extends Component {
               nGRi
             </Link>
           </div>
-          <div className='geneTile SBG'>
+          <div className='geneTile'>
             {' '}
             <Link
               to={{
@@ -83,7 +83,7 @@ class GeneHolder extends Component {
               pGRi
             </Link>
           </div>
-          <div className='geneTile SBG'>
+          <div className='geneTile'>
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/pBi`,
@@ -119,7 +119,7 @@ class GeneHolder extends Component {
               pBi
             </Link>
           </div>
-          <div className='geneTile SBG'>
+          <div className='geneTile'>
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/GR`,
@@ -165,7 +165,7 @@ class GeneHolder extends Component {
               GR
             </Link>
           </div>
-          <div className='geneTile SBG'>
+          <div className='geneTile'>
             <Link
               to={{
                 pathname: `/simulation/genes/${this.props.location.state.species}/LS`,

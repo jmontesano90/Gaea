@@ -18,14 +18,14 @@ class GeneTile extends Component {
     let valuesClass = '';
     let valuesO = '';
     if (genes.length === 4) {
-      valuesClass = 'values4 SBG';
-      valuesO = 'valuesO4 SBG';
+      valuesClass = 'values4 ';
+      valuesO = 'valuesO4 ';
     } else if (this.props.location.state.name === 'GR') {
-      valuesClass = 'values6 SBG';
-      valuesO = 'valuesO5 SBG';
+      valuesClass = 'values6 ';
+      valuesO = 'valuesO5 ';
     } else {
-      valuesClass = 'values6 SBG';
-      valuesO = 'values6 SBG';
+      valuesClass = 'values6 ';
+      valuesO = 'values6 ';
     }
 
     let half = Math.ceil(genes.length / 2);
@@ -76,15 +76,15 @@ class GeneTile extends Component {
         </section>
       ));
     return (
-      <div className='traitInformation'>
-        <h2 className='title SBG'>
+      <div className='traitInformation SBG'>
+        <h2 className='title'>
           {color}: {this.props.location.state.name}
         </h2>
 
         <div>
           <div className='valueTitles'>
-            <h4 className='SBG'>Current Values</h4>
-            <h4 className='SBG'>Original Values</h4>
+            <h4 className='align'>Current Values</h4>
+            <h4 className='align'>Original Values</h4>
           </div>
           <div className='valuesBox'>
             <section className={valuesClass}>{currentValuesTest}</section>
