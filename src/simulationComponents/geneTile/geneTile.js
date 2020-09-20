@@ -22,7 +22,7 @@ class GeneTile extends Component {
       valuesO = 'valuesO4 ';
     } else if (this.props.location.state.name === 'GR') {
       valuesClass = 'values6 ';
-      valuesO = 'valuesO5 ';
+      valuesO = 'values6 ';
     } else {
       valuesClass = 'values6 ';
       valuesO = 'values6 ';

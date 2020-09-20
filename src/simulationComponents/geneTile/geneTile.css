@@ -16,6 +16,8 @@
   justify-content: space-around;
   margin-left: 6%;
   margin-right: 6%;
+  border-right: 1px black dotted;
+  border-left: 1px black dotted;
 }
 
 .valuesO4 {
