@@ -21,7 +21,28 @@ class HomePage extends Component {
       );
     }
     let customDnaForm = (
-      <div>Log in to be able to make custom dna strands!</div>
+      <div className='notLogged'>
+        Log in to be able to make custom dna strands!
+        <div>
+          {' '}
+          <Link
+            className='link'
+            to={{
+              pathname: `/`,
+            }}
+          >
+            Register Here!
+          </Link>
+          <Link
+            className='link'
+            to={{
+              pathname: `/login`,
+            }}
+          >
+            Log in here!
+          </Link>
+        </div>
+      </div>
     );
 
     if (TokenService.hasAuthToken() === true) {

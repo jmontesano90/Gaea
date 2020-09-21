@@ -5,7 +5,6 @@ class CoreIdeas extends Component {
     return (
       <section className='homePage'>
         <h1 className='SBG titleAlign'>Core Ideas to Keep in Mind</h1>
-        <p>The point of Gaea is to try and hammer home some core concepts:</p>
         <p>
           {' '}
           <ul>
@@ -15,7 +14,7 @@ class CoreIdeas extends Component {
             </li>
             <li>
               At a very basic level, evolution is the slow change of what genes
-              are being expressed in a species over a long period of time.
+              are being expressed in a species over a long period of time.{' '}
               <b>
                 More favorable traits are passed down, less favorable traits are
                 expressed less or lost over time.
@@ -45,12 +44,12 @@ class CoreIdeas extends Component {
           selection is simple, the more offspring an individual has, the more
           offspring their offspring will have, and so on and so forth. All other
           metrics are significantly less important. Imagine a fish that is the
-          fastest member of its species by far, it's so fast none of the natural
-          predators can catch him. One would imagine that this individual would
-          perform well in the grand scheme of evolution, however due to his
-          speed he gets more attention from predators than his slower brethren,
-          and has to expend far more energy simplifying staying alive than they
-          do. Thus his slower comrades can devote more energy to reproduction.
+          fastest member of its species by far. He is so incredibly fast none of
+          the natural predators can catch him. One would imagine that this trait
+          would be massively beneficial, however due to his speed he gets more
+          attention from predators than his slower brethren, and has to expend
+          far more energy simply staying alive than they do. Thus his slower
+          comrades can devote more energy to reproduction.
         </p>
         <p>
           While this is a hypothetical situation, many similar situations have
@@ -63,24 +62,24 @@ class CoreIdeas extends Component {
           <a href='https://www.sciencedirect.com/science/article/pii/S0960982208005125'>
             three spine stickleback fish have lost and re-evolved armor plating
             several times
-          </a>
-          and many more! The takeaway is that at the end of the day the one
-          having more offspring is going to be more successful. This can be seen
-          when you run the simulations because sometimes the most successful
-          plant species will have some very poor traits, but because its traits
-          allow it to reproduce faster than the other two it wins out.
+          </a>{' '}
+          and many more! The takeaway is that at the end of the day the the
+          traits that facilitate having more offspring are going to be more
+          successful. This can be seen when you run the simulation because
+          sometimes the most successful plant species will have some very poor
+          traits, but because its traits allow it to reproduce faster than the
+          other two it wins out.
         </p>
         <h2 className='SBG titleAlign'>Evolution</h2>
         <p>
           Evolution is an incredibly complex and interesting subject but we’re
-          going to focus on one very small aspect of it, and it can be
-          considered the very core for understanding how evolution works. So now
-          that we know the most biologically fit individuals produce more
-          progeny which creates a positive feedback loop, and as that happens,
-          the overall genetic make up of the species gradually changes over
-          time. This is a very slow and imperceptible process most of the time,
-          but small changes in gene frequency can happen very fast, sometimes
-          even in only a generation or two.
+          going to focus on one very small aspect of it for this simulation. So
+          now that we know the most biologically fit individuals produce more
+          progeny which creates a positive feedback loop. As this happens, the
+          overall genetic make up of the species gradually changes over time.
+          This is a very slow and imperceptible process most of the time, but
+          small changes in gene frequency can happen very fast, sometimes even
+          in only a generation or two.
         </p>
 
         <p>
@@ -90,12 +89,14 @@ class CoreIdeas extends Component {
           , Prior to the industrial revolution most of the Peppered moths were
           primarily white. However once large amounts of factories started
           popping up in England, that began to change. Peppered moths became
-          primarily black, how could that be? Well the soot and ash thrown off
-          from the factories rested on the same trees as the Peppered Moths.
-          White moths used to blend in perfectly, but now with all the black
-          soot they stuck out like a sore thumb and were heavily targeted by
-          predators. And in a few short generations the black became the
-          predominant color.
+          primarily black instead of white, how could that be? Well the soot and
+          ash thrown off from the factories rested on the same trees as the
+          Peppered Moths. White moths used to blend in perfectly, but now with
+          all the black soot they stuck out like a sore thumb and were heavily
+          targeted by predators. Now the black moths were not being hunted, and
+          the white were. The black moths begain reproducing far more often than
+          the used to, and vice versa with the white moths. And in a few short
+          generations the black became the predominant color.
         </p>
         <p>
           These are things to keep a lookout for while using Gaea, which traits
@@ -109,7 +110,7 @@ class CoreIdeas extends Component {
           Understanding Mendelian Genetics is not absolutely necessary to
           appreciate Gaea. However since Gaea does operate on Mendelian Genetics
           it is important to understand how Mendelian genetics work in order to
-          appreciate what traits are being expressed. A brief explanation can be
+          appreciate what traits are being expressed. A brief explanation can be{' '}
           <a href='https://knowgenetics.org/mendelian-genetics/'>found here</a>,
           which should explain everything you need.
         </p>

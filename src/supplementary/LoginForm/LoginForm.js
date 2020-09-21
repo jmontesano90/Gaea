@@ -53,10 +53,10 @@ export default class LoginForm extends Component {
     const { error } = this.state;
     return (
       <div id='outerSection'>
-        <form className='LoginForm' onSubmit={this.handleSubmitJwtAuth}>
+        <form className='LoginForm SBG' onSubmit={this.handleSubmitJwtAuth}>
           <div role='alert'>{error && <p className='red'>{error}</p>}</div>
           <div className='user_name'>
-            <label htmlFor='LoginForm__user_name'>User name</label>
+            <label htmlFor='LoginForm__user_name '>User name</label>
             <Input name='user_name' id='LoginForm__user_name'></Input>
           </div>
           <div className='password'>
@@ -69,6 +69,10 @@ export default class LoginForm extends Component {
           </div>
           <Button type='submit'>Login</Button>
         </form>
+        <h4 className='SBG'>
+          Want to log in without signing up? Try our demo log in account: User:
+          TestLogin Pass: Evolution90*
+        </h4>
       </div>
     );
   }

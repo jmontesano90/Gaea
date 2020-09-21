@@ -199,7 +199,7 @@ class CustomDnaForm extends Component {
           the simulation normally before attempting this.{' '}
         </p>
 
-        <h3>{this.state.dnaStrand}</h3>
+        <h3 className='SBG'>{this.state.dnaStrand}</h3>
         <input
           type='text'
           placeholder='Name of DNA'

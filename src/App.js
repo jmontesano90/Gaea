@@ -771,7 +771,9 @@ class App extends Component {
     // };
     return (
       <GridContext.Provider value={value}>
+        
         <main className='App'>
+         
           <Route exact path='/' component={SplashPage} />
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />

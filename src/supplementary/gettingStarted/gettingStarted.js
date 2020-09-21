@@ -16,7 +16,7 @@ class GettingStarted extends Component {
           {' '}
           <ul>
             <li>
-              Natural selection doesn’t necessarily mean the strongest survives,
+              Natural selection doesn’t necessarily mean the strongest survives,{' '}
               <b>it simply means the one who reproduces the most.</b>{' '}
             </li>
             <li>
@@ -41,7 +41,7 @@ class GettingStarted extends Component {
         </p>
         <p>
           Initially when you start just run the simulation several times to get
-          an idea how things look. Then you should start delving into the Gene
+          an idea how things work. Then you should start delving into the Gene
           expression to try and explain why certain species do poorly. Once you
           get more accustomed to it, you should be able to accurately predict
           which species will do poorly!
@@ -58,12 +58,6 @@ class GettingStarted extends Component {
           species, they will almost assuredly be expressing the recessive traits
           for LS in higher numbers then they started. An excellent example of
           Natural Selection!{' '}
-        </p>
-
-        <p>
-          However it's important to check what genes they have and what genes
-          are being expressed, as it's possible they actually have a negative
-          nGRi, meaning that they actually help adjacent plants!
         </p>
 
         <p>

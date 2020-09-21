@@ -3,6 +3,7 @@ import TokenService from '../../services/token-service';
 import { Button, Input, Required } from '../../utils/Utils';
 import AuthApiService from '../../services/auth-api-service';
 import GridContext from '../../GridContext';
+import './registrationForm.css';
 
 export default class RegistrationForm extends Component {
   state = { error: null };
