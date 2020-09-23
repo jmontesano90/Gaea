@@ -3,7 +3,7 @@
   justify-content: space-around;
   /* border: 1px black solid;
   background-color: gray; */
-  margin-top: 12px;
+  margin-top: 18px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -36,4 +36,23 @@
   padding: 7px 15px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #999999;
+}
+
+@media screen and (min-width: 600px) {
+  .infoTiles {
+    margin-left: 13%;
+    margin-right: 13%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .infoTiles {
+    margin-left: 24%;
+    margin-right: 24%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .infoTiles {
+    margin-left: 37%;
+    margin-right: 37%;
+  }
 }

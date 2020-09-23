@@ -24,3 +24,22 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (min-width: 600px) {
+  .geneInformation {
+    margin-left: 19%;
+    margin-right: 19%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .geneInformation {
+    margin-left: 29%;
+    margin-right: 29%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .geneInformation {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+}

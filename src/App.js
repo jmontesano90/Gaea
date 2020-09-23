@@ -683,11 +683,10 @@ class App extends Component {
               plants.push(newPlant);
             }
           }
-          {
-            breedingLottery = [];
-            breedingLottery.push(maturePlants[i]);
-            //console.log('No Room for new plant!');
-          }
+
+          breedingLottery = [];
+          breedingLottery.push(maturePlants[i]);
+          //console.log('No Room for new plant!');
         }
       }
     }
@@ -771,9 +770,7 @@ class App extends Component {
     // };
     return (
       <GridContext.Provider value={value}>
-        
         <main className='App'>
-         
           <Route exact path='/' component={SplashPage} />
           <Route path='/' component={Nav} />
           <Route path='/home' component={HomePage} />

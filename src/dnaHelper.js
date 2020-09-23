@@ -36,15 +36,15 @@ const DnaHelper = {
 
   traitExplanation: {
     nGRi:
-      'nGRi stands for Negative Growth Rate Influence, and these genes determine how much of a negative impact this plant will have on adjacent plants of differing species.  Higher numbers have a larger impact, negative numbers actually help other species of plants.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'nGRi stands for Negative Growth Rate Influence, and these genes determine how much of a negative impact this plant will have on adjacent plants of differing species.  Higher numbers have a larger impact, negative numbers actually help other species of plants.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     pGRi:
-      'pGRi stands for Positive Growth Rate Influence, and these genes determine how much of a positive influence this plant has on adjacent plants of the same species.  Higher is better.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'pGRi stands for Positive Growth Rate Influence, and these genes determine how much of a positive influence this plant has on adjacent plants of the same species.  Higher is better.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     pBi:
-      'pBi stands for Positive Breeding Influence, and these genes increase the chances of breeding for plants in the same tile.  Higher is better.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'pBi stands for Positive Breeding Influence, and these genes increase the chances of breeding for plants in the same tile.  Higher is better.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     GR:
-      'GR stands for Growth Rate, and these genes influence how much biomass is gained per "turn".  This stat is influenced by pGRi and nGRi.  Plants will not breed until they hit a biomass treshold, so having a higher growth rate means they will start breeding earlier.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'GR stands for Growth Rate, and these genes influence how much biomass is gained per "turn".  This stat is influenced by pGRi and nGRi.  Plants will not breed until they hit a biomass treshold, so having a higher growth rate means they will start breeding earlier.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     LS:
-      'LS stands for Life Span, and these genes influence how long the plants stay alive.  Below are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'LS stands for Life Span, and these genes influence how long the plants stay alive.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
   },
 
   breeding(dnaM, dnaD) {
@@ -157,9 +157,9 @@ const DnaHelper = {
     let gridNumber = 0;
 
     let grids = [
-      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
-      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
-      [Math.round(Math.random() * 3), Math.round(Math.random() * 3)],
+      [Math.round(Math.random() * 1), Math.round(Math.random() * 1)],
+      [Math.round(Math.random() * 1), Math.round(Math.random() * 1) + 2],
+      [Math.round(Math.random() * 1) + 2, Math.round(Math.random() * 3)],
     ];
     let z = 1;
     let hackFrauds = 0;

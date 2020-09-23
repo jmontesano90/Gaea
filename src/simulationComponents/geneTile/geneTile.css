@@ -18,16 +18,33 @@
   margin-right: 6%;
   border-right: 1px black dotted;
   border-left: 1px black dotted;
+  border-radius: 10px;
 }
 
+/* .dnaValues {
+  padding: 3px;
+} */
+
 .valuesO4 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 107px;
+  border-right: 1px black dotted;
+  border-left: 1px black dotted;
+  border-radius: 10px;
+}
+/* .valuesO4 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 36%;
   margin-right: 36%;
-}
+} */
 
 .valuesO5 {
   display: flex;
@@ -83,7 +100,7 @@
 } */
 
 .Collapsible__contentInner {
-  background-color: rgb(190, 190, 190);
+  padding: 5px;
 }
 /* .Collapsible__contentOuter {
   border: 1px black solid;
@@ -106,4 +123,23 @@
 
 .align {
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .traitInformation {
+    margin-left: 19%;
+    margin-right: 19%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .traitInformation {
+    margin-left: 29%;
+    margin-right: 29%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .traitInformation {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
 }

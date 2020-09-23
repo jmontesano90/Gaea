@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class SplashPage extends Component {
   render() {
     return (
-      <section id='outerSection'>
+      <section id='outerSection' className='outerSection'>
         <main role='main'>
           <header role='banner' className='splashPageTitle'>
             <h1 className='SBG'>Gaea</h1>

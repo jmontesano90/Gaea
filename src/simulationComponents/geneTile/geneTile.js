@@ -71,7 +71,7 @@ class GeneTile extends Component {
     let dnaValues = this.props.location.state.listOfGenes
       .split('')
       .map((data, index) => (
-        <section>
+        <section className='dnaValues'>
           {data}: {dnaHelper.dnaKey[data]}
         </section>
       ));

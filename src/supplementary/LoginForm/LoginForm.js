@@ -69,7 +69,7 @@ export default class LoginForm extends Component {
           </div>
           <Button type='submit'>Login</Button>
         </form>
-        <h4 className='SBG'>
+        <h4 className='SBG fakeLogin'>
           Want to log in without signing up? Try our demo log in account: User:
           TestLogin Pass: Evolution90*
         </h4>

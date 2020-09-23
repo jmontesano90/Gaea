@@ -48,7 +48,7 @@ class nextButton extends Component {
     let forwardByOne;
     let forwardbyTen;
     if (this.context.imageReady === false) {
-      loading = <div>Loading!</div>;
+      loading = <div className='loading'>Loading!</div>;
     } else {
       forwardByOne = (
         <button className='simulationButton' onClick={this.goForwardByOne}>

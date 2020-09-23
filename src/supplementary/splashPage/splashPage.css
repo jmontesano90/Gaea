@@ -25,9 +25,33 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
 }
 
 .grid {
   width: 255px;
   height: 255px;
+}
+
+@media screen and (min-width: 600px) {
+  .splashSection {
+    margin-left: 17%;
+    margin-right: 17%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .splashSection {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .splashSection {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
 }

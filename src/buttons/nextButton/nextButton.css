@@ -50,3 +50,27 @@
   position: relative;
   top: 1px;
 }
+
+.loading {
+  animation: colorchange 3s linear 0s infinite;
+  font-size: 30px;
+}
+
+@keyframes colorchange {
+  0% {
+    background: red;
+    color: cyan;
+  }
+  33% {
+    background: green;
+    color: magenta;
+  }
+  66% {
+    background: red;
+    color: cyan;
+  }
+  100% {
+    background: blue;
+    color: yellow;
+  }
+}
