@@ -8,7 +8,7 @@ class HomePage extends Component {
   render() {
     let customDna;
     // console.log(this.context);
-    if (this.context.customDna.length >= 1) {
+    if (this.context.customDna && this.context.customDna.length >= 1) {
       customDna = (
         <Link
           className='link'

@@ -13,29 +13,30 @@ class Tile extends Component {
     let species;
     let currentPlants;
 
-    if (this.props.grid.plantCount > 6) {
-      currentPlants = 6;
-    } else {
-      currentPlants = this.props.grid.plantCount;
+    if (this.props.grid) {
+      if (this.props.grid.plantCount > 6) {
+        currentPlants = 6;
+      } else {
+        currentPlants = this.props.grid.plantCount;
+      }
+      if (this.props.grid.species === 1) {
+        species = 0 + currentPlants;
+        // color = 'red';
+      } else if (this.props.grid.species === 2) {
+        species = 6 + currentPlants;
+        // color = 'blue';
+      } else if (this.props.grid.species === 3) {
+        species = 12 + currentPlants;
+        // color = 'green';
+      } else {
+        species = 0;
+        // color = 'gray';
+      }
+      //console.log(species);
+      if (this.context.imageReady === true) {
+        image = this.context.images[species].url;
+      }
     }
-    if (this.props.grid.species === 1) {
-      species = 0 + currentPlants;
-      // color = 'red';
-    } else if (this.props.grid.species === 2) {
-      species = 6 + currentPlants;
-      // color = 'blue';
-    } else if (this.props.grid.species === 3) {
-      species = 12 + currentPlants;
-      // color = 'green';
-    } else {
-      species = 0;
-      // color = 'gray';
-    }
-    //console.log(species);
-    if (this.context.imageReady === true) {
-      image = this.context.images[species].url;
-    }
-
     return (
       <section
         // style={{ backgroundColor: `${color}`, opacity: `${transparency}` }}

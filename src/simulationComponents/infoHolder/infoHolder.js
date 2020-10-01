@@ -14,7 +14,7 @@ class InfoHolder extends Component {
     } else {
       loadingStats = <div></div>;
     }
-    if (this.context.turnData.length > 0) {
+    if (this.context.turnData && this.context.turnData.length > 0) {
       infoTiles = testArray.map((data, index) => (
         <InfoTile
           expressionValues={this.context.turnData}
@@ -27,13 +27,13 @@ class InfoHolder extends Component {
     }
     let dayCount;
 
-    if (this.context.turnData.length / 2 === 1) {
+    if (this.context.turnData && this.context.turnData.length / 2 === 1) {
       dayCount = (
         <div className='dayCountContainer'>
           <div className='dayCount'>1 day has passed.</div>
         </div>
       );
-    } else if (this.context.turnData.length / 2 > 1) {
+    } else if (this.context.turnData && this.context.turnData.length / 2 > 1) {
       dayCount = (
         <div className='dayCountContainer'>
           <div className='dayCount'>

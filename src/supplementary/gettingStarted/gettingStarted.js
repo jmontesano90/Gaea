@@ -12,7 +12,7 @@ class GettingStarted extends Component {
           giving a brief overview of Mendelian Genetics. To get the best out of
           Gaea, keep the following concepts in mind.
         </p>
-        <p>
+        <div>
           {' '}
           <ul>
             <li>
@@ -28,7 +28,7 @@ class GettingStarted extends Component {
               </b>
             </li>
           </ul>
-        </p>
+        </div>
 
         <p>
           With these two core concepts in mind you can start utilizing Gaea to

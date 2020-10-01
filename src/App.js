@@ -672,11 +672,13 @@ class App extends Component {
                   //console.log(newPlant);
                 }
               }
-            } else if (
-              this.state.grid[lotteryWinners[z].gridLoc[0]][
-                lotteryWinners[z].gridLoc[1]
-              ].plantCount < 6
-            ) {
+            }
+            // if (
+            //   this.state.grid[lotteryWinners[z].gridLoc[0]][
+            //     lotteryWinners[z].gridLoc[1]
+            //   ].plantCount < 6
+            // ) {
+            else {
               //console.log('New Plant Added in same grid!');
               breedingLottery = [];
               breedingLottery.push(maturePlants[i]);
@@ -741,7 +743,7 @@ class App extends Component {
   render() {
     //console.log(this.checkAdjacentGRI(0, 0));
     //console.log(DnaHelper.getDNAExppressionValues(this.state.plants));
-    // console.log(DnaHelper.randomPlantGeneration());
+    //console.log(DnaHelper.randomPlantGeneration());
     // console.log(DnaHelper.customPlantGeneration('aabbccddeeffkkllmmnnoopp'));
 
     //setTimeout(this.areImagesLoaded, 2000);

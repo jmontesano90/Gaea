@@ -1,15 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import CoreIdeas from '../../supplementary/coreIdeas/coreIdeas';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-    div
-  );
+  ReactDOM.render(<CoreIdeas />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

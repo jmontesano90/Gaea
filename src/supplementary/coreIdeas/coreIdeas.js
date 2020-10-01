@@ -5,7 +5,7 @@ class CoreIdeas extends Component {
     return (
       <section className='homePage'>
         <h1 className='SBG titleAlign'>Core Ideas to Keep in Mind</h1>
-        <p>
+        <div>
           {' '}
           <ul>
             <li>
@@ -21,7 +21,7 @@ class CoreIdeas extends Component {
               </b>
             </li>
           </ul>
-        </p>
+        </div>
 
         <p>
           Here I’d just like to expand on these two points to help make sure you
