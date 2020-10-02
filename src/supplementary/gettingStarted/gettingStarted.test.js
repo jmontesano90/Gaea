@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GettingStarted from '../../supplementary/GettingStarted/GettingStarted';
+import GettingStarted from './GettingStarted';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

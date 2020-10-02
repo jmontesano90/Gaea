@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SplashPage from '../../supplementary/SplashPage/SplashPage';
+import SplashPage from './SplashPage';
 import { BrowserRouter } from 'react-router-dom';
 
 it('renders without crashing', () => {

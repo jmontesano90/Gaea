@@ -191,7 +191,7 @@ class CustomDnaForm extends Component {
       );
     return (
       <section className='homePage'>
-        <h1>Custom Dna Form</h1>
+        <h1 className='SBG'>Custom Dna Form</h1>
         <p>
           Here you can construct your own DNA strand, and then inject it into
           the simulator and see how your plant performs! It is reccomended you

@@ -10,7 +10,7 @@ class CustomDnaList extends Component {
     console.log(this.context.customDna);
     let customDna = this.context.customDna.map((data, index) => (
       <Link
-        className='link'
+        className='link '
         to={{
           state: {
             name: data.name,
@@ -25,18 +25,15 @@ class CustomDnaList extends Component {
     ));
     return (
       <section>
-        <h1>Custom DNA</h1>
-        <h3>
+        <h1 className='SBG top'>Custom DNA</h1>
+        <h3 className='SBG'>
           Here you will find a list of all the custom dna you have created!
         </h3>
-        <h5>
+        <h5 className='SBG infoTablet'>
           Click one of your custom DNA strands, and then load it into the
-          simulation!{' '}
+          simulation! Once loaded, it will be injected into the Red plant
+          species and watch it play out!{' '}
         </h5>
-        <h6>
-          Once loaded, it will be injected into the Red plant species and watch
-          it play out!
-        </h6>
         {customDna}
       </section>
     );
