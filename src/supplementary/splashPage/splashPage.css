@@ -33,21 +33,21 @@
 
 @media screen and (min-width: 600px) {
   .splashSection {
-    margin-left: 17%;
-    margin-right: 17%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
 @media screen and (min-width: 800px) {
   .splashSection {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .splashSection {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }

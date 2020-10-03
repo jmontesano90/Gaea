@@ -18,9 +18,13 @@
 
 .Collapsible {
   text-align: center;
-  border: 1px solid black;
   padding: 0;
   margin: 10px;
+}
+
+.is-closed,
+.is-open {
+  border: 1px solid black;
 }
 .Collapsible > span {
   font-weight: bold;
@@ -45,4 +49,23 @@
   flex-basis: 50%;
   font-size: 14px;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .Collapsible {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .Collapsible {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Collapsible {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }

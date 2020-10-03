@@ -21,6 +21,7 @@ import PrivateOnlyRoute from './utils/PrivateRoute';
 import SplashPage from './supplementary/splashPage/splashPage';
 import DnaApiService from './services/dna-api-service';
 import InitalData from './dummyData/initialData';
+import TokenService from './services/token-service';
 import './App.css';
 
 class App extends Component {
@@ -230,6 +231,7 @@ class App extends Component {
 
   componentDidMount() {
     this.updateGrid(InitalData.grid);
+    TokenService.clearAuthToken();
     let plants = DnaHelper.randomPlantGeneration();
     this.updatePlants(plants);
     this.preloadImages();

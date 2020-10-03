@@ -14,7 +14,7 @@ class GettingStarted extends Component {
         </p>
         <div>
           {' '}
-          <ul>
+          <ul className='backUp SBG'>
             <li>
               Natural selection doesn’t necessarily mean the strongest survives,{' '}
               <b>it simply means the one who reproduces the most.</b>{' '}

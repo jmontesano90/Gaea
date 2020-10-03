@@ -6,14 +6,6 @@
   z-index: 0;
 }
 
-.particles {
-  position: 'absolute';
-  top: 0;
-  left: 0;
-  width: '100%';
-  height: '100%';
-}
-
 p {
   border-style: inset;
   margin-left: 10px;
@@ -69,7 +61,8 @@ h4 {
 }
 
 @media screen and (min-width: 600px) {
-  p {
+  p,
+  .backUp {
     margin-left: 13%;
     margin-right: 13%;
     padding: 8px;
@@ -77,17 +70,19 @@ h4 {
   }
 }
 @media screen and (min-width: 800px) {
-  p {
-    margin-left: 24%;
-    margin-right: 24%;
+  p,
+  .backUp {
+    margin-left: 19%;
+    margin-right: 19%;
     padding: 8px;
     font-size: 18px;
   }
 }
 @media screen and (min-width: 1000px) {
-  p {
-    margin-left: 30%;
-    margin-right: 30%;
+  p,
+  .backUp {
+    margin-left: 23%;
+    margin-right: 23%;
     padding: 8px;
     font-size: 20px;
   }

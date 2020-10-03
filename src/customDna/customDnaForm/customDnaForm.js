@@ -207,563 +207,573 @@ class CustomDnaForm extends Component {
         ></input>
         <div>{this.state.error}</div>
         <Collapsible trigger='nGRi' className='customTrait'>
-          <form action='idk'>
-            <div>nGRi value: {ngriStat}</div>
-            <div className='geneTitle'>Gene 1</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='A'>
-                  A
-                  <input
-                    type='radio'
-                    value='A'
-                    name='0'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='a'>
-                  a
-                  <input
-                    type='radio'
-                    value='a'
-                    name='0'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-              <span className='genePair'>
-                <label htmlFor='B'>
-                  B
-                  <input
-                    type='radio'
-                    value='B'
-                    name='2'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='b'>
-                  b
-                  <input
-                    type='radio'
-                    value='b'
-                    name='2'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-            <div className='geneTitle'>Gene 2</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='A'>
-                  A
-                  <input
-                    type='radio'
-                    value='A'
-                    name='1'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='a'>
-                  a
-                  <input
-                    type='radio'
-                    value='a'
-                    name='1'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+          <div className='SBG'>
+            <form action='idk'>
+              <div>nGRi value: {ngriStat}</div>
+              <div className='geneTitle'>Gene 1</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='A'>
+                    A
+                    <input
+                      type='radio'
+                      value='A'
+                      name='0'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='a'>
+                    a
+                    <input
+                      type='radio'
+                      value='a'
+                      name='0'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+                <span className='genePair'>
+                  <label htmlFor='B'>
+                    B
+                    <input
+                      type='radio'
+                      value='B'
+                      name='2'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='b'>
+                    b
+                    <input
+                      type='radio'
+                      value='b'
+                      name='2'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+              <div className='geneTitle'>Gene 2</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='A'>
+                    A
+                    <input
+                      type='radio'
+                      value='A'
+                      name='1'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='a'>
+                    a
+                    <input
+                      type='radio'
+                      value='a'
+                      name='1'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='B'>
-                  B
-                  <input
-                    type='radio'
-                    value='B'
-                    name='3'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='b'>
-                  b
-                  <input
-                    type='radio'
-                    value='b'
-                    name='3'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-          </form>
-          <Collapsible trigger='Trait explanation'>
-            {DnaHelper.traitExplanation.nGRi}
-          </Collapsible>
+                <span className='genePair'>
+                  <label htmlFor='B'>
+                    B
+                    <input
+                      type='radio'
+                      value='B'
+                      name='3'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='b'>
+                    b
+                    <input
+                      type='radio'
+                      value='b'
+                      name='3'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+            </form>
+            <Collapsible trigger='Trait explanation'>
+              {DnaHelper.traitExplanation.nGRi}
+            </Collapsible>
+          </div>
         </Collapsible>
         <Collapsible trigger='pGRi' className='customTrait'>
-          <form action='idk'>
-            <div className='geneTitle'>Gene 1</div>
-            <div>pGRi value: {pgriStat}</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='C'>
-                  C
-                  <input
-                    type='radio'
-                    value='C'
-                    name='4'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='c'>
-                  c
-                  <input
-                    type='radio'
-                    value='c'
-                    name='4'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+          <div className='SBG'>
+            <form action='idk'>
+              <div className='geneTitle'>Gene 1</div>
+              <div>pGRi value: {pgriStat}</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='C'>
+                    C
+                    <input
+                      type='radio'
+                      value='C'
+                      name='4'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='c'>
+                    c
+                    <input
+                      type='radio'
+                      value='c'
+                      name='4'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='D'>
-                  D
-                  <input
-                    type='radio'
-                    value='D'
-                    name='6'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='d'>
-                  d
-                  <input
-                    type='radio'
-                    value='d'
-                    name='6'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-            <div className='geneTitle'>Gene 2</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='C'>
-                  C
-                  <input
-                    type='radio'
-                    value='C'
-                    name='5'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='c'>
-                  c
-                  <input
-                    type='radio'
-                    value='c'
-                    name='5'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+                <span className='genePair'>
+                  <label htmlFor='D'>
+                    D
+                    <input
+                      type='radio'
+                      value='D'
+                      name='6'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='d'>
+                    d
+                    <input
+                      type='radio'
+                      value='d'
+                      name='6'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+              <div className='geneTitle'>Gene 2</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='C'>
+                    C
+                    <input
+                      type='radio'
+                      value='C'
+                      name='5'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='c'>
+                    c
+                    <input
+                      type='radio'
+                      value='c'
+                      name='5'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='D'>
-                  D
-                  <input
-                    type='radio'
-                    value='D'
-                    name='7'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='d'>
-                  d
-                  <input
-                    type='radio'
-                    value='d'
-                    name='7'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-          </form>
-          <Collapsible trigger='Trait explanation'>
-            {DnaHelper.traitExplanation.pGRi}
-          </Collapsible>
+                <span className='genePair'>
+                  <label htmlFor='D'>
+                    D
+                    <input
+                      type='radio'
+                      value='D'
+                      name='7'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='d'>
+                    d
+                    <input
+                      type='radio'
+                      value='d'
+                      name='7'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+            </form>
+            <Collapsible trigger='Trait explanation'>
+              {DnaHelper.traitExplanation.pGRi}
+            </Collapsible>
+          </div>
         </Collapsible>
         <Collapsible trigger='pBi' className='customTrait'>
-          <form action='idk'>
-            <div className='geneTitle'>Gene 1</div>
-            <div>pBi value: {pbiStat}</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='E'>
-                  E
-                  <input
-                    type='radio'
-                    value='E'
-                    name='8'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='e'>
-                  e
-                  <input
-                    type='radio'
-                    value='e'
-                    name='8'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+          <div className='SBG'>
+            <form action='idk'>
+              <div className='geneTitle'>Gene 1</div>
+              <div>pBi value: {pbiStat}</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='E'>
+                    E
+                    <input
+                      type='radio'
+                      value='E'
+                      name='8'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='e'>
+                    e
+                    <input
+                      type='radio'
+                      value='e'
+                      name='8'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='F'>
-                  F
-                  <input
-                    type='radio'
-                    value='F'
-                    name='10'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='f'>
-                  f
-                  <input
-                    type='radio'
-                    value='f'
-                    name='10'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-            <div className='geneTitle'>Gene 2</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='E'>
-                  E
-                  <input
-                    type='radio'
-                    value='E'
-                    name='9'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='e'>
-                  e
-                  <input
-                    type='radio'
-                    value='e'
-                    name='9'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+                <span className='genePair'>
+                  <label htmlFor='F'>
+                    F
+                    <input
+                      type='radio'
+                      value='F'
+                      name='10'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='f'>
+                    f
+                    <input
+                      type='radio'
+                      value='f'
+                      name='10'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+              <div className='geneTitle'>Gene 2</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='E'>
+                    E
+                    <input
+                      type='radio'
+                      value='E'
+                      name='9'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='e'>
+                    e
+                    <input
+                      type='radio'
+                      value='e'
+                      name='9'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='F'>
-                  F
-                  <input
-                    type='radio'
-                    value='F'
-                    name='11'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='f'>
-                  f
-                  <input
-                    type='radio'
-                    value='f'
-                    name='11'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-          </form>
-          <Collapsible trigger='Trait explanation'>
-            {DnaHelper.traitExplanation.pBi}
-          </Collapsible>
+                <span className='genePair'>
+                  <label htmlFor='F'>
+                    F
+                    <input
+                      type='radio'
+                      value='F'
+                      name='11'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='f'>
+                    f
+                    <input
+                      type='radio'
+                      value='f'
+                      name='11'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+            </form>
+            <Collapsible trigger='Trait explanation'>
+              {DnaHelper.traitExplanation.pBi}
+            </Collapsible>
+          </div>
         </Collapsible>
         <Collapsible trigger='GR' className='customTrait'>
-          <form action='idk'>
-            <div className='geneTitle'>Gene 1</div>
-            <div>GR value: {grStat}</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='K'>
-                  K
-                  <input
-                    type='radio'
-                    value='K'
-                    name='12'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='k'>
-                  k
-                  <input
-                    type='radio'
-                    value='k'
-                    name='12'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+          <div className='SBG'>
+            <form action='idk'>
+              <div className='geneTitle'>Gene 1</div>
+              <div>GR value: {grStat}</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='K'>
+                    K
+                    <input
+                      type='radio'
+                      value='K'
+                      name='12'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='k'>
+                    k
+                    <input
+                      type='radio'
+                      value='k'
+                      name='12'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='L'>
-                  L
-                  <input
-                    type='radio'
-                    value='L'
-                    name='14'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='l'>
-                  l
-                  <input
-                    type='radio'
-                    value='l'
-                    name='14'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-              <span className='genePair'>
-                <label htmlFor='M'>
-                  M
-                  <input
-                    type='radio'
-                    value='M'
-                    name='16'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='m'>
-                  m
-                  <input
-                    type='radio'
-                    value='m'
-                    name='16'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-            <div className='geneTitle'>Gene 2</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='K'>
-                  K
-                  <input
-                    type='radio'
-                    value='K'
-                    name='13'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='k'>
-                  k
-                  <input
-                    type='radio'
-                    value='k'
-                    name='13'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+                <span className='genePair'>
+                  <label htmlFor='L'>
+                    L
+                    <input
+                      type='radio'
+                      value='L'
+                      name='14'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='l'>
+                    l
+                    <input
+                      type='radio'
+                      value='l'
+                      name='14'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+                <span className='genePair'>
+                  <label htmlFor='M'>
+                    M
+                    <input
+                      type='radio'
+                      value='M'
+                      name='16'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='m'>
+                    m
+                    <input
+                      type='radio'
+                      value='m'
+                      name='16'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+              <div className='geneTitle'>Gene 2</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='K'>
+                    K
+                    <input
+                      type='radio'
+                      value='K'
+                      name='13'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='k'>
+                    k
+                    <input
+                      type='radio'
+                      value='k'
+                      name='13'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='L'>
-                  L
-                  <input
-                    type='radio'
-                    value='L'
-                    name='15'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='l'>
-                  l
-                  <input
-                    type='radio'
-                    value='l'
-                    name='15'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-              <span className='genePair'>
-                <label htmlFor='M'>
-                  M
-                  <input
-                    type='radio'
-                    value='M'
-                    name='17'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='m'>
-                  m
-                  <input
-                    type='radio'
-                    value='m'
-                    name='17'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-          </form>
-          <Collapsible trigger='Trait explanation'>
-            {DnaHelper.traitExplanation.GR}
-          </Collapsible>
+                <span className='genePair'>
+                  <label htmlFor='L'>
+                    L
+                    <input
+                      type='radio'
+                      value='L'
+                      name='15'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='l'>
+                    l
+                    <input
+                      type='radio'
+                      value='l'
+                      name='15'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+                <span className='genePair'>
+                  <label htmlFor='M'>
+                    M
+                    <input
+                      type='radio'
+                      value='M'
+                      name='17'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='m'>
+                    m
+                    <input
+                      type='radio'
+                      value='m'
+                      name='17'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+            </form>
+            <Collapsible trigger='Trait explanation'>
+              {DnaHelper.traitExplanation.GR}
+            </Collapsible>
+          </div>
         </Collapsible>
         <Collapsible trigger='LS' className='customTrait'>
-          <form action='idk'>
-            <div className='geneTitle'>Gene 1</div>
-            <div>LS value: {lsStat}</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='N'>
-                  N
-                  <input
-                    type='radio'
-                    value='N'
-                    name='18'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='n'>
-                  n
-                  <input
-                    type='radio'
-                    value='n'
-                    name='18'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+          <div className='SBG'>
+            <form action='idk'>
+              <div className='geneTitle'>Gene 1</div>
+              <div>LS value: {lsStat}</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='N'>
+                    N
+                    <input
+                      type='radio'
+                      value='N'
+                      name='18'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='n'>
+                    n
+                    <input
+                      type='radio'
+                      value='n'
+                      name='18'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='O'>
-                  O
-                  <input
-                    type='radio'
-                    value='O'
-                    name='20'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='o'>
-                  o
-                  <input
-                    type='radio'
-                    value='o'
-                    name='20'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-              <span className='genePair'>
-                <label htmlFor='P'>
-                  P
-                  <input
-                    type='radio'
-                    value='P'
-                    name='22'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='p'>
-                  p
-                  <input
-                    type='radio'
-                    value='p'
-                    name='22'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-            <div className='geneTitle'>Gene 2</div>
-            <div className='geneGroup'>
-              <span className='genePair'>
-                <label htmlFor='N'>
-                  N
-                  <input
-                    type='radio'
-                    value='N'
-                    name='19'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='n'>
-                  n
-                  <input
-                    type='radio'
-                    value='n'
-                    name='19'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
+                <span className='genePair'>
+                  <label htmlFor='O'>
+                    O
+                    <input
+                      type='radio'
+                      value='O'
+                      name='20'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='o'>
+                    o
+                    <input
+                      type='radio'
+                      value='o'
+                      name='20'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+                <span className='genePair'>
+                  <label htmlFor='P'>
+                    P
+                    <input
+                      type='radio'
+                      value='P'
+                      name='22'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='p'>
+                    p
+                    <input
+                      type='radio'
+                      value='p'
+                      name='22'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+              <div className='geneTitle'>Gene 2</div>
+              <div className='geneGroup'>
+                <span className='genePair'>
+                  <label htmlFor='N'>
+                    N
+                    <input
+                      type='radio'
+                      value='N'
+                      name='19'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='n'>
+                    n
+                    <input
+                      type='radio'
+                      value='n'
+                      name='19'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
 
-              <span className='genePair'>
-                <label htmlFor='O'>
-                  O
-                  <input
-                    type='radio'
-                    value='O'
-                    name='21'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='o'>
-                  o
-                  <input
-                    type='radio'
-                    value='o'
-                    name='21'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-              <span className='genePair'>
-                <label htmlFor='P'>
-                  P
-                  <input
-                    type='radio'
-                    value='P'
-                    name='23'
-                    onChange={this.onChange}
-                  />
-                </label>
-                <label htmlFor='p'>
-                  p
-                  <input
-                    type='radio'
-                    value='p'
-                    name='23'
-                    onChange={this.onChange}
-                  />
-                </label>
-              </span>
-            </div>
-          </form>
-          <Collapsible trigger='Trait explanation'>
-            {DnaHelper.traitExplanation.LS}
-          </Collapsible>
+                <span className='genePair'>
+                  <label htmlFor='O'>
+                    O
+                    <input
+                      type='radio'
+                      value='O'
+                      name='21'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='o'>
+                    o
+                    <input
+                      type='radio'
+                      value='o'
+                      name='21'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+                <span className='genePair'>
+                  <label htmlFor='P'>
+                    P
+                    <input
+                      type='radio'
+                      value='P'
+                      name='23'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                  <label htmlFor='p'>
+                    p
+                    <input
+                      type='radio'
+                      value='p'
+                      name='23'
+                      onChange={this.onChange}
+                    />
+                  </label>
+                </span>
+              </div>
+            </form>
+            <Collapsible trigger='Trait explanation'>
+              {DnaHelper.traitExplanation.LS}
+            </Collapsible>
+          </div>
         </Collapsible>
         <input
           type='text'

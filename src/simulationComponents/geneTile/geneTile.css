@@ -113,13 +113,13 @@
 }
 @media screen and (min-width: 800px) {
   .traitInformation {
-    margin-left: 29%;
-    margin-right: 29%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
 @media screen and (min-width: 1000px) {
   .traitInformation {
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }

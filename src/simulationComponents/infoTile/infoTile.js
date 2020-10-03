@@ -47,6 +47,7 @@ class InfoTile extends Component {
               speciesNumber: this.props.species,
               expressionValues: this.state.expressionValues,
               currentValues: currentValues,
+              key: Math.round(Math.random() * 10),
             },
           }}
         >

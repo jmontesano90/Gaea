@@ -15,6 +15,7 @@ class CustomDnaList extends Component {
             name: data.name,
             dnaStrand: data.dnaStrand,
             comment: data.comment,
+            key: index,
           },
           pathname: `/customDnaList/${data.name}`,
         }}
