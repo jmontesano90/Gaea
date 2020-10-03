@@ -11,7 +11,6 @@ const DnaApiService = {
     );
   },
   postDna(user_id, name, dna, comment) {
-    console.log(user_id);
     return fetch(`${config.API_ENDPOINT}/dna`, {
       method: 'POST',
       headers: {

@@ -21,10 +21,6 @@
   border-radius: 10px;
 }
 
-/* .dnaValues {
-  padding: 3px;
-} */
-
 .valuesO4 {
   display: flex;
   align-items: center;
@@ -37,14 +33,6 @@
   border-left: 1px black dotted;
   border-radius: 10px;
 }
-/* .valuesO4 {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 36%;
-  margin-right: 36%;
-} */
 
 .valuesO5 {
   display: flex;
@@ -95,17 +83,9 @@
   padding: 4px;
 }
 
-/* .geneTile {
-  background-color: white;
-} */
-
 .Collapsible__contentInner {
   padding: 5px;
 }
-/* .Collapsible__contentOuter {
-  border: 1px black solid;
-  padding: 0px;
-} */
 
 .title {
   font-size: 20px;

@@ -32,7 +32,6 @@ class GeneTile extends Component {
 
       let half = Math.ceil(genes.length / 2);
       let genesTest = genes.splice(0, half);
-      console.log(genesTest);
       let currentValuesTest = genesTest.map((data, index) => (
         <section className='oneTrait'>
           <div>

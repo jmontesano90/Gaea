@@ -122,8 +122,6 @@ const DnaHelper = {
           plants[i].dna.charAt(y) === plants[i].dna.charAt(y).toUpperCase() ||
           plants[i].dna.charAt(y + 1) === plants[i].dna.charAt(y).toUpperCase()
         ) {
-          // gene = plants[i].dna.toString();
-          // console.log(gene.charAt(y));
           gene = plants[i].dna.charAt(y).toUpperCase();
           expressionValues[plants[i].species][gene] =
             parseInt(expressionValues[plants[i].species][gene]) + 1;
@@ -142,7 +140,6 @@ const DnaHelper = {
     let dnaTemplate = 'AaBbcCdDeEFfGgHhIiJjkkLlMmNnOoPp';
     let dna = [];
     let i = 0;
-    //console.log(dnaTemplate.charAt(i).toLowerCase());
     for (i = 0; i < dnaTemplate.length; i++) {
       if (Math.random() < 0.5) {
         dna.push(dnaTemplate.charAt(i).toUpperCase());
@@ -183,7 +180,6 @@ const DnaHelper = {
     let i = 0;
     for (i = 0; i < 18; i++) {
       if (i % 6 === 0 && i !== 0) {
-        //console.log('New Species info');
         species += 1;
         gridNumber += 1;
         dna = [this.randomDNAStrand(), this.randomDNAStrand()];
@@ -199,7 +195,6 @@ const DnaHelper = {
       };
       plants.push(plant);
     }
-    //console.log(plants[0]);
     return plants;
   },
   customPlantGeneration(customDna) {
@@ -234,7 +229,6 @@ const DnaHelper = {
     let i = 0;
     for (i = 0; i < 18; i++) {
       if (i % 6 === 0 && i !== 0) {
-        //console.log('New Species info');
         species += 1;
         gridNumber += 1;
         dna = [this.randomDNAStrand(), this.randomDNAStrand()];
@@ -250,7 +244,6 @@ const DnaHelper = {
       };
       plants.push(plant);
     }
-    //console.log(plants[0]);
     return plants;
   },
 };

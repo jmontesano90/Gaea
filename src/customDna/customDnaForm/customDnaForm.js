@@ -35,7 +35,6 @@ class CustomDnaForm extends Component {
   }
 
   saveValues = () => {
-    console.log(this.context.userId);
     if (this.state.name !== '') {
       DnaApiService.postDna(
         this.context.userId,

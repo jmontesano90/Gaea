@@ -7,8 +7,6 @@ import GridContext from '../../GridContext';
 class TileHolder extends Component {
   static contextType = GridContext;
   render() {
-    //console.log(this.context.grid[0]);
-    //console.log(arrayData.arrayData[0]);
     let tile1;
     let tile2;
     let tile3;

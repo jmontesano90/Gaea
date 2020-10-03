@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './customDnaList.css';
 import GridContext from '../../GridContext';
 
 class CustomDnaSingle extends Component {

@@ -8,12 +8,6 @@ class InfoHolder extends Component {
   render() {
     let testArray = [1, 2, 3];
     let infoTiles;
-    let loadingStats;
-    if (this.context.imageReady === false) {
-      loadingStats = <div>Loading!</div>;
-    } else {
-      loadingStats = <div></div>;
-    }
     if (this.context.turnData && this.context.turnData.length > 0) {
       infoTiles = testArray.map((data, index) => (
         <InfoTile
@@ -47,7 +41,6 @@ class InfoHolder extends Component {
       <div>
         {dayCount}
         <div className='infoTiles SBG'>{infoTiles}</div>
-        {/* {loadingStats} */}
       </div>
     );
   }

@@ -20,7 +20,6 @@ class nextButton extends Component {
     let i = 0;
     for (i = 0; i < 10; i++) {
       setTimeout(this.context.timePass, 10);
-      //console.log(i);
     }
     this.props.history.replace('/simulation');
   };
@@ -36,11 +35,6 @@ class nextButton extends Component {
     clearInterval(this.intervalId);
     this.setState({ onGoing: false });
   };
-
-  // restart = () => {
-  //   this.context.restart;
-  //   this.setState({ onGoing: false });
-  // };
 
   render() {
     let loading;

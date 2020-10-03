@@ -7,7 +7,6 @@ class HomePage extends Component {
   static contextType = GridContext;
   render() {
     let customDna;
-    // console.log(this.context);
     if (this.context.customDna && this.context.customDna.length >= 1) {
       customDna = (
         <Link

@@ -9,13 +9,6 @@ class InfoTile extends Component {
   };
   render() {
     let color = '';
-
-    // console.log(
-    //   this.props.expressionValues[this.props.expressionValues.length - 1][
-    //     this.props.species + 1
-    //   ].total
-    // );
-    let valuesLength = 1;
     let currentValues;
     let message;
     if (this.props.expressionValues) {
@@ -27,7 +20,6 @@ class InfoTile extends Component {
         color = 'Green';
       }
 
-      valuesLength = this.props.expressionValues;
       currentValues = this.state.expressionValues[
         this.state.expressionValues.length - 1
       ][this.state.species + 1];

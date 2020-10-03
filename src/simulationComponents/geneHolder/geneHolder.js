@@ -8,7 +8,6 @@ class GeneHolder extends Component {
     if (this.props.location) {
       geneCategories = (
         <div className='geneCategory'>
-          {/* <h2 className='title'>{this.props.location.state.species}</h2> */}
           <section className='geneInformation SBG'>
             <div className='geneTile'>
               {' '}

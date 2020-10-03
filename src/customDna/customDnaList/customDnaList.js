@@ -7,7 +7,6 @@ class CustomDnaList extends Component {
   static contextType = GridContext;
 
   render() {
-    console.log(this.context.customDna);
     let customDna = this.context.customDna.map((data, index) => (
       <Link
         className='link '
