@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
+import './customDnaSingle.css';
 
 class CustomDnaSingle extends Component {
   static contextType = GridContext;
@@ -11,8 +12,7 @@ class CustomDnaSingle extends Component {
 
   render() {
     return (
-      <section>
-        <h1>Custom DNA</h1>
+      <section className='customDnaSingle SBG backUp'>
         <h3>{this.props.location.state.name}</h3>
         <h4>{this.props.location.state.dnaStrand}</h4>
         <h4>{this.props.location.state.comment}</h4>
