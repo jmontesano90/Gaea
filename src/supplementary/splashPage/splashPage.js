@@ -71,6 +71,10 @@ class SplashPage extends Component {
           <section className='splashSection'>
             <header>
               <h3>Sign up here to make custom plant species!</h3>
+              <p>
+                Want to try Geb without signing up? Go to the log in page and
+                use the pre-existing credentials!
+              </p>
             </header>
             <RegistrationForm
               id='register'
