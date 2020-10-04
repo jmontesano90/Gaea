@@ -19,10 +19,10 @@ class HowDoesThisWork extends Component {
           plants (generally) give a growth rate bonus, while plants of the
           opposite species give a growth rate penalty. Once plants grow enough
           and hit a threshold they become mature enough to reproduce. At this
-          point every “turn” they have a chance to reproduce, if another plant
-          is mature in their same tile. When two plants mate, their offspring is
-          a combination of the parents.This will continue until the plants die
-          of old age.
+          point every “turn” they have a chance to reproduce if another plant is
+          mature in the same tile. When two plants mate, their offspring is a
+          combination of the parents. This will continue until the plants die of
+          old age.
         </p>
         <p>
           Plants exchange DNA and express traits given the guidelines of

@@ -71,8 +71,8 @@ export default class LoginForm extends Component {
         </form>
         <h4 className='SBG fakeLogin'>
           Want to log in without signing up? Try our demo log in account:
-          <span>User name: TestUser</span>
-          <span>Password: TestUser10!</span>
+          <span>User name: TestAccount</span>
+          <span>Password: TestAccount10!</span>
         </h4>
       </div>
     );
