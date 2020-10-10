@@ -7,22 +7,26 @@ class CustomDnaList extends Component {
   static contextType = GridContext;
 
   render() {
-    let customDna = this.context.customDna.map((data, index) => (
-      <Link
-        className='link SBG backUp strand'
-        to={{
-          state: {
-            name: data.name,
-            dnaStrand: data.dnaStrand,
-            comment: data.comment,
-            key: index,
-          },
-          pathname: `/customDnaList/${data.name}`,
-        }}
-      >
-        {data.name}
-      </Link>
-    ));
+    let customDna;
+
+    if (this.context.customDna) {
+      customDna = this.context.customDna.map((data, index) => (
+        <Link
+          className='link SBG backUp strand'
+          to={{
+            state: {
+              name: data.name,
+              dnaStrand: data.dnaStrand,
+              comment: data.comment,
+              key: index,
+            },
+            pathname: `/customDnaList/${data.name}`,
+          }}
+        >
+          {data.name}
+        </Link>
+      ));
+    }
     return (
       <section>
         <h1 className='SBG top backUp'>Custom DNA</h1>
