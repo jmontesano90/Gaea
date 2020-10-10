@@ -1,3 +1,4 @@
+//Renders and passes information to all the different traits depending on the species
 import React, { Component } from 'react';
 import './geneHolder.css';
 import { Link } from 'react-router-dom';

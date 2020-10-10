@@ -1,3 +1,6 @@
+//Renders the individual tile with a sprite
+//Checks to see what species it is, and how many number of plants, then renders
+
 import React, { Component } from 'react';
 import './tile.css';
 import GridContext from '../../GridContext';

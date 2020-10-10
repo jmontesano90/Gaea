@@ -1,3 +1,5 @@
+//Renders the initial button to see the different species genetic information
+
 import React, { Component } from 'react';
 import './infoTile.css';
 import { Link } from 'react-router-dom';

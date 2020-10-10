@@ -1,3 +1,6 @@
+//Renders an individual custom DNA strand
+//Gives the option to load it the simulation
+
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './customDnaSingle.css';

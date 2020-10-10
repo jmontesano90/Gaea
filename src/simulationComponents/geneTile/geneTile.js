@@ -1,3 +1,5 @@
+//Renders all the specific up to date information about a certain trait for a certain species
+
 import React, { Component } from 'react';
 import dnaHelper from '../../dnaHelper';
 import Collapsible from 'react-collapsible';

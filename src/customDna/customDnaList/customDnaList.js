@@ -1,3 +1,4 @@
+//Renders the list of all Custom DNA on the associated user account
 import React, { Component } from 'react';
 import './customDnaList.css';
 import GridContext from '../../GridContext';

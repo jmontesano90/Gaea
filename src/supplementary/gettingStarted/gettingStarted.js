@@ -1,3 +1,4 @@
+//Renders the getting started, and explains to users the basic principles of the site
 import React, { Component } from 'react';
 import './gettingStarted.css';
 class GettingStarted extends Component {

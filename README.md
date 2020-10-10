@@ -5,6 +5,7 @@ https://gaea.jmontesano90.vercel.app/
 Thank you for using Gaea!
 
 https://imgur.com/ymd3GMS
+![Gaea Simulation Page](/build/simulation.jpeg)
 
 Gaea is a tool meant to help educate, and demonstrate the very basics of natural selection, evolution and mendelian genetics. This is accomplished by simulating three different plant species, and having them grow, mature, and reproduce in real time. This readme is aimed at explaining how it works.
 

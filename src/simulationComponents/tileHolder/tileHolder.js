@@ -1,3 +1,6 @@
+//This component renders the tile holder page.
+//The individual "tiles" are the sprites that represent the number of "plants"
+//The entire grid is 4*4
 import React, { Component } from 'react';
 import Tile from '../tile/tile';
 import './tileHolder.css';

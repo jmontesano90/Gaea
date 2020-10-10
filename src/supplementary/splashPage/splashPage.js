@@ -7,8 +7,8 @@ class SplashPage extends Component {
   render() {
     return (
       <section id='outerSection' className='outerSection'>
-        <main role='main'>
-          <header role='banner' className='splashPageTitle'>
+        <div>
+          <header className='splashPageTitle'>
             <h1 className='SBG'>Gaea</h1>
             <h2 className='SBG'>Ecology Simulator</h2>
           </header>
@@ -81,7 +81,7 @@ class SplashPage extends Component {
               history={this.props.history}
             ></RegistrationForm>
           </section>
-        </main>
+        </div>
       </section>
     );
   }

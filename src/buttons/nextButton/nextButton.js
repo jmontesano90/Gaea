@@ -1,3 +1,4 @@
+//Renders the buttons used in the simulation
 import React, { Component } from 'react';
 import GridContext from '../../GridContext';
 import './nextButton.css';
@@ -14,7 +15,7 @@ class nextButton extends Component {
       setTimeout(this.context.timePass, 10);
     }
 
-    this.props.history.replace('/simulation');
+    //this.props.history.replace('/simulation');
   };
   goForwardByTen = () => {
     let i = 0;

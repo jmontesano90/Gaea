@@ -1,3 +1,4 @@
+//Renders the core ideas page, giving a more thorough explanation of what I want users to get out of this site
 import React, { Component } from 'react';
 import './coreIdeas.css';
 class CoreIdeas extends Component {

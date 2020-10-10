@@ -36,7 +36,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div className='nav'>
-        <nav role='navigation'>
+        <nav>
           <div className='navOptions'>
             <Link
               to='/home'

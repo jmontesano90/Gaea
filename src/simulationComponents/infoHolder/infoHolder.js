@@ -1,3 +1,5 @@
+//Shows user how many days have passed
+//Also renders the holder for the links to individual species genetic information
 import React, { Component } from 'react';
 import InfoTile from '../infoTile/infoTile';
 import './infoHolder.css';

@@ -1,3 +1,4 @@
+//Renders the page that explains how this site works
 import React, { Component } from 'react';
 
 import './howDoesThisWork.css';

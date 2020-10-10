@@ -688,7 +688,7 @@ class App extends Component {
           <Route path='/gettingStarted' component={GettingStarted} />
           <Route path='/CoreIdeas' component={CoreIdeas} />
           <Route path='/HowThisWorks' component={HowDoesThisWork} />
-          <PrivateOnlyRoute path='/customDnaForm' component={CustomDnaForm} />
+          <Route path='/customDnaForm' component={CustomDnaForm} />
           <Route path='/simulation' component={TileHolder} />
           <Route path='/simulation' component={NextButton} />
           <Route path='/simulation' component={InfoHolder} />

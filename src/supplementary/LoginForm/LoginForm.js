@@ -1,3 +1,5 @@
+//Renders the login form
+
 import React, { Component } from 'react';
 import { Button, Input } from '../../utils/Utils';
 import TokenService from '../../services/token-service';
