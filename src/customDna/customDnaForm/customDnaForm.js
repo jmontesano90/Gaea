@@ -239,7 +239,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 1</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label htmlFor={data.geneList[0]}>
+                <label >
                   {data.geneList[0]}
                   <input
                     type='radio'
@@ -248,7 +248,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[1]}>
+                <label >
                   {data.geneList[1]}
                   <input
                     type='radio'
@@ -259,7 +259,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label htmlFor={data.geneList[2]}>
+                <label >
                   {data.geneList[2]}
                   <input
                     type='radio'
@@ -268,7 +268,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[3]}>
+                <label >
                   {data.geneList[3]}
                   <input
                     type='radio'
@@ -282,7 +282,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label htmlFor={data.geneList[0]}>
+                <label >
                   {data.geneList[0]}
                   <input
                     type='radio'
@@ -291,7 +291,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[1]}>
+                <label >
                   {data.geneList[1]}
                   <input
                     type='radio'
@@ -302,7 +302,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label htmlFor={data.geneList[2]}>
+                <label >
                   {data.geneList[2]}
                   <input
                     type='radio'
@@ -311,7 +311,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[3]}>
+                <label >
                   {data.geneList[3]}
                   <input
                     type='radio'
@@ -339,7 +339,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 1</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label htmlFor={data.geneList[0]}>
+                <label >
                   {data.geneList[0]}
                   <input
                     type='radio'
@@ -348,7 +348,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[1]}>
+                <label >
                   {data.geneList[1]}
                   <input
                     type='radio'
@@ -359,7 +359,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label htmlFor={data.geneList[2]}>
+                <label >
                   {data.geneList[2]}
                   <input
                     type='radio'
@@ -368,7 +368,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[3]}>
+                <label >
                   {data.geneList[3]}
                   <input
                     type='radio'
@@ -380,7 +380,7 @@ class CustomDnaForm extends Component {
               </span>
 
               <span className='genePair'>
-                <label htmlFor={data.geneList[4]}>
+                <label >
                   {data.geneList[4]}
                   <input
                     type='radio'
@@ -389,7 +389,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[5]}>
+                <label >
                   {data.geneList[5]}
                   <input
                     type='radio'
@@ -403,7 +403,7 @@ class CustomDnaForm extends Component {
             <div className='geneTitle'>Gene 2</div>
             <div className='geneGroup'>
               <span className='genePair'>
-                <label htmlFor={data.geneList[0]}>
+                <label >
                   {data.geneList[0]}
                   <input
                     type='radio'
@@ -412,7 +412,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[1]}>
+                <label >
                   {data.geneList[1]}
                   <input
                     type='radio'
@@ -423,7 +423,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label htmlFor={data.geneList[2]}>
+                <label >
                   {data.geneList[2]}
                   <input
                     type='radio'
@@ -432,7 +432,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[3]}>
+                <label >
                   {data.geneList[3]}
                   <input
                     type='radio'
@@ -443,7 +443,7 @@ class CustomDnaForm extends Component {
                 </label>
               </span>
               <span className='genePair'>
-                <label htmlFor={data.geneList[4]}>
+                <label >
                   {data.geneList[4]}
                   <input
                     type='radio'
@@ -452,7 +452,7 @@ class CustomDnaForm extends Component {
                     onChange={this.onChange}
                   />
                 </label>
-                <label htmlFor={data.geneList[5]}>
+                <label >
                   {data.geneList[5]}
                   <input
                     type='radio'
