@@ -230,7 +230,7 @@ class CustomDnaForm extends Component {
       },
     ];
     let customInfo = dnaInfo1.map((data, index) => (
-      <Collapsible trigger={data.name} className='customTrait'>
+      <Collapsible key={index} trigger={data.name} className='customTrait'>
         <div className='SBG'>
           <form action='idk'>
             <div>
@@ -330,7 +330,7 @@ class CustomDnaForm extends Component {
       </Collapsible>
     ));
     let customInfo2 = dnaInfo2.map((data, index) => (
-      <Collapsible trigger={data.name} className='customTrait'>
+      <Collapsible  key={index} trigger={data.name} className='customTrait'>
         <div className='SBG'>
           <form action='idk'>
             <div>
