@@ -29,12 +29,12 @@ class TileHolder extends Component {
       ));
     }
     return (
-      <section className='tiles'>
+      <div className='tiles'>
         {tile1}
         {tile2}
         {tile3}
         {tile4}
-      </section>
+      </div>
     );
   }
 }

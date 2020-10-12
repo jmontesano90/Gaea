@@ -33,7 +33,7 @@ class Tile extends Component {
       }
     }
     return (
-      <section
+      <div
         style={{
           backgroundImage: `url(${image})`,
           backgroundPosition: 'center',
@@ -41,7 +41,7 @@ class Tile extends Component {
           backgroundRepeat: 'no-repeat',
         }}
         className={`${tileName} tile`}
-      ></section>
+      ></div>
     );
   }
 }

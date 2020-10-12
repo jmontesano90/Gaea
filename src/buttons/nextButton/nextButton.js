@@ -83,14 +83,14 @@ class nextButton extends Component {
 
     return (
       <div className='buttonContainer'>
-        <section className='simulationButtons'>
+        <div className='simulationButtons'>
           {loading}
           {forwardByOne}
           <br></br>
           {forwardbyTen}
           {infiniteButton}
-        </section>
-        <section className='simulationButtons'>{restartButton}</section>
+        </div>
+        <div className='simulationButtons'>{restartButton}</div>
       </div>
     );
   }
