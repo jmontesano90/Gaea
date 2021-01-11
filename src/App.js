@@ -22,6 +22,7 @@ import SplashPage from './supplementary/splashPage/splashPage';
 import DnaApiService from './services/dna-api-service';
 import InitalData from './dummyData/initialData';
 import TokenService from './services/token-service';
+import SimHeader from './simulationComponents/simHeader/simHeader'
 import './App.css';
 
 class App extends Component {
@@ -689,6 +690,7 @@ class App extends Component {
           <Route path='/CoreIdeas' component={CoreIdeas} />
           <Route path='/HowThisWorks' component={HowDoesThisWork} />
           <Route path='/customDnaForm' component={CustomDnaForm} />
+          <Route path='/simulation' component={SimHeader} />
           <Route path='/simulation' component={TileHolder} />
           <Route path='/simulation' component={NextButton} />
           <Route path='/simulation' component={InfoHolder} />

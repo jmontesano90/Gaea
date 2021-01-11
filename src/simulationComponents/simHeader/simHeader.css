@@ -1,0 +1,7 @@
+.simHeader {
+  margin-right: 30%;
+  margin-left: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}

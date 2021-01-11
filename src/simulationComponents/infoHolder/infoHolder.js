@@ -21,27 +21,10 @@ class InfoHolder extends Component {
     } else {
       infoTiles = <div>Click Above to start the simulation</div>;
     }
-    let dayCount;
 
-    if (this.context.turnData && this.context.turnData.length / 2 === 1) {
-      dayCount = (
-        <div className='dayCountContainer'>
-          <div className='dayCount'>1 day has passed.</div>
-        </div>
-      );
-    } else if (this.context.turnData && this.context.turnData.length / 2 > 1) {
-      dayCount = (
-        <div className='dayCountContainer'>
-          <div className='dayCount'>
-            {Math.round(this.context.turnData.length / 2)} days have passed.
-          </div>
-        </div>
-      );
-    }
 
     return (
       <div>
-        {dayCount}
         <div className='infoTiles SBG'>{infoTiles}</div>
       </div>
     );
