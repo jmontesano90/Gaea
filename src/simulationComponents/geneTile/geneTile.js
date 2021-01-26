@@ -47,6 +47,41 @@ class GeneTile extends Component {
         </section>
       ))
 
+      let originalValue = 0;
+      //console.log(this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total);
+      //console.log(DnaHelper.dnaKey.A[0]);
+      let plantCount = this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total;
+
+      //console.log(this.props.location.state.expressionValues[0][
+      //  this.props.location.state.speciesNumber + 1
+      //][genesTest[1]]) 
+      //console.log(genesTest[1])       
+
+      // originalValue = genesTest.map((data, index) =>(
+      //   <section className='oneTrait'>
+      //     {(
+      //         (((this.props.location.state.expressionValues[0][
+      //           this.props.location.state.speciesNumber + 1
+      //         ][data] /
+      //           6) * plantCount) * DnaHelper.dnaKey[data][0])/plantCount
+      //       ) }
+      //   </section>
+      // ))
+
+      let i;
+      for (i = 0; i < genesTest.length; i ++){
+        originalValue +=   Math.round((((this.props.location.state.expressionValues[0][
+                    this.props.location.state.speciesNumber + 1
+                   ][genesTest[i]] /
+                     6)) * DnaHelper.dnaKey[genesTest[i]][0]))
+
+                     originalValue +=   Math.round((((this.props.location.state.expressionValues[0][
+                      this.props.location.state.speciesNumber + 1
+                     ][genesTest[i].toLowerCase()] /
+                       6)) * DnaHelper.dnaKey[genesTest[i].toLowerCase()][0]))
+
+      }
+
       let currentValuesTest = genesTest.map((data, index) => (
         <section className='oneTrait'>
           <div>
@@ -97,6 +132,7 @@ class GeneTile extends Component {
           <h2 className='title'>
             {color}: {this.props.location.state.name} Gene Expression
           </h2>
+          {originalValue}
           {geneChange}
           <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4>
          <Collapsible trigger="Additional Gene Information">
