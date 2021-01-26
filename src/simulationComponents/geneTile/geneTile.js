@@ -34,6 +34,19 @@ class GeneTile extends Component {
 
       let half = Math.ceil(genes.length / 2);
       let genesTest = genes.splice(0, half);
+
+      let geneChange = genesTest.map((data, index) => (
+        <section className='oneTrait'>
+          {data}: {this.props.location.state[data]- Math.round(
+              (this.props.location.state.expressionValues[0][
+                this.props.location.state.speciesNumber + 1
+              ][data] /
+                6) *
+                100
+            )}%
+        </section>
+      ))
+
       let currentValuesTest = genesTest.map((data, index) => (
         <section className='oneTrait'>
           <div>
@@ -82,8 +95,15 @@ class GeneTile extends Component {
       traitInfo = (
         <div className='traitInformation SBG'>
           <h2 className='title'>
-            {color}: {this.props.location.state.name}
+            {color}: {this.props.location.state.name} Gene Expression
           </h2>
+          {geneChange}
+          <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4>
+         <Collapsible trigger="Additional Gene Information">
+            <h2>Trait Values</h2>
+            <div className={valuesO}> {dnaValues}</div>
+            <br></br>
+            {DnaHelper.traitExplanation[this.props.location.state.name]}
 
           <div>
             <div className='valueTitles'>
@@ -95,9 +115,7 @@ class GeneTile extends Component {
               <section className={valuesClass}>{originalValuesTest}</section>
             </div>
           </div>
-          <Collapsible trigger='Trait Explanation' className='explanation'>
-            <div className={valuesO}> {dnaValues}</div>
-            {DnaHelper.traitExplanation[this.props.location.state.name]}
+
           </Collapsible>
         </div>
       );

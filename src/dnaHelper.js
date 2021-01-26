@@ -42,9 +42,9 @@ const DnaHelper = {
     pBi:
       'pBi stands for Positive Breeding Influence, and these genes increase the chances of breeding for plants in the same tile.  Higher is better.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     GR:
-      'GR stands for Growth Rate, and these genes influence how much biomass is gained per "turn".  This stat is influenced by pGRi and nGRi.  Plants will not breed until they hit a biomass treshold, so having a higher growth rate means they will start breeding earlier.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'GR stands for Growth Rate, and these genes influence how much biomass is gained per day.  This stat is influenced by pGRi and nGRi.  Plants will not breed until they hit a biomass treshold, so having a higher growth rate means they will start breeding earlier.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
     LS:
-      'LS stands for Life Span, and these genes influence how long the plants stay alive.  Above are the numeric values for what these genes represent.  While the numbers themselves are not particularity useful to you,  their relative difference is!',
+      'LS stands for Life Span, and these genes influence how many days the plant will stay alive.  Above are the numeric values for what these genes represent.',
   },
 
   breeding(dnaM, dnaD) {

@@ -21,6 +21,7 @@ class GeneHolder extends Component {
                   key: 'LS',
                   state: {
                     name: 'LS',
+                    title: 'Life Span',
                     listOfGenes: 'NPOnpo',
                     speciesNumber: this.props.location.state.speciesNumber,
                     expressionValues: this.props.location.state
@@ -70,6 +71,7 @@ class GeneHolder extends Component {
                   key: 'GR',
                   state: {
                     name: 'GR',
+                    title: 'Growth Rate',
                     listOfGenes: 'KLMklm',
                     speciesNumber: this.props.location.state.speciesNumber,
                     expressionValues: this.props.location.state
@@ -119,6 +121,7 @@ class GeneHolder extends Component {
                   key: 'nGRi',
                   state: {
                     name: 'nGRi',
+                    title: 'Negative Growth Rate Influence',
                     listOfGenes: 'ABab',
                     speciesNumber: this.props.location.state.speciesNumber,
                     expressionValues: this.props.location.state
@@ -157,6 +160,7 @@ class GeneHolder extends Component {
                   key: 'pGRi',
                   state: {
                     name: 'pGRi',
+                    title: 'Positive Growth Rate Influence',
 
                     listOfGenes: 'CDcd',
                     speciesNumber: this.props.location.state.speciesNumber,
@@ -195,6 +199,7 @@ class GeneHolder extends Component {
                   key: 'pBi',
                   state: {
                     name: 'pBi',
+                    title: 'Positive Breeding Influence',
                     listOfGenes: 'EFef',
                     speciesNumber: this.props.location.state.speciesNumber,
                     expressionValues: this.props.location.state
