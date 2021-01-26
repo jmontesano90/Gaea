@@ -82,6 +82,15 @@ class GeneTile extends Component {
 
       }
 
+      let currentValue = 0;
+      let y;
+      console.log(this.props.location.state[genesTest[1]])
+      for (y = 0; y< genesTest.length; y++){
+        currentValue += (this.props.location.state[genesTest[y]]/100) * DnaHelper.dnaKey[genesTest[y]][0] 
+        currentValue += Math.round((this.props.location.state[genesTest[y].toLowerCase()]/100) * DnaHelper.dnaKey[genesTest[y].toLowerCase()][0])
+      }
+
+
       let currentValuesTest = genesTest.map((data, index) => (
         <section className='oneTrait'>
           <div>
@@ -132,7 +141,7 @@ class GeneTile extends Component {
           <h2 className='title'>
             {color}: {this.props.location.state.name} Gene Expression
           </h2>
-          {originalValue}
+          {originalValue}: {currentValue}
           {geneChange}
           <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4>
          <Collapsible trigger="Additional Gene Information">
