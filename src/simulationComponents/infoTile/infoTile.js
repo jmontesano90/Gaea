@@ -39,8 +39,12 @@ class InfoTile extends Component {
         message = color + ' has gone extinct.';
       }
     }
+    let colorMessage = color + " genes";
     return (
       <div className='infoTile '>
+               
+        {message}
+        <br></br>
         <Link
           to={{
             pathname: `/simulation/genes/${color}`,
@@ -53,8 +57,9 @@ class InfoTile extends Component {
             },
           }}
         >
-          {message}
+          {colorMessage}
         </Link>
+
       </div>
     );
   }

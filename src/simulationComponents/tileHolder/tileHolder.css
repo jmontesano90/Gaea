@@ -11,19 +11,19 @@
 
 @media screen and (min-width: 600px) {
   .tiles {
-    margin-left: 11%;
-    margin-right: 11%;
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 @media screen and (min-width: 800px) {
   .tiles {
-    margin-left: 19%;
-    margin-right: 19%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 @media screen and (min-width: 1000px) {
   .tiles {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 37%;
+    margin-right: 37%;
   }
 }
