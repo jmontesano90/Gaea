@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.geneTitle{
+  text-align: center;
+}
+
 .geneInformation {
   display: flex;
   justify-content: center;
@@ -15,7 +19,7 @@
 
 .geneTile {
   margin: 5px;
-  font-size: 14px;
+  font-size: 18px;
   padding: 4px 8px;
   text-decoration: none;
 }
