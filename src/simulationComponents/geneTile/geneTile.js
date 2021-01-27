@@ -84,9 +84,9 @@ class GeneTile extends Component {
 
       let currentValue = 0;
       let y;
-      console.log(this.props.location.state[genesTest[1]])
+      //console.log(this.props.location.state[genesTest[1]])
       for (y = 0; y< genesTest.length; y++){
-        currentValue += (this.props.location.state[genesTest[y]]/100) * DnaHelper.dnaKey[genesTest[y]][0] 
+        currentValue += Math.round((this.props.location.state[genesTest[y]]/100) * DnaHelper.dnaKey[genesTest[y]][0]) 
         currentValue += Math.round((this.props.location.state[genesTest[y].toLowerCase()]/100) * DnaHelper.dnaKey[genesTest[y].toLowerCase()][0])
       }
 
@@ -139,11 +139,14 @@ class GeneTile extends Component {
       traitInfo = (
         <div className='traitInformation SBG'>
           <h2 className='title'>
-            {color}: {this.props.location.state.name} Gene Expression
+            {color}: {this.props.location.state.name} 
           </h2>
-          {originalValue}: {currentValue}
+          <h4 className='oneTrait'>Average Value for {color} {this.props.location.state.title}</h4>
+          <div className='oneTrait'>Current Value: {currentValue}</div>
+          <div className='oneTrait'>Original Value: {originalValue}</div>
+          <h4 className='oneTrait'>Percent Change in dominant gene expression</h4>
           {geneChange}
-          <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4>
+          {/* <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4> */}
          <Collapsible trigger="Additional Gene Information">
             <h2>Trait Values</h2>
             <div className={valuesO}> {dnaValues}</div>
