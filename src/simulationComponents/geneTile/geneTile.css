@@ -90,10 +90,16 @@
 .title {
   font-size: 20px;
   padding: 7px 15px;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
   text-decoration: none;
+}
+
+.backButton{
+  margin-top: 3px;
+  margin-left: 3px;
+  position: absolute;
 }
 
 .marginTop{

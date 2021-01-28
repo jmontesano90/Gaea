@@ -4,9 +4,14 @@ import React, { Component } from 'react';
 import dnaHelper from '../../dnaHelper';
 import Collapsible from 'react-collapsible';
 import DnaHelper from '../../dnaHelper';
+import { Link } from 'react-router-dom';
 import './geneTile.css';
 
 class GeneTile extends Component {
+
+  goBack = () => {
+    this.props.history.goBack(); 
+};
   render() {
     let traitInfo;
     if (this.props.location) {
@@ -34,6 +39,8 @@ class GeneTile extends Component {
 
       let half = Math.ceil(genes.length / 2);
       let genesTest = genes.splice(0, half);
+      
+    
 
       let geneChange = genesTest.map((data, index) => {
         let percentChange = this.props.location.state[data]- Math.round((this.props.location.state.expressionValues[0][
@@ -140,9 +147,13 @@ class GeneTile extends Component {
 
       traitInfo = (
         <div className='traitInformation SBG'>
+                    <button className='backButton simulationButton' onClick={this.goBack}>
+          Back
+        </button>
           <h2 className='title'>
             {color}: {this.props.location.state.title} 
           </h2>
+
           <h4 className='oneTrait'>Average Value for {color} {this.props.location.state.title}</h4>
           <div className='niceBorder'>
           <div className='oneTrait'>Current Average: <span className={currentCSS}>{currentValue}</span></div>
