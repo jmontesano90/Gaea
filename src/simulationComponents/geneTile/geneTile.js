@@ -35,38 +35,30 @@ class GeneTile extends Component {
       let half = Math.ceil(genes.length / 2);
       let genesTest = genes.splice(0, half);
 
-      let geneChange = genesTest.map((data, index) => (
-        <section className='oneTrait'>
-          {data}: {this.props.location.state[data]- Math.round(
-              (this.props.location.state.expressionValues[0][
-                this.props.location.state.speciesNumber + 1
-              ][data] /
-                6) *
-                100
-            )}%
-        </section>
-      ))
+      let geneChange = genesTest.map((data, index) => {
+        let percentChange = this.props.location.state[data]- Math.round((this.props.location.state.expressionValues[0][
+            this.props.location.state.speciesNumber + 1][data] / 6) *100);
+        let percentChangeDomCss;
+        let percentChangeRecCss
+           if (percentChange > 0){
+             percentChangeDomCss = 'green';
+             percentChangeRecCss = 'red';
+           } else if (percentChange < 0){
+             percentChangeDomCss = 'red';
+             percentChangeRecCss = 'green';
+           }
+         return(<div className='twoTrait'><section className='oneTrait'>
+         {data}: <span className={percentChangeDomCss}>{percentChange}%</span>    
+       </section>
+       <section className='oneTrait'>
+         {data.toLowerCase()}: <span className={percentChangeRecCss}>{percentChange * -1}%</span>    
+       </section>
+       </div>)   
+        
+      })
 
       let originalValue = 0;
-      //console.log(this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total);
-      //console.log(DnaHelper.dnaKey.A[0]);
       let plantCount = this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total;
-
-      //console.log(this.props.location.state.expressionValues[0][
-      //  this.props.location.state.speciesNumber + 1
-      //][genesTest[1]]) 
-      //console.log(genesTest[1])       
-
-      // originalValue = genesTest.map((data, index) =>(
-      //   <section className='oneTrait'>
-      //     {(
-      //         (((this.props.location.state.expressionValues[0][
-      //           this.props.location.state.speciesNumber + 1
-      //         ][data] /
-      //           6) * plantCount) * DnaHelper.dnaKey[data][0])/plantCount
-      //       ) }
-      //   </section>
-      // ))
 
       let i;
       for (i = 0; i < genesTest.length; i ++){
@@ -88,6 +80,16 @@ class GeneTile extends Component {
       for (y = 0; y< genesTest.length; y++){
         currentValue += Math.round((this.props.location.state[genesTest[y]]/100) * DnaHelper.dnaKey[genesTest[y]][0]) 
         currentValue += Math.round((this.props.location.state[genesTest[y].toLowerCase()]/100) * DnaHelper.dnaKey[genesTest[y].toLowerCase()][0])
+      }
+
+      let originalCSS;
+      let currentCSS;
+      if (originalValue > currentValue){
+            originalCSS = "green";
+            currentCSS = 'red';
+      } else if (currentValue > originalValue){
+        originalCSS = 'red';
+        currentCSS = 'green';
       }
 
 
@@ -139,13 +141,15 @@ class GeneTile extends Component {
       traitInfo = (
         <div className='traitInformation SBG'>
           <h2 className='title'>
-            {color}: {this.props.location.state.name} 
+            {color}: {this.props.location.state.title} 
           </h2>
           <h4 className='oneTrait'>Average Value for {color} {this.props.location.state.title}</h4>
-          <div className='oneTrait'>Current Value: {currentValue}</div>
-          <div className='oneTrait'>Original Value: {originalValue}</div>
-          <h4 className='oneTrait'>Percent Change in dominant gene expression</h4>
-          {geneChange}
+          <div className='niceBorder'>
+          <div className='oneTrait'>Current Average: <span className={currentCSS}>{currentValue}</span></div>
+          <div className='oneTrait'>Original Average: <span className={originalCSS}>{originalValue}</span></div>
+          </div>
+          <h4 className='oneTrait marginTop'>Percent Change in gene expression</h4>
+          <div className='niceBorder'>{geneChange}</div>
           {/* <h4 className='explanation2'>Above is the percent change in dominant gene expression since the beginning of the simulation.  So if a dominant gene is expressed five percent less, the recessive trait is being expressed five percent more.</h4> */}
          <Collapsible trigger="Additional Gene Information">
             <h2>Trait Values</h2>

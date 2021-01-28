@@ -96,6 +96,32 @@
   text-decoration: none;
 }
 
+.marginTop{
+  margin-top: 20px;
+}
+
+.niceBorder{
+  border-right: 1px black dotted;
+    border-left: 1px black dotted;
+    border-radius: 10px;
+    margin-left: 34%;
+    margin-right:34%;
+}
+
+.twoTrait{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red; 
+}
+
 .explanation2{
   margin-left: 10%;
   margin-right: 10%;
