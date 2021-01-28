@@ -535,7 +535,7 @@ class App extends Component {
         } else {
           plant.age += 1;
         }
-        if (plant.BioMass >= 1500) {
+        if (plant.BioMass >= 2000) {
           maturePlants.push(plant);
         }
       }

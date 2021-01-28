@@ -182,7 +182,7 @@ const DnaHelper = {
       if (i % 6 === 0 && i !== 0) {
         species += 1;
         gridNumber += 1;
-        dna = [this.randomDNAStrand(), this.randomDNAStrand()];
+        dna = [this.randomDNAStrand(), this.randomDNAStrand()] ;
         tileNumber = grids[gridNumber][0] * 4 + grids[gridNumber][1] + 1;
       }
       plant = {
