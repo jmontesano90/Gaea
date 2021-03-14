@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import dnaHelper from '../../dnaHelper';
 import Collapsible from 'react-collapsible';
 import DnaHelper from '../../dnaHelper';
-import { Link } from 'react-router-dom';
 import './geneTile.css';
 
 class GeneTile extends Component {
@@ -65,7 +64,7 @@ class GeneTile extends Component {
       })
 
       let originalValue = 0;
-      let plantCount = this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total;
+      //let plantCount = this.props.location.state.expressionValues[this.props.location.state.expressionValues.length - 1][this.props.location.state.speciesNumber + 1].total;
 
       let i;
       for (i = 0; i < genesTest.length; i ++){
@@ -83,7 +82,7 @@ class GeneTile extends Component {
 
       let currentValue = 0;
       let y;
-      //console.log(this.props.location.state[genesTest[1]])
+
       for (y = 0; y< genesTest.length; y++){
         currentValue += Math.round((this.props.location.state[genesTest[y]]/100) * DnaHelper.dnaKey[genesTest[y]][0]) 
         currentValue += Math.round((this.props.location.state[genesTest[y].toLowerCase()]/100) * DnaHelper.dnaKey[genesTest[y].toLowerCase()][0])
